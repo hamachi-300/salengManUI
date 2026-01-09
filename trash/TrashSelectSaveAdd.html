@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Saleng Man - Select Address</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#FD7014", // Orange
+              "background-light": "#EEEEEE", // Light Grey
+              "background-dark": "#222831", // Dark Grey
+              "surface-light": "#FFFFFF",
+              "surface-dark": "#393E46", // Card Background
+              "text-light": "#222831",
+              "text-dark": "#EEEEEE",
+              "subtext-light": "#6B7280",
+              "subtext-dark": "#9CA3AF",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.75rem", // 12px
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark min-h-screen flex items-center justify-center p-4 text-text-light dark:text-text-dark transition-colors duration-300"
+  >
+    <div
+      class="w-full max-w-[375px] h-[812px] bg-background-light dark:bg-background-dark rounded-[40px] shadow-2xl border-8 border-gray-200 dark:border-surface-dark relative flex flex-col overflow-hidden"
+    >
+      <div
+        class="absolute top-0 w-full h-12 flex justify-between items-center px-6 z-50 bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 text-sm font-medium"
+      >
+        <span>9:41</span>
+        <div class="flex gap-1.5 items-center">
+          <span class="material-icons-round text-base"
+            >signal_cellular_alt</span
+          >
+          <span class="material-icons-round text-base">wifi</span>
+          <span class="material-icons-round text-base">battery_full</span>
+        </div>
+      </div>
+      <header
+        class="sticky top-0 z-10 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm px-4 py-4 pt-14 flex items-center gap-4 border-b border-gray-200 dark:border-gray-800"
+      >
+        <button
+          class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+        >
+          <a href="TrashSpecifyLocation.html">
+            <span
+              class="material-icons-round text-2xl text-text-light dark:text-text-dark"
+              >arrow_back</span
+            >
+          </a>
+        </button>
+        <div class="flex-1">
+          <h1 class="text-lg font-bold">Post Trash</h1>
+          <p class="text-xs text-subtext-light dark:text-subtext-dark">
+            Step 4 of 4
+          </p>
+        </div>
+        <button class="p-2">
+          <span
+            class="material-icons-round text-text-light dark:text-text-dark opacity-50"
+            >more_vert</span
+          >
+        </button>
+      </header>
+      <main class="flex-1 p-5 pb-24">
+        <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+          <span class="material-icons-round text-primary">location_on</span>
+          Select Saved Address
+        </h2>
+        <div class="space-y-4">
+          <div class="relative group cursor-pointer">
+            <div
+              class="absolute inset-0 bg-primary opacity-10 rounded-xl border-2 border-primary"
+            ></div>
+            <div
+              class="relative bg-surface-light dark:bg-surface-dark p-5 rounded-xl border-2 border-primary shadow-md flex items-start gap-4 transition-all"
+            >
+              <div class="mt-1">
+                <span class="material-icons-round text-primary text-2xl"
+                  >home</span
+                >
+              </div>
+              <div class="flex-1">
+                <div class="flex justify-between items-start mb-1">
+                  <h3 class="font-bold text-base">Home</h3>
+                  <span
+                    class="bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide"
+                    >Default</span
+                  >
+                </div>
+                <p
+                  class="text-sm text-subtext-light dark:text-subtext-dark leading-relaxed mb-2"
+                >
+                  123/45 Village No. 8, Saleng Road, Bang Khen District
+                </p>
+                <p class="text-lg font-semibold tracking-wider">24240</p>
+              </div>
+              <div class="flex flex-col justify-between items-end h-full">
+                <div
+                  class="w-5 h-5 rounded-full border-2 border-primary flex items-center justify-center bg-primary"
+                >
+                  <span class="material-icons-round text-white text-xs"
+                    >check</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative group cursor-pointer">
+            <div
+              class="bg-surface-light dark:bg-surface-dark p-5 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm flex items-start gap-4 hover:border-primary/50 transition-all"
+            >
+              <div class="mt-1">
+                <span
+                  class="material-icons-round text-subtext-light dark:text-subtext-dark text-2xl"
+                  >work</span
+                >
+              </div>
+              <div class="flex-1">
+                <div class="flex justify-between items-start mb-1">
+                  <h3 class="font-bold text-base">Office</h3>
+                </div>
+                <p
+                  class="text-sm text-subtext-light dark:text-subtext-dark leading-relaxed mb-2"
+                >
+                  88 Tower A, 15th Floor, Ratchada Road, Huai Khwang
+                </p>
+                <p
+                  class="text-lg font-semibold tracking-wider text-subtext-light dark:text-subtext-dark"
+                >
+                  10310
+                </p>
+              </div>
+              <div class="flex flex-col justify-between items-end h-full">
+                <div
+                  class="w-5 h-5 rounded-full border-2 border-gray-300 dark:border-gray-600 group-hover:border-primary transition-colors"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="relative group cursor-pointer">
+            <div
+              class="bg-surface-light dark:bg-surface-dark p-5 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm flex items-start gap-4 hover:border-primary/50 transition-all"
+            >
+              <div class="mt-1">
+                <span
+                  class="material-icons-round text-subtext-light dark:text-subtext-dark text-2xl"
+                  >store</span
+                >
+              </div>
+              <div class="flex-1">
+                <div class="flex justify-between items-start mb-1">
+                  <h3 class="font-bold text-base">Mom's Shop</h3>
+                </div>
+                <p
+                  class="text-sm text-subtext-light dark:text-subtext-dark leading-relaxed mb-2"
+                >
+                  99/9 Market Street, Chatuchak
+                </p>
+                <p
+                  class="text-lg font-semibold tracking-wider text-subtext-light dark:text-subtext-dark"
+                >
+                  10900
+                </p>
+              </div>
+              <div class="flex flex-col justify-between items-end h-full">
+                <div
+                  class="w-5 h-5 rounded-full border-2 border-gray-300 dark:border-gray-600 group-hover:border-primary transition-colors"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <a
+            href="../address/PostAddNewAddress.html"
+            class="w-full mt-6 py-4 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 flex items-center justify-center gap-2 text-primary hover:bg-primary/5 transition-colors group"
+          >
+            <div
+              class="bg-primary/10 p-1 rounded-full group-hover:bg-primary/20 transition-colors"
+            >
+              <span class="material-icons-round text-primary text-xl">add</span>
+            </div>
+            <span class="font-semibold">Add New Address</span>
+          </a>
+        </div>
+      </main>
+      <div
+        class="fixed bottom-0 left-0 w-full bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800 p-4 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-20"
+      >
+        <div class="max-w-md mx-auto flex gap-4 items-center">
+          <div class="flex-1">
+            <p class="text-xs text-subtext-light dark:text-subtext-dark mb-1">
+              Estimated Pickup
+            </p>
+            <p class="text-sm font-semibold">Today, 2:00 PM</p>
+          </div>
+          <a href="TrashSpecifyLocation.html">
+            <button
+              class="bg-primary hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-xl shadow-lg shadow-orange-500/30 flex items-center gap-2 transition-all transform active:scale-95"
+            >
+              <span>Post Trash</span>
+              <span class="material-icons-round text-sm">send</span>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="../theme-toggle.js"></script>
+  </body>
+</html>

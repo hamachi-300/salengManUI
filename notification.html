@@ -1,13 +1,23 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Saleng Man - Notification Screen</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<script>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Saleng Man - Notification Screen</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script>
       tailwind.config = {
         darkMode: "class",
         theme: {
@@ -28,163 +38,307 @@
             },
             borderRadius: {
               DEFAULT: "12px",
-              "xl": "16px",
+              xl: "16px",
               "2xl": "20px",
             },
           },
         },
       };
     </script>
-<style>::-webkit-scrollbar {
-            width: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        ::-webkit-scrollbar-thumb {
-            background-color: #CBD5E1;
-            border-radius: 20px;
-        }
-        .dark ::-webkit-scrollbar-thumb {
-            background-color: #4B5563;
-        }
+    <style>
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #cbd5e1;
+        border-radius: 20px;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background-color: #4b5563;
+      }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
   </head>
-<body class="bg-background-light dark:bg-background-dark font-sans min-h-screen flex items-center justify-center p-4 antialiased transition-colors duration-200">
-<div class="w-full max-w-[375px] h-[812px] bg-background-light dark:bg-background-dark rounded-[40px] border-8 border-gray-200 dark:border-surface-dark shadow-2xl overflow-hidden relative flex flex-col">
-<div class="absolute top-0 w-full h-12 flex justify-between items-center px-6 z-50 bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 text-sm font-medium">
-    <span>9:41</span>
-    <div class="flex gap-1.5 items-center">
-    <span class="material-icons-round text-base">signal_cellular_alt</span>
-    <span class="material-icons-round text-base">wifi</span>
-    <span class="material-icons-round text-base">battery_full</span>
+  <body
+    class="bg-background-light dark:bg-background-dark font-sans min-h-screen flex items-center justify-center p-4 antialiased transition-colors duration-200"
+  >
+    <div
+      class="w-full max-w-[375px] h-[812px] bg-background-light dark:bg-background-dark rounded-[40px] border-8 border-gray-200 dark:border-surface-dark shadow-2xl overflow-hidden relative flex flex-col"
+    >
+      <div
+        class="absolute top-0 w-full h-12 flex justify-between items-center px-6 z-50 bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 text-sm font-medium"
+      >
+        <span>9:41</span>
+        <div class="flex gap-1.5 items-center">
+          <span class="material-icons-round text-base"
+            >signal_cellular_alt</span
+          >
+          <span class="material-icons-round text-base">wifi</span>
+          <span class="material-icons-round text-base">battery_full</span>
+        </div>
+      </div>
+      <div
+        class="pt-10 pb-4 px-6 flex items-center justify-between bg-surface-light dark:bg-background-dark sticky top-0 z-10 shadow-sm dark:shadow-none transition-colors duration-200"
+      >
+        <h1
+          class="text-2xl font-bold text-text-light-primary dark:text-text-dark-primary tracking-wide"
+        >
+          Notification
+        </h1>
+        <button
+          class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-surface-dark transition-colors"
+        >
+          <span
+            class="material-icons-round text-text-light-primary dark:text-text-dark-primary"
+            >settings</span
+          >
+        </button>
+      </div>
+      <main class="flex-1 overflow-y-auto px-4 py-4 pb-24 space-y-4">
+        <div>
+          <h2
+            class="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3 px-2 uppercase tracking-wider"
+          >
+            Today
+          </h2>
+          <div class="space-y-3">
+            <div
+              class="bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-start gap-4 hover:shadow-md transition-shadow cursor-pointer relative overflow-hidden group"
+            >
+              <div
+                class="absolute left-0 top-0 bottom-0 w-1 bg-primary group-hover:w-1.5 transition-all"
+              ></div>
+              <div
+                class="bg-blue-100 dark:bg-blue-900/30 p-2.5 rounded-full flex-shrink-0"
+              >
+                <span
+                  class="material-icons-round text-blue-600 dark:text-blue-400 text-xl"
+                  >person</span
+                >
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex justify-between items-start">
+                  <h3
+                    class="font-semibold text-text-light-primary dark:text-text-dark-primary truncate"
+                  >
+                    Buyer Arrived
+                  </h3>
+                  <span class="text-xs text-gray-400 whitespace-nowrap ml-2"
+                    >2m ago</span
+                  >
+                </div>
+                <p
+                  class="text-sm text-gray-600 dark:text-gray-300 mt-1 line-clamp-2"
+                >
+                  The buyer for "Old Newspapers" is waiting at the location.
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-start gap-4 hover:shadow-md transition-shadow cursor-pointer relative overflow-hidden group"
+            >
+              <div
+                class="absolute left-0 top-0 bottom-0 w-1 bg-primary group-hover:w-1.5 transition-all"
+              ></div>
+              <div
+                class="bg-red-100 dark:bg-red-900/30 p-2.5 rounded-full flex-shrink-0"
+              >
+                <span
+                  class="material-icons-round text-red-600 dark:text-red-400 text-xl"
+                  >priority_high</span
+                >
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex justify-between items-start">
+                  <h3
+                    class="font-semibold text-text-light-primary dark:text-text-dark-primary truncate"
+                  >
+                    Pickup Delayed
+                  </h3>
+                  <span class="text-xs text-gray-400 whitespace-nowrap ml-2"
+                    >1h ago</span
+                  >
+                </div>
+                <p
+                  class="text-sm text-gray-600 dark:text-gray-300 mt-1 line-clamp-2"
+                >
+                  Your pickup schedule #4421 has been rescheduled due to heavy
+                  rain.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pt-2">
+          <h2
+            class="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3 px-2 uppercase tracking-wider"
+          >
+            Yesterday
+          </h2>
+          <div class="space-y-3">
+            <div
+              class="bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-start gap-4 hover:shadow-md transition-shadow cursor-pointer opacity-90"
+            >
+              <div
+                class="bg-green-100 dark:bg-green-900/30 p-2.5 rounded-full flex-shrink-0"
+              >
+                <span
+                  class="material-icons-round text-green-600 dark:text-green-400 text-xl"
+                  >check_circle</span
+                >
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex justify-between items-start">
+                  <h3
+                    class="font-semibold text-text-light-primary dark:text-text-dark-primary truncate"
+                  >
+                    Sale Completed
+                  </h3>
+                  <span class="text-xs text-gray-400 whitespace-nowrap ml-2"
+                    >Yesterday</span
+                  >
+                </div>
+                <p
+                  class="text-sm text-gray-600 dark:text-gray-300 mt-1 line-clamp-2"
+                >
+                  You successfully sold 5kg of plastic bottles. 50 THB added to
+                  wallet.
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-start gap-4 hover:shadow-md transition-shadow cursor-pointer opacity-90"
+            >
+              <div
+                class="bg-gray-100 dark:bg-gray-700/50 p-2.5 rounded-full flex-shrink-0"
+              >
+                <span
+                  class="material-icons-round text-gray-600 dark:text-gray-400 text-xl"
+                  >info</span
+                >
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex justify-between items-start">
+                  <h3
+                    class="font-semibold text-text-light-primary dark:text-text-dark-primary truncate"
+                  >
+                    Price Update
+                  </h3>
+                  <span class="text-xs text-gray-400 whitespace-nowrap ml-2"
+                    >Yesterday</span
+                  >
+                </div>
+                <p
+                  class="text-sm text-gray-600 dark:text-gray-300 mt-1 line-clamp-2"
+                >
+                  Market prices for Aluminum cans have increased by 5%.
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-start gap-4 hover:shadow-md transition-shadow cursor-pointer opacity-90"
+            >
+              <div
+                class="bg-primary/10 dark:bg-primary/20 p-2.5 rounded-full flex-shrink-0"
+              >
+                <span class="material-icons-round text-primary text-xl"
+                  >local_offer</span
+                >
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex justify-between items-start">
+                  <h3
+                    class="font-semibold text-text-light-primary dark:text-text-dark-primary truncate"
+                  >
+                    Special Bonus
+                  </h3>
+                  <span class="text-xs text-gray-400 whitespace-nowrap ml-2"
+                    >Yesterday</span
+                  >
+                </div>
+                <p
+                  class="text-sm text-gray-600 dark:text-gray-300 mt-1 line-clamp-2"
+                >
+                  Recycle glass bottles this week and get 2x points!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <nav
+        class="absolute bottom-0 left-0 right-0 bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-700 pt-2 px-4 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] dark:shadow-none z-50 rounded-b-[32px]"
+      >
+        <div class="flex justify-between items-center pb-4">
+          <a href="homescreen.html">
+            <button class="flex flex-col items-center gap-1 group w-14">
+              <span
+                class="material-icons-round text-gray-400 dark:text-gray-500 group-hover:text-primary transition-colors text-2xl"
+                >home</span
+              >
+              <span
+                class="text-[10px] font-medium text-gray-400 dark:text-gray-500 group-hover:text-primary transition-colors"
+                >Home</span
+              >
+            </button>
+          </a>
+
+          <a href="orders/history.html">
+            <button class="flex flex-col items-center gap-1 group w-14">
+              <span
+                class="material-icons-round text-gray-400 dark:text-gray-500 group-hover:text-primary transition-colors text-2xl"
+                >receipt_long</span
+              >
+              <span
+                class="text-[10px] font-medium text-gray-400 dark:text-gray-500 group-hover:text-primary transition-colors"
+                >History</span
+              >
+            </button>
+          </a>
+
+          <a href="notification.html">
+            <button class="flex flex-col items-center gap-1 w-14">
+              <div class="relative">
+                <span
+                  class="material-icons-round text-primary text-2xl drop-shadow-sm"
+                  >mail</span
+                >
+                <span class="absolute -top-1 -right-1 flex h-3 w-3">
+                  <span
+                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"
+                  ></span>
+                  <span
+                    class="relative inline-flex rounded-full h-3 w-3 bg-red-500 border-2 border-surface-light dark:border-surface-dark"
+                  ></span>
+                </span>
+              </div>
+              <span class="text-[10px] font-medium text-primary">Notify</span>
+            </button>
+          </a>
+
+          <a href="account.html">
+            <button class="flex flex-col items-center gap-1 group w-14">
+              <span
+                class="material-icons-round text-gray-400 dark:text-gray-500 group-hover:text-primary transition-colors text-2xl"
+                >account_circle</span
+              >
+              <span
+                class="text-[10px] font-medium text-gray-400 dark:text-gray-500 group-hover:text-primary transition-colors"
+                >Account</span
+              >
+            </button>
+          </a>
+        </div>
+      </nav>
     </div>
-    </div>
-<div class="pt-10 pb-4 px-6 flex items-center justify-between bg-surface-light dark:bg-background-dark sticky top-0 z-10 shadow-sm dark:shadow-none transition-colors duration-200">
-<h1 class="text-2xl font-bold text-text-light-primary dark:text-text-dark-primary tracking-wide">Notification</h1>
-<button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-surface-dark transition-colors">
-<span class="material-icons-round text-text-light-primary dark:text-text-dark-primary">settings</span>
-</button>
-</div>
-<main class="flex-1 overflow-y-auto px-4 py-4 pb-24 space-y-4">
-<div>
-<h2 class="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3 px-2 uppercase tracking-wider">Today</h2>
-<div class="space-y-3">
-<div class="bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-start gap-4 hover:shadow-md transition-shadow cursor-pointer relative overflow-hidden group">
-<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary group-hover:w-1.5 transition-all"></div>
-<div class="bg-blue-100 dark:bg-blue-900/30 p-2.5 rounded-full flex-shrink-0">
-<span class="material-icons-round text-blue-600 dark:text-blue-400 text-xl">person</span>
-</div>
-<div class="flex-1 min-w-0">
-<div class="flex justify-between items-start">
-<h3 class="font-semibold text-text-light-primary dark:text-text-dark-primary truncate">Buyer Arrived</h3>
-<span class="text-xs text-gray-400 whitespace-nowrap ml-2">2m ago</span>
-</div>
-<p class="text-sm text-gray-600 dark:text-gray-300 mt-1 line-clamp-2">The buyer for "Old Newspapers" is waiting at the location.</p>
-</div>
-</div>
-<div class="bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-start gap-4 hover:shadow-md transition-shadow cursor-pointer relative overflow-hidden group">
-<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary group-hover:w-1.5 transition-all"></div>
-<div class="bg-red-100 dark:bg-red-900/30 p-2.5 rounded-full flex-shrink-0">
-<span class="material-icons-round text-red-600 dark:text-red-400 text-xl">priority_high</span>
-</div>
-<div class="flex-1 min-w-0">
-<div class="flex justify-between items-start">
-<h3 class="font-semibold text-text-light-primary dark:text-text-dark-primary truncate">Pickup Delayed</h3>
-<span class="text-xs text-gray-400 whitespace-nowrap ml-2">1h ago</span>
-</div>
-<p class="text-sm text-gray-600 dark:text-gray-300 mt-1 line-clamp-2">Your pickup schedule #4421 has been rescheduled due to heavy rain.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="pt-2">
-<h2 class="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3 px-2 uppercase tracking-wider">Yesterday</h2>
-<div class="space-y-3">
-<div class="bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-start gap-4 hover:shadow-md transition-shadow cursor-pointer opacity-90">
-<div class="bg-green-100 dark:bg-green-900/30 p-2.5 rounded-full flex-shrink-0">
-<span class="material-icons-round text-green-600 dark:text-green-400 text-xl">check_circle</span>
-</div>
-<div class="flex-1 min-w-0">
-<div class="flex justify-between items-start">
-<h3 class="font-semibold text-text-light-primary dark:text-text-dark-primary truncate">Sale Completed</h3>
-<span class="text-xs text-gray-400 whitespace-nowrap ml-2">Yesterday</span>
-</div>
-<p class="text-sm text-gray-600 dark:text-gray-300 mt-1 line-clamp-2">You successfully sold 5kg of plastic bottles. 50 THB added to wallet.</p>
-</div>
-</div>
-<div class="bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-start gap-4 hover:shadow-md transition-shadow cursor-pointer opacity-90">
-<div class="bg-gray-100 dark:bg-gray-700/50 p-2.5 rounded-full flex-shrink-0">
-<span class="material-icons-round text-gray-600 dark:text-gray-400 text-xl">info</span>
-</div>
-<div class="flex-1 min-w-0">
-<div class="flex justify-between items-start">
-<h3 class="font-semibold text-text-light-primary dark:text-text-dark-primary truncate">Price Update</h3>
-<span class="text-xs text-gray-400 whitespace-nowrap ml-2">Yesterday</span>
-</div>
-<p class="text-sm text-gray-600 dark:text-gray-300 mt-1 line-clamp-2">Market prices for Aluminum cans have increased by 5%.</p>
-</div>
-</div>
-<div class="bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-start gap-4 hover:shadow-md transition-shadow cursor-pointer opacity-90">
-<div class="bg-primary/10 dark:bg-primary/20 p-2.5 rounded-full flex-shrink-0">
-<span class="material-icons-round text-primary text-xl">local_offer</span>
-</div>
-<div class="flex-1 min-w-0">
-<div class="flex justify-between items-start">
-<h3 class="font-semibold text-text-light-primary dark:text-text-dark-primary truncate">Special Bonus</h3>
-<span class="text-xs text-gray-400 whitespace-nowrap ml-2">Yesterday</span>
-</div>
-<p class="text-sm text-gray-600 dark:text-gray-300 mt-1 line-clamp-2">Recycle glass bottles this week and get 2x points!</p>
-</div>
-</div>
-</div>
-</div>
-</main>
-<nav class="absolute bottom-0 left-0 right-0 bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-700 pt-2 px-4 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] dark:shadow-none z-50 rounded-b-[32px]">
-<div class="flex justify-between items-center pb-4">
 
-<a href="homescreen.html">
-  <button class="flex flex-col items-center gap-1 group w-14">
-  <span class="material-icons-round text-gray-400 dark:text-gray-500 group-hover:text-primary transition-colors text-2xl">home</span>
-  <span class="text-[10px] font-medium text-gray-400 dark:text-gray-500 group-hover:text-primary transition-colors">Home</span>
-  </button>
-</a>
-
-<a href="history.html">
-  <button class="flex flex-col items-center gap-1 group w-14">
-  <span class="material-icons-round text-gray-400 dark:text-gray-500 group-hover:text-primary transition-colors text-2xl">receipt_long</span>
-  <span class="text-[10px] font-medium text-gray-400 dark:text-gray-500 group-hover:text-primary transition-colors">History</span>
-  </button>
-</a>
-
-<a href="notification.html">
-  <button class="flex flex-col items-center gap-1 w-14">
-  <div class="relative">
-  <span class="material-icons-round text-primary text-2xl drop-shadow-sm">mail</span>
-  <span class="absolute -top-1 -right-1 flex h-3 w-3">
-  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-  <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500 border-2 border-surface-light dark:border-surface-dark"></span>
-  </span>
-  </div>
-  <span class="text-[10px] font-medium text-primary">Notify</span>
-  </button>
-</a>
-
-<a href="account.html">
-  <button class="flex flex-col items-center gap-1 group w-14">
-  <span class="material-icons-round text-gray-400 dark:text-gray-500 group-hover:text-primary transition-colors text-2xl">account_circle</span>
-  <span class="text-[10px] font-medium text-gray-400 dark:text-gray-500 group-hover:text-primary transition-colors">Account</span>
-  </button>
-</a>
-
-</div>
-</nav>
-</div>
-
-<script src="theme-toggle.js"></script>
-</body></html>
+    <script src="theme-toggle.js"></script>
+  </body>
+</html>

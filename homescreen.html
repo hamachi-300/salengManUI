@@ -1,183 +1,305 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Saleng Man - Home</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
-<script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#FD7014", // Orange from prompt
-                        "background-light": "#EEEEEE", // Light gray/white from prompt
-                        "background-dark": "#222831", // Dark gray/black from prompt
-                        "surface-light": "#FFFFFF",
-                        "surface-dark": "#393E46", // Medium dark gray from prompt
-                        "text-light": "#222831",
-                        "text-dark": "#EEEEEE",
-                        "text-muted-light": "#64748B",
-                        "text-muted-dark": "#A0AEC0",
-                    },
-                    fontFamily: {
-                        display: ["Prompt", "sans-serif"],
-                        body: ["Prompt", "sans-serif"],
-                    },
-                    borderRadius: {
-                        DEFAULT: "12px",
-                        xl: "20px",
-                    },
-                    boxShadow: {
-                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.1)',
-                        'glow': '0 0 15px rgba(253, 112, 20, 0.3)',
-                    }
-                },
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Saleng Man - Home</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#FD7014", // Orange from prompt
+              "background-light": "#EEEEEE", // Light gray/white from prompt
+              "background-dark": "#222831", // Dark gray/black from prompt
+              "surface-light": "#FFFFFF",
+              "surface-dark": "#393E46", // Medium dark gray from prompt
+              "text-light": "#222831",
+              "text-dark": "#EEEEEE",
+              "text-muted-light": "#64748B",
+              "text-muted-dark": "#A0AEC0",
             },
-        };
+            fontFamily: {
+              display: ["Prompt", "sans-serif"],
+              body: ["Prompt", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "12px",
+              xl: "20px",
+            },
+            boxShadow: {
+              soft: "0 4px 20px -2px rgba(0, 0, 0, 0.1)",
+              glow: "0 0 15px rgba(253, 112, 20, 0.3)",
+            },
+          },
+        },
+      };
     </script>
-<style>
-        body {
-            font-family: 'Prompt', sans-serif;
-        }.safe-top {
-            padding-top: env(safe-area-inset-top);
-        }
-        .safe-bottom {
-            padding-bottom: env(safe-area-inset-bottom);
-        }
+    <style>
+      body {
+        font-family: "Prompt", sans-serif;
+      }
+      .safe-top {
+        padding-top: env(safe-area-inset-top);
+      }
+      .safe-bottom {
+        padding-bottom: env(safe-area-inset-bottom);
+      }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
   </head>
-<body class="bg-gray-100 dark:bg-gray-900 min-h-screen flex justify-center items-center p-4 font-body selection:bg-primary selection:text-white">
-<div class="w-full max-w-[375px] h-[812px] bg-background-light dark:bg-background-dark relative overflow-hidden flex flex-col shadow-2xl rounded-[40px] border-8 border-gray-200 dark:border-surface-dark transition-colors duration-300">
-<div class="h-12 w-full bg-background-light dark:bg-background-dark flex items-center justify-between px-6 absolute top-0 z-20">
-<div class="absolute top-0 w-full h-12 flex justify-between items-center px-6 z-50 bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 text-sm font-medium">
-    <span>9:41</span>
-    <div class="flex gap-1.5 items-center">
-    <span class="material-icons-round text-base">signal_cellular_alt</span>
-    <span class="material-icons-round text-base">wifi</span>
-    <span class="material-icons-round text-base">battery_full</span>
+  <body
+    class="bg-gray-100 dark:bg-gray-900 min-h-screen flex justify-center items-center p-4 font-body selection:bg-primary selection:text-white"
+  >
+    <div
+      class="w-full max-w-[375px] h-[812px] bg-background-light dark:bg-background-dark relative overflow-hidden flex flex-col shadow-2xl rounded-[40px] border-8 border-gray-200 dark:border-surface-dark transition-colors duration-300"
+    >
+      <div
+        class="h-12 w-full bg-background-light dark:bg-background-dark flex items-center justify-between px-6 absolute top-0 z-20"
+      >
+        <div
+          class="absolute top-0 w-full h-12 flex justify-between items-center px-6 z-50 bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 text-sm font-medium"
+        >
+          <span>9:41</span>
+          <div class="flex gap-1.5 items-center">
+            <span class="material-icons-round text-base"
+              >signal_cellular_alt</span
+            >
+            <span class="material-icons-round text-base">wifi</span>
+            <span class="material-icons-round text-base">battery_full</span>
+          </div>
+        </div>
+        <div class="flex space-x-2 text-text-light dark:text-text-dark">
+          <span class="material-icons-round text-sm">signal_cellular_alt</span>
+          <span class="material-icons-round text-sm">wifi</span>
+          <span class="material-icons-round text-sm">battery_full</span>
+        </div>
+      </div>
+      <main
+        class="flex-1 overflow-y-auto pt-16 pb-24 px-6 relative z-10 scrollbar-hide"
+      >
+        <header class="mb-8 mt-2">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <p
+                class="text-text-muted-light dark:text-gray-400 text-sm font-medium"
+              >
+                Welcome back,
+              </p>
+              <h1
+                class="text-2xl font-bold text-text-light dark:text-text-dark"
+              >
+                Saleng Man
+              </h1>
+            </div>
+            <div
+              class="w-10 h-10 rounded-full bg-surface-dark dark:bg-surface-dark overflow-hidden border-2 border-primary"
+            >
+              <img
+                alt="User Profile"
+                class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTrvqkyi33oCF68MvPQ-ESefo4oFEqK1OU1RdZInGDYRkB5GECLzS5qIVnPBRg9lnAP-pLdgjcGMVfefVr22NWZFLl5cIgqoEXiTxdd9jUcD95xmMKicPfgWu0LRVdB3uV9Nd0VU9IiGbiHLhftN-fx_o8eol8DCvxeqlKfJMCpJ_pn5lVZ0zEDXnbI32ckBiYO-itd-c_h6xy927pkRTVVoDlUDVULby7jidWppAz-kQg3NJ0dC69J3s-Ij0ebMVvydwg_GgNbGc"
+              />
+            </div>
+          </div>
+          <div
+            class="w-full bg-gradient-to-r from-surface-dark to-gray-800 dark:from-surface-dark dark:to-gray-800 rounded-xl p-5 text-white shadow-soft relative overflow-hidden mb-8"
+          >
+            <div
+              class="absolute right-0 top-0 w-32 h-32 bg-primary opacity-10 rounded-full transform translate-x-8 -translate-y-8"
+            ></div>
+            <h3 class="font-bold text-lg mb-1 relative z-10 text-primary">
+              Green World
+            </h3>
+            <p class="text-sm text-gray-300 mb-3 max-w-[70%] relative z-10">
+              Turn your trash into treasure and save the planet.
+            </p>
+          </div>
+        </header>
+        <section>
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-xl font-bold text-text-light dark:text-text-dark">
+              Services
+            </h2>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <a
+              href="items/itemuploadphoto.html"
+              class="group bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-soft hover:shadow-glow transition-all duration-300 flex flex-col items-center text-center aspect-square justify-center border border-transparent hover:border-primary"
+            >
+              <div
+                class="w-16 h-16 bg-orange-100 dark:bg-gray-700 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300"
+              >
+                <span class="material-icons-round text-4xl text-primary"
+                  >inventory_2</span
+                >
+              </div>
+              <span
+                class="font-bold text-text-light dark:text-text-dark text-lg"
+                >Sell Old Items</span
+              >
+              <span
+                class="text-xs text-text-muted-light dark:text-gray-400 mt-1"
+                >ขายของเก่า</span
+              >
+            </a>
+
+            <a
+              href="trash/TrashUploadPhoto.html"
+              class="group bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-soft hover:shadow-glow transition-all duration-300 flex flex-col items-center text-center aspect-square justify-center border border-transparent hover:border-primary"
+            >
+              <div
+                class="w-16 h-16 bg-orange-100 dark:bg-gray-700 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300"
+              >
+                <span class="material-icons-round text-4xl text-primary"
+                  >delete_outline</span
+                >
+              </div>
+              <span
+                class="font-bold text-text-light dark:text-text-dark text-lg"
+                >Dispose Trash</span
+              >
+              <span
+                class="text-xs text-text-muted-light dark:text-gray-400 mt-1"
+                >ทิ้งขยะ</span
+              >
+            </a>
+          </div>
+        </section>
+        <section class="mt-8">
+          <h2
+            class="text-xl font-bold text-text-light dark:text-text-dark mb-4"
+          >
+            Recent Activity
+          </h2>
+          <div
+            class="bg-surface-light dark:bg-surface-dark rounded-xl p-4 shadow-soft"
+          >
+            <div
+              class="flex items-center justify-between border-b border-gray-100 dark:border-gray-600 pb-3 mb-3"
+            >
+              <div class="flex items-center space-x-3">
+                <div
+                  class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-500"
+                >
+                  <span class="material-icons-round text-xl">recycling</span>
+                </div>
+                <div>
+                  <h4
+                    class="font-semibold text-text-light dark:text-text-dark text-sm"
+                  >
+                    Sold Cardboard
+                  </h4>
+                  <p class="text-xs text-text-muted-light dark:text-gray-400">
+                    Yesterday, 14:00
+                  </p>
+                </div>
+              </div>
+              <span class="text-green-500 font-bold text-sm">+ 120 ฿</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center space-x-3">
+                <div
+                  class="w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-500"
+                >
+                  <span class="material-icons-round text-xl">delete</span>
+                </div>
+                <div>
+                  <h4
+                    class="font-semibold text-text-light dark:text-text-dark text-sm"
+                  >
+                    Trash Pickup
+                  </h4>
+                  <p class="text-xs text-text-muted-light dark:text-gray-400">
+                    Tue, 10:30
+                  </p>
+                </div>
+              </div>
+              <span
+                class="text-text-muted-light dark:text-gray-400 font-medium text-sm"
+                >Completed</span
+              >
+            </div>
+          </div>
+        </section>
+      </main>
+      <nav
+        class="absolute bottom-0 w-full bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-700 px-6 py-4 flex justify-between items-center z-30 safe-bottom"
+      >
+        <a href="homescreen.html">
+          <button class="flex flex-col items-center space-y-1 group">
+            <span
+              class="material-icons-round text-3xl text-primary transition-colors"
+              >home</span
+            >
+            <span class="text-[10px] font-medium text-primary">Home</span>
+          </button>
+        </a>
+        <a href="orders/history.html">
+          <button class="flex flex-col items-center space-y-1 group">
+            <span
+              class="material-icons-round text-3xl text-gray-400 group-hover:text-primary dark:text-gray-500 transition-colors"
+              >receipt_long</span
+            >
+            <span
+              class="text-[10px] font-medium text-gray-400 group-hover:text-primary dark:text-gray-500"
+              >History</span
+            >
+          </button>
+        </a>
+        <a href="notification.html">
+          <button class="flex flex-col items-center space-y-1 group">
+            <div class="relative">
+              <span
+                class="material-icons-round text-3xl text-gray-400 group-hover:text-primary dark:text-gray-500 transition-colors"
+                >notifications</span
+              >
+              <span
+                class="absolute top-0 right-0 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-surface-light dark:border-surface-dark"
+              ></span>
+            </div>
+            <span
+              class="text-[10px] font-medium text-gray-400 group-hover:text-primary dark:text-gray-500"
+              >Notify</span
+            >
+          </button>
+        </a>
+        <a href="account.html">
+          <button class="flex flex-col items-center space-y-1 group">
+            <span
+              class="material-icons-round text-3xl text-gray-400 group-hover:text-primary dark:text-gray-500 transition-colors"
+              >account_circle</span
+            >
+            <span
+              class="text-[10px] font-medium text-gray-400 group-hover:text-primary dark:text-gray-500"
+              >Account</span
+            >
+          </button>
+        </a>
+      </nav>
+      <div
+        class="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-gray-200 to-transparent dark:from-gray-800 dark:to-transparent pointer-events-none opacity-50 z-0"
+      ></div>
     </div>
-    </div>
-<div class="flex space-x-2 text-text-light dark:text-text-dark">
-<span class="material-icons-round text-sm">signal_cellular_alt</span>
-<span class="material-icons-round text-sm">wifi</span>
-<span class="material-icons-round text-sm">battery_full</span>
-</div>
-</div>
-<main class="flex-1 overflow-y-auto pt-16 pb-24 px-6 relative z-10 scrollbar-hide">
-<header class="mb-8 mt-2">
-<div class="flex items-center justify-between mb-4">
-<div>
-<p class="text-text-muted-light dark:text-gray-400 text-sm font-medium">Welcome back,</p>
-<h1 class="text-2xl font-bold text-text-light dark:text-text-dark">Saleng Man</h1>
-</div>
-<div class="w-10 h-10 rounded-full bg-surface-dark dark:bg-surface-dark overflow-hidden border-2 border-primary">
-<img alt="User Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTrvqkyi33oCF68MvPQ-ESefo4oFEqK1OU1RdZInGDYRkB5GECLzS5qIVnPBRg9lnAP-pLdgjcGMVfefVr22NWZFLl5cIgqoEXiTxdd9jUcD95xmMKicPfgWu0LRVdB3uV9Nd0VU9IiGbiHLhftN-fx_o8eol8DCvxeqlKfJMCpJ_pn5lVZ0zEDXnbI32ckBiYO-itd-c_h6xy927pkRTVVoDlUDVULby7jidWppAz-kQg3NJ0dC69J3s-Ij0ebMVvydwg_GgNbGc"/>
-</div>
-</div>
-<div class="w-full bg-gradient-to-r from-surface-dark to-gray-800 dark:from-surface-dark dark:to-gray-800 rounded-xl p-5 text-white shadow-soft relative overflow-hidden mb-8">
-<div class="absolute right-0 top-0 w-32 h-32 bg-primary opacity-10 rounded-full transform translate-x-8 -translate-y-8"></div>
-<h3 class="font-bold text-lg mb-1 relative z-10 text-primary">Green World</h3>
-<p class="text-sm text-gray-300 mb-3 max-w-[70%] relative z-10">Turn your trash into treasure and save the planet.</p>
-</div>
-</header>
-<section>
-<div class="flex items-center justify-between mb-4">
-<h2 class="text-xl font-bold text-text-light dark:text-text-dark">Services</h2>
-</div>
-<div class="grid grid-cols-2 gap-4">
 
-<a href="itemuploadphoto.html" class="group bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-soft hover:shadow-glow transition-all duration-300 flex flex-col items-center text-center aspect-square justify-center border border-transparent hover:border-primary">
-    <div class="w-16 h-16 bg-orange-100 dark:bg-gray-700 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
-    <span class="material-icons-round text-4xl text-primary">inventory_2</span>
-    </div>
-    <span class="font-bold text-text-light dark:text-text-dark text-lg">Sell Old Items</span>
-    <span class="text-xs text-text-muted-light dark:text-gray-400 mt-1">ขายของเก่า</span>
-</a>
-
-
-<a href="TrashUploadPhoto.html" class="group bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-soft hover:shadow-glow transition-all duration-300 flex flex-col items-center text-center aspect-square justify-center border border-transparent hover:border-primary">
-    <div class="w-16 h-16 bg-orange-100 dark:bg-gray-700 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
-    <span class="material-icons-round text-4xl text-primary">delete_outline</span>
-    </div>
-    <span class="font-bold text-text-light dark:text-text-dark text-lg">Dispose Trash</span>
-    <span class="text-xs text-text-muted-light dark:text-gray-400 mt-1">ทิ้งขยะ</span>
-</a>
-
-</div>
-</section>
-<section class="mt-8">
-<h2 class="text-xl font-bold text-text-light dark:text-text-dark mb-4">Recent Activity</h2>
-<div class="bg-surface-light dark:bg-surface-dark rounded-xl p-4 shadow-soft">
-<div class="flex items-center justify-between border-b border-gray-100 dark:border-gray-600 pb-3 mb-3">
-<div class="flex items-center space-x-3">
-<div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-500">
-<span class="material-icons-round text-xl">recycling</span>
-</div>
-<div>
-<h4 class="font-semibold text-text-light dark:text-text-dark text-sm">Sold Cardboard</h4>
-<p class="text-xs text-text-muted-light dark:text-gray-400">Yesterday, 14:00</p>
-</div>
-</div>
-<span class="text-green-500 font-bold text-sm">+ 120 ฿</span>
-</div>
-<div class="flex items-center justify-between">
-<div class="flex items-center space-x-3">
-<div class="w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-500">
-<span class="material-icons-round text-xl">delete</span>
-</div>
-<div>
-<h4 class="font-semibold text-text-light dark:text-text-dark text-sm">Trash Pickup</h4>
-<p class="text-xs text-text-muted-light dark:text-gray-400">Tue, 10:30</p>
-</div>
-</div>
-<span class="text-text-muted-light dark:text-gray-400 font-medium text-sm">Completed</span>
-</div>
-</div>
-</section>
-</main>
-<nav class="absolute bottom-0 w-full bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-700 px-6 py-4 flex justify-between items-center z-30 safe-bottom">
-<a href="homescreen.html">
-    <button class="flex flex-col items-center space-y-1 group">
-    <span class="material-icons-round text-3xl text-primary transition-colors">home</span>
-    <span class="text-[10px] font-medium text-primary">Home</span>
-    </button>
-</a>
-<a href="history.html">
-    <button class="flex flex-col items-center space-y-1 group">
-    <span class="material-icons-round text-3xl text-gray-400 group-hover:text-primary dark:text-gray-500 transition-colors">receipt_long</span>
-    <span class="text-[10px] font-medium text-gray-400 group-hover:text-primary dark:text-gray-500">History</span>
-    </button>
-</a>
-<a href="notification.html">
-    <button class="flex flex-col items-center space-y-1 group">
-    <div class="relative">
-    <span class="material-icons-round text-3xl text-gray-400 group-hover:text-primary dark:text-gray-500 transition-colors">notifications</span>
-    <span class="absolute top-0 right-0 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-surface-light dark:border-surface-dark"></span>
-    </div>
-    <span class="text-[10px] font-medium text-gray-400 group-hover:text-primary dark:text-gray-500">Notify</span>
-    </button>
-</a>
-<a href="account.html">
-    <button class="flex flex-col items-center space-y-1 group">
-    <span class="material-icons-round text-3xl text-gray-400 group-hover:text-primary dark:text-gray-500 transition-colors">account_circle</span>
-    <span class="text-[10px] font-medium text-gray-400 group-hover:text-primary dark:text-gray-500">Account</span>
-    </button>
-</a>
-
-</nav>
-<div class="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-gray-200 to-transparent dark:from-gray-800 dark:to-transparent pointer-events-none opacity-50 z-0"></div>
-</div>
-
-
-
-<script src="theme-toggle.js"></script>
-</body></html>
+    <script src="theme-toggle.js"></script>
+  </body>
+</html>

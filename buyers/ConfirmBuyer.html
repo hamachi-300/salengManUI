@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Saleng Man - Confirm Buyer</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined|Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#FD7014", // Orange
+              "background-light": "#EEEEEE", // Light Gray/White
+              "background-dark": "#222831", // Dark Navy
+              "surface-light": "#FFFFFF",
+              "surface-dark": "#393E46", // Lighter Dark Gray
+              "text-light": "#222831",
+              "text-dark": "#EEEEEE",
+              "secondary-text-light": "#393E46",
+              "secondary-text-dark": "#ADB5BD",
+            },
+            fontFamily: {
+              display: ["Prompt", "sans-serif"],
+              body: ["Prompt", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "12px",
+              xl: "16px",
+              "2xl": "24px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Prompt", sans-serif;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-100 dark:bg-gray-900 flex justify-center items-center min-h-screen p-4 font-body antialiased"
+  >
+    <div
+      class="w-full max-w-[375px] h-[812px] bg-background-light dark:bg-background-dark shadow-2xl rounded-[40px] border-8 border-gray-200 dark:border-surface-dark overflow-hidden relative flex flex-col transition-colors duration-300"
+    >
+      <div
+        class="absolute top-0 w-full h-12 flex justify-between items-center px-6 z-50 bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 text-sm font-medium"
+      >
+        <span>9:41</span>
+        <div class="flex gap-1.5 items-center">
+          <span class="material-icons-round text-base"
+            >signal_cellular_alt</span
+          >
+          <span class="material-icons-round text-base">wifi</span>
+          <span class="material-icons-round text-base">battery_full</span>
+        </div>
+      </div>
+      <div class="px-4 py-3 pt-14 flex items-center justify-between z-10">
+        <a href="BuyerList.html">
+          <button
+            class="p-2 -ml-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-text-light dark:text-text-dark"
+          >
+            <span class="material-icons-round text-2xl"
+              >arrow_back_ios_new</span
+            >
+          </button>
+        </a>
+        <h1 class="text-lg font-bold text-text-light dark:text-text-dark">
+          Confirm Buyer
+        </h1>
+        <button
+          class="p-2 -mr-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-text-light dark:text-text-dark relative"
+        >
+          <span class="material-icons-outlined text-2xl"
+            >chat_bubble_outline</span
+          >
+          <span
+            class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"
+          ></span>
+        </button>
+      </div>
+      <div
+        class="flex-1 flex flex-col items-center pt-8 px-6 pb-24 overflow-y-auto no-scrollbar"
+      >
+        <div class="relative mb-8 group">
+          <div
+            class="absolute inset-0 bg-primary opacity-20 blur-xl rounded-full scale-90 group-hover:scale-100 transition-transform duration-500"
+          ></div>
+          <div
+            class="relative w-40 h-40 rounded-full border-4 border-surface-light dark:border-surface-dark shadow-lg overflow-hidden bg-surface-dark"
+          >
+            <img
+              alt="Buyer Profile Picture"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjlldeVkSxezVLoSBLTYbK91fjOG_F_6iIkJcRvGkCPhd2W81q78p0NERiesNL5_0rMFWWk5KwkNVxrekKzdLXIasS54m9iDtXwMEpaLPsU5WuH0Mj1RseUfdrFIEmjLNdsoQNZL4CD2PPaZfitgb0TOljg5qfwkdD3EPbAbs9nhhiWuOWS04ihY24qEEiXo9JVTUhlbgjxHKev_azoOGixdsLgYCdxjWmjdrvblODLPvQoi_ct16rF4qV-bPDt9evFSEfPNVmM6w"
+            />
+          </div>
+          <div
+            class="absolute bottom-2 right-2 w-8 h-8 bg-green-500 rounded-full border-2 border-background-light dark:border-background-dark flex items-center justify-center"
+          >
+            <span class="material-icons-round text-white text-xs">check</span>
+          </div>
+        </div>
+        <div
+          class="w-full bg-surface-light dark:bg-surface-dark rounded-2xl p-6 shadow-sm border border-gray-200 dark:border-gray-700/50 mb-6"
+        >
+          <h2
+            class="text-xs font-bold text-primary uppercase tracking-wider mb-4"
+          >
+            Buyer Information
+          </h2>
+          <div class="space-y-5">
+            <div class="flex items-start">
+              <div
+                class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 shrink-0 text-primary"
+              >
+                <span class="material-icons-round">person</span>
+              </div>
+              <div class="flex-1">
+                <p
+                  class="text-xs text-secondary-text-light dark:text-secondary-text-dark font-medium mb-0.5"
+                >
+                  Name
+                </p>
+                <p
+                  class="text-lg font-semibold text-text-light dark:text-text-dark"
+                >
+                  Somsak Delivery
+                </p>
+              </div>
+            </div>
+            <div class="h-px bg-gray-100 dark:bg-gray-700 w-full"></div>
+            <div class="flex items-start">
+              <div
+                class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 shrink-0 text-primary"
+              >
+                <span class="material-icons-round">phone</span>
+              </div>
+              <div class="flex-1">
+                <p
+                  class="text-xs text-secondary-text-light dark:text-secondary-text-dark font-medium mb-0.5"
+                >
+                  Phone Number
+                </p>
+                <div class="flex items-center justify-between">
+                  <p
+                    class="text-lg font-semibold text-text-light dark:text-text-dark"
+                  >
+                    089-123-4567
+                  </p>
+                  <button
+                    class="text-primary hover:text-orange-600 transition-colors"
+                  >
+                    <span class="material-icons-outlined text-xl"
+                      >content_copy</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="h-px bg-gray-100 dark:bg-gray-700 w-full"></div>
+            <div class="flex items-start">
+              <div
+                class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 shrink-0 text-primary"
+              >
+                <span class="material-icons-round">star</span>
+              </div>
+              <div class="flex-1">
+                <p
+                  class="text-xs text-secondary-text-light dark:text-secondary-text-dark font-medium mb-0.5"
+                >
+                  Rating
+                </p>
+                <div class="flex items-center">
+                  <span
+                    class="text-lg font-semibold text-text-light dark:text-text-dark mr-2"
+                    >4.8</span
+                  >
+                  <div class="flex text-yellow-400 text-sm">
+                    <span class="material-icons-round text-base">star</span>
+                    <span class="material-icons-round text-base">star</span>
+                    <span class="material-icons-round text-base">star</span>
+                    <span class="material-icons-round text-base">star</span>
+                    <span class="material-icons-round text-base"
+                      >star_half</span
+                    >
+                  </div>
+                  <span
+                    class="text-xs text-secondary-text-light dark:text-secondary-text-dark ml-2"
+                    >(124 reviews)</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full bg-orange-50 dark:bg-orange-900/10 border border-orange-100 dark:border-orange-900/30 rounded-xl p-4 flex items-start"
+        >
+          <span class="material-icons-outlined text-primary mr-3 mt-0.5 text-lg"
+            >info</span
+          >
+          <p
+            class="text-sm text-secondary-text-light dark:text-gray-400 leading-relaxed"
+          >
+            By confirming, you agree to sell your items to this buyer. Please
+            verify their details before proceeding.
+          </p>
+        </div>
+      </div>
+      <div
+        class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-background-light via-background-light to-transparent dark:from-background-dark dark:via-background-dark dark:to-transparent pt-12"
+      >
+        <a href="../address/PostSchedulePickup.html">
+          <button
+            class="w-full bg-primary hover:bg-orange-600 text-white font-bold py-4 rounded-2xl shadow-lg shadow-orange-500/30 active:scale-[0.98] transition-all flex items-center justify-center text-lg"
+          >
+            <span class="mr-2">Confirm Buyer</span>
+            <span class="material-icons-round">check_circle</span>
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <script src="../theme-toggle.js"></script>
+  </body>
+</html>
