@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Saleng Man - Order Completed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#FD7014", // Orange from prompt
+              "primary-dark": "#e35e08",
+              "background-light": "#EEEEEE", // Light gray/white from prompt
+              "background-dark": "#222831", // Dark gray from prompt
+              "surface-light": "#FFFFFF",
+              "surface-dark": "#393E46", // Medium gray from prompt
+              "text-light": "#222831",
+              "text-dark": "#EEEEEE",
+            },
+            fontFamily: {
+              display: ["Kanit", "sans-serif"], // Thai-friendly font
+              sans: ["Kanit", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.75rem", // Consistent rounded corners
+              xl: "1rem",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+        body {
+            font-family: 'Kanit', sans-serif;
+        }
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex justify-center items-center p-4">
+<div class="w-full max-w-[375px] h-[812px] bg-surface-light dark:bg-surface-dark shadow-2xl rounded-[40px] overflow-hidden border-8 border-gray-200 dark:border-surface-dark flex flex-col relative transition-colors duration-300">
+<div class="h-6 w-full bg-transparent"></div>
+<header class="px-6 py-4 flex items-center justify-between border-b border-gray-100 dark:border-gray-700">
+<div class="flex items-center space-x-2">
+<a href="OrderPending.html">
+<button class="text-text-light dark:text-text-dark hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">arrow_back</span>
+</button>
+</a>
+<h1 class="text-xl font-semibold text-text-light dark:text-text-dark">Order Details</h1>
+</div>
+<div class="flex items-center">
+<span class="px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs font-medium uppercase tracking-wide border border-green-200 dark:border-green-800">
+                    Completed
+                </span>
+</div>
+</header>
+<main class="flex-1 px-6 py-6 flex flex-col space-y-6 overflow-y-auto">
+<div class="bg-background-light dark:bg-background-dark rounded-xl p-4 shadow-sm border border-gray-200 dark:border-gray-600">
+<div class="flex items-start justify-between mb-3">
+<div class="flex items-center space-x-2">
+<div class="p-2 bg-primary/10 rounded-full">
+<span class="material-symbols-outlined text-primary text-xl">recycling</span>
+</div>
+<h2 class="text-lg font-medium text-text-light dark:text-text-dark">ขายของเก่า (Second Hand)</h2>
+</div>
+<a href="DriverTrackLoca.html">
+<button class="text-primary hover:text-primary-dark text-sm font-medium border border-primary px-3 py-1 rounded-lg transition-colors">
+                        Chat
+                    </button>
+                </a>    
+</div>
+<div class="w-full h-40 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center mb-4 relative overflow-hidden group">
+<img alt="Old Television Set" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvkMavwpeI6f8eD-om-_-SVl5deJNizE8oMLqnt7BaPcL6ylkgLWYLEXQxVo_BukiP-guI16YIUk52cmMHSxHET_dphcBhifY2WOvJLBY-_0sbHwqhF8OcnCY_ZUFDNHZUgkw7iLoqeEBXmEKyShSeSWRd0CvHBJBVkZGyeNOCYquVp2fhayC6NE1gxiHbXkO42AGBAWO1BHKKL0DVGqYBPfbatfTz2G2bS_GEydV4yspsVEelItifaMdA3hT2cu5vFxpOpMw26G4"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-gray-500 dark:text-gray-400 ml-1">ที่อยู่ (Address)</label>
+<div class="bg-background-light dark:bg-background-dark rounded-xl p-4 border border-gray-200 dark:border-gray-600 flex items-start space-x-3">
+<span class="material-symbols-outlined text-primary mt-0.5">location_on</span>
+<div>
+<p class="text-text-light dark:text-text-dark text-sm leading-relaxed">
+                            123/45 Muang District,<br/>
+                            Bangkok, Thailand
+                        </p>
+<p class="text-primary font-medium mt-1">24240</p>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-gray-500 dark:text-gray-400 ml-1">ผู้รับซื้อ (Buyer)</label>
+<a href="DriverTrackLoca.html">
+<div class="bg-background-light dark:bg-background-dark rounded-xl p-4 border border-gray-200 dark:border-gray-600 flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-full bg-gray-300 dark:bg-gray-600 overflow-hidden">
+<img alt="Buyer Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU5CKP4T0653EIXf1TCzYpcI0h1NYS0uHHRj4LPC1gGru38lloGc7Us91dwhlmFRi2VObV9GO92kz-aHAG9lTIbh6WsuFZkkQRECLhjLll6H_AKohvxKBRw47tbmQzN7aFlDMELBXv6C7qymaXgpis39wFrJQR-3fiAqIViyV8namSzh0h9TRM0atLtWuxbeoIOH5SaUnKisNNF7fnPi-oASRPhVoXdTStoOwsrke_Ivpqx6XJWZa4DPXbyW0pBXz9pbCz3nUR1x8"/>
+</div>
+<div>
+<p class="text-text-light dark:text-text-dark font-medium">Somchai Jai-dee</p>
+<div class="flex text-yellow-500 text-xs">
+<span class="material-symbols-outlined text-[14px]">star</span>
+<span class="material-symbols-outlined text-[14px]">star</span>
+<span class="material-symbols-outlined text-[14px]">star</span>
+<span class="material-symbols-outlined text-[14px]">star</span>
+<span class="material-symbols-outlined text-[14px]">star_half</span>
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</main>
+<a href="history.html">
+<div class="p-6 bg-surface-light dark:bg-surface-dark border-t border-gray-100 dark:border-gray-700">
+    <button class="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-4 rounded-xl shadow-lg shadow-orange-500/30 transition-all active:scale-[0.98] flex items-center justify-center space-x-2">
+<span class="material-symbols-outlined">thumbs_up_down</span>
+<span>ให้คะแนนผู้ซื้อ (Rate Buyer)</span>
+</button>
+</div>
+</a>
+</div>
+<button class="fixed bottom-4 right-4 p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg z-50 text-gray-800 dark:text-white hover:scale-110 transition-transform" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-symbols-outlined dark:hidden">dark_mode</span>
+<span class="material-symbols-outlined hidden dark:block">light_mode</span>
+</button>
+
+</body></html>
