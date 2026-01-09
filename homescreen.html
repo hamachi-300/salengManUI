@@ -5,7 +5,8 @@
 <title>Saleng Man - Home</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
 <script>
         tailwind.config = {
             darkMode: "class",
@@ -168,14 +169,8 @@
 </nav>
 <div class="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-gray-200 to-transparent dark:from-gray-800 dark:to-transparent pointer-events-none opacity-50 z-0"></div>
 </div>
-<button class="fixed top-4 right-4 p-3 bg-gray-200 dark:bg-gray-800 rounded-full shadow-lg z-50 hover:scale-110 transition-transform" onclick="document.documentElement.classList.toggle('dark')">
-<span class="material-icons-round text-gray-800 dark:hidden">dark_mode</span>
-<span class="material-icons-round text-yellow-400 hidden dark:block">light_mode</span>
-</button>
-<script>
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.documentElement.classList.add('dark');
-        }
-    </script>
 
+
+
+<script src="theme-toggle.js"></script>
 </body></html>
