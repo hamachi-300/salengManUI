@@ -1,200 +1,151 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Post Trash: Specify Location</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
-      rel="stylesheet"
-    />
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#FD7014", // Bright Orange for actions
-              secondary: "#393E46", // Dark Grey for cards/secondary elements
-              "background-light": "#EEEEEE", // Light Grey for light mode
-              "background-dark": "#222831", // Very Dark Grey for dark mode
-              "text-light": "#222831",
-              "text-dark": "#EEEEEE",
-              "surface-dark": "#393E46",
-              "surface-light": "#FFFFFF",
-            },
-            fontFamily: {
-              sans: ["Prompt", "sans-serif"],
-            },
-            borderRadius: {
-              DEFAULT: "12px",
-              xl: "16px",
-              "2xl": "24px",
-            },
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Post Trash: Specify Location</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#FD7014", // Bright Orange for actions
+            secondary: "#393E46", // Dark Grey for cards/secondary elements
+            "background-light": "#EEEEEE", // Light Grey for light mode
+            "background-dark": "#222831", // Very Dark Grey for dark mode
+            "text-light": "#222831",
+            "text-dark": "#EEEEEE",
+            "surface-dark": "#393E46",
+            "surface-light": "#FFFFFF",
+          },
+          fontFamily: {
+            sans: ["Prompt", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "12px",
+            xl: "16px",
+            "2xl": "24px",
           },
         },
-      };
-    </script>
-    <style>
-      body {
-        min-height: max(884px, 100dvh);
-      }
-    </style>
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
-      rel="stylesheet"
-    />
-  </head>
-  <body
-    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans min-h-screen flex justify-center items-center p-4 antialiased"
-  >
+      },
+    };
+  </script>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+</head>
+
+<body
+  class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans min-h-screen flex justify-center items-center p-4 antialiased">
+  <div
+    class="w-full max-w-[375px] h-[812px] bg-background-light dark:bg-background-dark rounded-[40px] border-8 border-gray-200 dark:border-surface-dark flex flex-col relative shadow-2xl overflow-hidden">
     <div
-      class="w-full max-w-[375px] h-[812px] bg-background-light dark:bg-background-dark rounded-[40px] border-8 border-gray-200 dark:border-surface-dark flex flex-col relative shadow-2xl overflow-hidden"
-    >
+      class="absolute top-0 w-full h-12 flex justify-between items-center px-6 z-50 bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 text-sm font-medium">
+      <span>9:41</span>
+      <div class="flex gap-1.5 items-center">
+        <span class="material-icons-round text-base">signal_cellular_alt</span>
+        <span class="material-icons-round text-base">wifi</span>
+        <span class="material-icons-round text-base">battery_full</span>
+      </div>
+    </div>
+    <div class="px-6 py-4 pt-14 flex items-center gap-4">
+      <a href="TrashSelectCategory.html">
+        <button class="p-2 -ml-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition">
+          <span class="material-icons-outlined text-2xl">arrow_back</span>
+        </button>
+      </a>
+      <h1 class="text-xl font-bold">Post Trash</h1>
+    </div>
+    <div class="px-6 mb-6">
+      <div class="flex items-center gap-2">
+        <div class="h-1.5 flex-1 rounded-full bg-primary opacity-30"></div>
+        <div class="h-1.5 flex-1 rounded-full bg-primary opacity-30"></div>
+        <div class="h-1.5 flex-1 rounded-full bg-primary"></div>
+        <div class="h-1.5 flex-1 rounded-full bg-gray-300 dark:bg-gray-700"></div>
+      </div>
+      <p class="text-xs text-gray-500 dark:text-gray-400 mt-2 font-medium">
+        Step 3 of 4: Specify Location
+      </p>
+    </div>
+    <div class="flex-1 overflow-y-auto px-6 pb-24">
+      <h2 class="text-2xl font-bold mb-6">Specify Location</h2>
+      <a href="TrashSelectSaveAdd.html">
+        <button
+          class="w-full flex items-center justify-between bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 mb-6 active:scale-[0.98] transition-transform">
+          <div class="flex items-center gap-3">
+            <span class="material-icons-outlined text-primary">home</span>
+            <span class="font-medium text-lg">Select Saved Address</span>
+          </div>
+          <span class="material-icons-outlined text-gray-400">chevron_right</span>
+        </button>
+      </a>
       <div
-        class="absolute top-0 w-full h-12 flex justify-between items-center px-6 z-50 bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 text-sm font-medium"
-      >
-        <span>9:41</span>
-        <div class="flex gap-1.5 items-center">
-          <span class="material-icons-round text-base"
-            >signal_cellular_alt</span
-          >
-          <span class="material-icons-round text-base">wifi</span>
-          <span class="material-icons-round text-base">battery_full</span>
-        </div>
-      </div>
-      <div class="px-6 py-4 pt-14 flex items-center gap-4">
-        <a href="TrashSelectCategory.html">
-          <button
-            class="p-2 -ml-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition"
-          >
-            <span class="material-icons-outlined text-2xl">arrow_back</span>
-          </button>
-        </a>
-        <h1 class="text-xl font-bold">Post Trash</h1>
-      </div>
-      <div class="px-6 mb-6">
-        <div class="flex items-center gap-2">
-          <div class="h-1.5 flex-1 rounded-full bg-primary opacity-30"></div>
-          <div class="h-1.5 flex-1 rounded-full bg-primary opacity-30"></div>
-          <div class="h-1.5 flex-1 rounded-full bg-primary"></div>
-          <div
-            class="h-1.5 flex-1 rounded-full bg-gray-300 dark:bg-gray-700"
-          ></div>
-        </div>
-        <p class="text-xs text-gray-500 dark:text-gray-400 mt-2 font-medium">
-          Step 3 of 4: Specify Location
-        </p>
-      </div>
-      <div class="flex-1 overflow-y-auto px-6 pb-24">
-        <h2 class="text-2xl font-bold mb-6">Specify Location</h2>
-        <a href="TrashSelectSaveAdd.html">
-          <button
-            class="w-full flex items-center justify-between bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 mb-6 active:scale-[0.98] transition-transform"
-          >
-            <div class="flex items-center gap-3">
-              <span class="material-icons-outlined text-primary">home</span>
-              <span class="font-medium text-lg">Select Saved Address</span>
-            </div>
-            <span class="material-icons-outlined text-gray-400"
-              >chevron_right</span
-            >
-          </button>
-        </a>
+        class="relative w-full h-64 bg-gray-200 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-inner mb-6 border border-gray-300 dark:border-gray-600 group">
         <div
-          class="relative w-full h-64 bg-gray-200 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-inner mb-6 border border-gray-300 dark:border-gray-600 group"
-        >
-          <div
-            class="absolute inset-0 opacity-50 dark:opacity-30 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"
-          ></div>
-          <div
-            class="absolute top-4 right-4 bg-surface-light dark:bg-surface-dark p-2 rounded-lg shadow-md"
-          >
-            <span
-              class="material-icons-outlined text-gray-600 dark:text-gray-300 block text-xl"
-              >my_location</span
-            >
-          </div>
-          <div class="absolute inset-0 flex items-center justify-center -mt-4">
-            <div class="relative">
-              <span
-                class="material-icons-outlined text-5xl text-primary drop-shadow-lg animate-bounce"
-                >location_on</span
-              >
-              <div
-                class="w-3 h-1.5 bg-black/30 rounded-[100%] absolute bottom-1 left-1/2 -translate-x-1/2 blur-[1px]"
-              ></div>
+          class="absolute inset-0 opacity-50 dark:opacity-30 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+        </div>
+        <div class="absolute top-4 right-4 bg-surface-light dark:bg-surface-dark p-2 rounded-lg shadow-md">
+          <span class="material-icons-outlined text-gray-600 dark:text-gray-300 block text-xl">my_location</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center -mt-4">
+          <div class="relative">
+            <span class="material-icons-outlined text-5xl text-primary drop-shadow-lg animate-bounce">location_on</span>
+            <div class="w-3 h-1.5 bg-black/30 rounded-[100%] absolute bottom-1 left-1/2 -translate-x-1/2 blur-[1px]">
             </div>
-          </div>
-          <div
-            class="absolute bottom-2 left-2 bg-white/80 dark:bg-black/50 text-[10px] px-1 rounded text-gray-600 dark:text-gray-400"
-          >
-            Google
           </div>
         </div>
         <div
-          class="bg-surface-light dark:bg-surface-dark p-5 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 space-y-4"
-        >
-          <div class="flex items-start gap-3">
-            <span class="material-icons-outlined text-primary mt-1">place</span>
-            <div class="flex-1">
-              <label
-                class="block text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-1"
-                >Current Location</label
-              >
-              <p class="text-sm font-medium leading-relaxed">
-                99/1 Village No. 5, Phahonyothin Road, Khlong Nueng Subdistrict,
-                Khlong Luang District
-              </p>
-              <p class="text-sm font-bold mt-1 text-primary">
-                Pathum Thani 12120
-              </p>
-            </div>
-          </div>
-          <hr class="border-gray-100 dark:border-gray-600" />
-          <div>
+          class="absolute bottom-2 left-2 bg-white/80 dark:bg-black/50 text-[10px] px-1 rounded text-gray-600 dark:text-gray-400">
+          Google
+        </div>
+      </div>
+      <div
+        class="bg-surface-light dark:bg-surface-dark p-5 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 space-y-4">
+        <div class="flex items-start gap-3">
+          <span class="material-icons-outlined text-primary mt-1">place</span>
+          <div class="flex-1">
             <label
-              class="block text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2"
-              >Note to driver (Optional)</label
-            >
-            <input
-              class="w-full bg-background-light dark:bg-background-dark rounded-lg p-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all border border-transparent focus:border-primary placeholder-gray-400 dark:placeholder-gray-500"
-              placeholder="e.g. Near the big mango tree"
-              type="text"
-            />
+              class="block text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-1">Current
+              Location</label>
+            <p class="text-sm font-medium leading-relaxed">
+              99/1 Village No. 5, Phahonyothin Road, Khlong Nueng Subdistrict,
+              Khlong Luang District
+            </p>
+            <p class="text-sm font-bold mt-1 text-primary">
+              Pathum Thani 12120
+            </p>
           </div>
         </div>
-      </div>
-      <div
-        class="absolute bottom-0 left-0 w-full bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-700 p-6 pb-8 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]"
-      >
-        <div class="flex items-center justify-between gap-4">
-          <div class="flex flex-col">
-            <span class="text-xs text-gray-500 dark:text-gray-400"
-              >Total Estimate</span
-            >
-            <span class="text-lg font-bold text-primary">~ 150 THB</span>
-          </div>
-          <a
-            href="../orders/OrderWaitingForBuyer.html"
-            class="flex-1 bg-primary text-white font-bold text-lg py-4 rounded-xl shadow-lg shadow-primary/30 hover:shadow-primary/50 active:scale-[0.98] transition-all flex items-center justify-center gap-2"
-          >
-            Post
-            <span class="material-icons-outlined text-xl">send</span>
-          </a>
+        <hr class="border-gray-100 dark:border-gray-600" />
+        <div>
+          <label class="block text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Note
+            to driver (Optional)</label>
+          <input
+            class="w-full bg-background-light dark:bg-background-dark rounded-lg p-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all border border-transparent focus:border-primary placeholder-gray-400 dark:placeholder-gray-500"
+            placeholder="e.g. Near the big mango tree" type="text" />
         </div>
       </div>
     </div>
+    <div
+      class="absolute bottom-0 left-0 w-full bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-700 p-6 pb-8 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
+      <a href="../orders/OrderWaitingForBuyerTrash.html"
+        class="w-full bg-primary text-white font-bold text-lg py-4 rounded-xl shadow-lg shadow-primary/30 hover:shadow-primary/50 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+        Post
+        <span class="material-icons-outlined text-xl">send</span>
+      </a>
+    </div>
+  </div>
 
-    <script src="../theme-toggle.js"></script>
-  </body>
+  <script src="../theme-toggle.js"></script>
+</body>
+
 </html>

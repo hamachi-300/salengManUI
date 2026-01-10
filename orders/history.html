@@ -1,324 +1,250 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Saleng Man - History</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
-      rel="stylesheet"
-    />
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#FD7014", // Orange from the prompt/wireframe
-              secondary: "#393E46", // Dark gray
-              "background-light": "#EEEEEE", // Light gray/whiteish
-              "background-dark": "#222831", // Very dark gray/black
-              "card-dark": "#393E46",
-              "card-light": "#FFFFFF",
-              "text-light": "#222831",
-              "text-dark": "#EEEEEE",
-              "subtext-light": "#6B7280",
-              "subtext-dark": "#9CA3AF",
-            },
-            fontFamily: {
-              display: ["Inter", "sans-serif"],
-            },
-            borderRadius: {
-              DEFAULT: "12px",
-              xl: "16px",
-              "2xl": "24px",
-            },
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Saleng Man - History</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#FD7014", // Orange from the prompt/wireframe
+            secondary: "#393E46", // Dark gray
+            "background-light": "#EEEEEE", // Light gray/whiteish
+            "background-dark": "#222831", // Very dark gray/black
+            "card-dark": "#393E46",
+            "card-light": "#FFFFFF",
+            "text-light": "#222831",
+            "text-dark": "#EEEEEE",
+            "subtext-light": "#6B7280",
+            "subtext-dark": "#9CA3AF",
+          },
+          fontFamily: {
+            display: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "12px",
+            xl: "16px",
+            "2xl": "24px",
           },
         },
-      };
-    </script>
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-      }
-      .no-scrollbar::-webkit-scrollbar {
-        display: none;
-      }
-      .no-scrollbar {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-    </style>
-    <style>
-      body {
-        min-height: max(884px, 100dvh);
-      }
-    </style>
-  </head>
-  <body
-    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark min-h-screen w-full flex justify-center items-center p-4 overflow-hidden"
-  >
+      },
+    };
+  </script>
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+
+<body
+  class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark min-h-screen w-full flex justify-center items-center p-4 overflow-hidden">
+  <div
+    class="w-full max-w-[375px] h-[812px] bg-background-light dark:bg-background-dark rounded-[40px] border-8 border-gray-200 dark:border-card-dark flex flex-col relative shadow-2xl overflow-hidden">
     <div
-      class="w-full max-w-[375px] h-[812px] bg-background-light dark:bg-background-dark rounded-[40px] border-8 border-gray-200 dark:border-card-dark flex flex-col relative shadow-2xl overflow-hidden"
-    >
-      <div
-        class="absolute top-0 w-full h-12 flex justify-between items-center px-6 z-50 bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 text-sm font-medium"
-      >
-        <span>9:41</span>
-        <div class="flex gap-1.5 items-center">
-          <span class="material-icons-round text-base"
-            >signal_cellular_alt</span
-          >
-          <span class="material-icons-round text-base">wifi</span>
-          <span class="material-icons-round text-base">battery_full</span>
-        </div>
+      class="absolute top-0 w-full h-12 flex justify-between items-center px-6 z-50 bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 text-sm font-medium">
+      <span>9:41</span>
+      <div class="flex gap-1.5 items-center">
+        <span class="material-icons-round text-base">signal_cellular_alt</span>
+        <span class="material-icons-round text-base">wifi</span>
+        <span class="material-icons-round text-base">battery_full</span>
       </div>
-      <header
-        class="px-6 py-4 pt-14 pb-2 bg-background-light dark:bg-background-dark z-10"
-      >
-        <h1
-          class="text-2xl font-bold tracking-tight text-text-light dark:text-white"
-        >
-          History
-        </h1>
-        <p class="text-sm text-subtext-light dark:text-subtext-dark mt-1">
-          Track your selling and disposal activities
-        </p>
-      </header>
-      <div class="px-6 py-2 flex gap-3 mb-2">
+    </div>
+    <header class="px-6 py-4 pt-14 pb-2 bg-background-light dark:bg-background-dark z-10">
+      <h1 class="text-2xl font-bold tracking-tight text-text-light dark:text-white">
+        History
+      </h1>
+      <p class="text-sm text-subtext-light dark:text-subtext-dark mt-1">
+        Track your selling and disposal activities
+      </p>
+    </header>
+    <div class="px-6 py-2 flex gap-3 mb-2">
+      <button
+        class="px-4 py-1.5 bg-primary text-white rounded-full text-sm font-medium shadow-md hover:opacity-90 transition-opacity">
+        All
+      </button>
+      <a href="OrderPending.html">
         <button
-          class="px-4 py-1.5 bg-primary text-white rounded-full text-sm font-medium shadow-md hover:opacity-90 transition-opacity"
-        >
-          All
+          class="px-4 py-1.5 bg-gray-200 dark:bg-secondary text-text-light dark:text-gray-300 rounded-full text-sm font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+          Pending
         </button>
-        <a href="OrderPending.html">
-          <button
-            class="px-4 py-1.5 bg-gray-200 dark:bg-secondary text-text-light dark:text-gray-300 rounded-full text-sm font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
-          >
-            Pending
-          </button>
-        </a>
-        <a href="OrderCompleted.html">
-          <button
-            class="px-4 py-1.5 bg-gray-200 dark:bg-secondary text-text-light dark:text-gray-300 rounded-full text-sm font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
-          >
-            Completed
-          </button>
-        </a>
-      </div>
-      <main
-        class="flex-1 overflow-y-auto no-scrollbar px-6 pb-24 space-y-4 pt-2"
-      >
-        <a href="OrderPending.html">
-          <div
-            class="group bg-card-light dark:bg-card-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-center gap-4 transition-transform active:scale-[0.98]"
-          >
-            <div
-              class="w-14 h-14 rounded-full bg-orange-100 dark:bg-gray-700 flex items-center justify-center shrink-0"
-            >
-              <span class="material-icons text-primary text-2xl"
-                >delete_outline</span
-              >
-            </div>
-            <div class="flex-1 min-w-0">
-              <div class="flex justify-between items-start mb-1">
-                <h3
-                  class="font-semibold text-lg text-text-light dark:text-white truncate"
-                >
-                  Trash Pick-up
-                </h3>
-                <span
-                  class="px-2 py-0.5 rounded-md bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400 text-xs font-medium border border-yellow-200 dark:border-yellow-800"
-                >
-                  Pending
-                </span>
-              </div>
-              <p
-                class="text-sm text-subtext-light dark:text-subtext-dark truncate"
-              >
-                3 bags of plastic bottles
-              </p>
-              <div
-                class="mt-2 flex items-center gap-2 text-xs text-subtext-light dark:text-subtext-dark"
-              >
-                <span class="material-icons text-[14px]">schedule</span>
-                <span>Today, 10:30 AM</span>
-              </div>
-            </div>
-            <div class="self-center">
-              <span class="material-icons text-gray-400 dark:text-gray-500"
-                >chevron_right</span
-              >
-            </div>
-          </div>
-        </a>
-        <a href="OrderCompleted.html">
-          <div
-            class="group bg-card-light dark:bg-card-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-center gap-4 transition-transform active:scale-[0.98]"
-          >
-            <div
-              class="w-14 h-14 rounded-full bg-green-50 dark:bg-gray-700 flex items-center justify-center shrink-0"
-            >
-              <span
-                class="material-icons text-green-600 dark:text-green-400 text-2xl"
-                >inventory_2</span
-              >
-            </div>
-            <div class="flex-1 min-w-0">
-              <div class="flex justify-between items-start mb-1">
-                <h3
-                  class="font-semibold text-lg text-text-light dark:text-white truncate"
-                >
-                  Sold Old Electronics
-                </h3>
-                <span
-                  class="px-2 py-0.5 rounded-md bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 text-xs font-medium border border-green-200 dark:border-green-800"
-                >
-                  Completed
-                </span>
-              </div>
-              <p
-                class="text-sm text-subtext-light dark:text-subtext-dark truncate"
-              >
-                Old TV, broken fan
-              </p>
-              <div
-                class="mt-2 flex items-center gap-2 text-xs text-subtext-light dark:text-subtext-dark"
-              >
-                <span class="material-icons text-[14px]">event</span>
-                <span>Yesterday, 2:15 PM</span>
-              </div>
-            </div>
-          </div>
-        </a>
+      </a>
+      <a href="OrderCompleted.html">
+        <button
+          class="px-4 py-1.5 bg-gray-200 dark:bg-secondary text-text-light dark:text-gray-300 rounded-full text-sm font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+          Completed
+        </button>
+      </a>
+    </div>
+    <main class="flex-1 overflow-y-auto no-scrollbar px-6 pb-24 space-y-4 pt-2">
+      <a href="OrderPending.html">
         <div
-          class="group bg-card-light dark:bg-card-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-center gap-4 transition-transform active:scale-[0.98]"
-        >
-          <div
-            class="w-14 h-14 rounded-full bg-green-50 dark:bg-gray-700 flex items-center justify-center shrink-0"
-          >
-            <span
-              class="material-icons text-green-600 dark:text-green-400 text-2xl"
-              >newspaper</span
-            >
+          class="group bg-card-light dark:bg-card-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-center gap-4 transition-transform active:scale-[0.98]">
+          <div class="w-14 h-14 rounded-full bg-orange-100 dark:bg-gray-700 flex items-center justify-center shrink-0">
+            <span class="material-icons text-primary text-2xl">delete_outline</span>
           </div>
           <div class="flex-1 min-w-0">
             <div class="flex justify-between items-start mb-1">
-              <h3
-                class="font-semibold text-lg text-text-light dark:text-white truncate"
-              >
-                Paper Recycling
+              <h3 class="font-semibold text-lg text-text-light dark:text-white truncate">
+                Trash Pick-up
               </h3>
               <span
-                class="px-2 py-0.5 rounded-md bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 text-xs font-medium border border-green-200 dark:border-green-800"
-              >
+                class="px-2 py-0.5 rounded-md bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400 text-xs font-medium border border-yellow-200 dark:border-yellow-800">
+                Pending
+              </span>
+            </div>
+            <p class="text-sm text-subtext-light dark:text-subtext-dark truncate">
+              3 bags of plastic bottles
+            </p>
+            <div class="mt-2 flex items-center gap-2 text-xs text-subtext-light dark:text-subtext-dark">
+              <span class="material-icons text-[14px]">schedule</span>
+              <span>Today, 10:30 AM</span>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="OrderCompleted.html">
+        <div
+          class="group bg-card-light dark:bg-card-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-center gap-4 transition-transform active:scale-[0.98]">
+          <div class="w-14 h-14 rounded-full bg-green-50 dark:bg-gray-700 flex items-center justify-center shrink-0">
+            <span class="material-icons text-green-600 dark:text-green-400 text-2xl">inventory_2</span>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex justify-between items-start mb-1">
+              <h3 class="font-semibold text-lg text-text-light dark:text-white truncate">
+                Sold Old Electronics
+              </h3>
+              <span
+                class="px-2 py-0.5 rounded-md bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 text-xs font-medium border border-green-200 dark:border-green-800">
                 Completed
               </span>
             </div>
-            <p
-              class="text-sm text-subtext-light dark:text-subtext-dark truncate"
-            >
+            <p class="text-sm text-subtext-light dark:text-subtext-dark truncate">
+              Old TV, broken fan
+            </p>
+            <div class="mt-2 flex items-center gap-2 text-xs text-subtext-light dark:text-subtext-dark">
+              <span class="material-icons text-[14px]">event</span>
+              <span>Yesterday, 2:15 PM</span>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="OrderWaitingForBuyer.html">
+        <div
+          class="group bg-card-light dark:bg-card-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-center gap-4 transition-transform active:scale-[0.98]">
+          <div class="w-14 h-14 rounded-full bg-orange-100 dark:bg-gray-700 flex items-center justify-center shrink-0">
+            <span class="material-icons text-primary text-2xl">newspaper</span>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex justify-between items-start mb-1">
+              <h3 class="font-semibold text-lg text-text-light dark:text-white truncate">
+                Paper Recycling
+              </h3>
+              <div
+                class="inline-flex items-center px-2 py-0.5 rounded-md bg-orange-100 dark:bg-orange-900/30 text-primary text-xs font-medium border border-primary/20">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary mr-1.5 animate-pulse"></span>
+                Waiting
+              </div>
+            </div>
+            <p class="text-sm text-subtext-light dark:text-subtext-dark truncate">
               5kg of old newspapers
             </p>
-            <div
-              class="mt-2 flex items-center gap-2 text-xs text-subtext-light dark:text-subtext-dark"
-            >
+            <div class="mt-2 flex items-center gap-2 text-xs text-subtext-light dark:text-subtext-dark">
               <span class="material-icons text-[14px]">event</span>
               <span>Oct 24, 4:00 PM</span>
             </div>
           </div>
         </div>
-        <div
-          class="group bg-card-light dark:bg-card-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-center gap-4 transition-transform active:scale-[0.98] opacity-75"
-        >
-          <div
-            class="w-14 h-14 rounded-full bg-red-50 dark:bg-gray-700 flex items-center justify-center shrink-0"
-          >
-            <span class="material-icons text-red-500 text-2xl">close</span>
+      </a>
+      <div
+        class="group bg-card-light dark:bg-card-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-center gap-4 transition-transform active:scale-[0.98] opacity-75">
+        <div class="w-14 h-14 rounded-full bg-red-50 dark:bg-gray-700 flex items-center justify-center shrink-0">
+          <span class="material-icons text-red-500 text-2xl">close</span>
+        </div>
+        <div class="flex-1 min-w-0">
+          <div class="flex justify-between items-start mb-1">
+            <h3 class="font-semibold text-lg text-text-light dark:text-white truncate">
+              Metal Scraps
+            </h3>
+            <span
+              class="px-2 py-0.5 rounded-md bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 text-xs font-medium border border-red-200 dark:border-red-800">
+              Cancelled
+            </span>
           </div>
-          <div class="flex-1 min-w-0">
-            <div class="flex justify-between items-start mb-1">
-              <h3
-                class="font-semibold text-lg text-text-light dark:text-white truncate"
-              >
-                Metal Scraps
-              </h3>
-              <span
-                class="px-2 py-0.5 rounded-md bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 text-xs font-medium border border-red-200 dark:border-red-800"
-              >
-                Cancelled
-              </span>
-            </div>
-            <p
-              class="text-sm text-subtext-light dark:text-subtext-dark truncate"
-            >
-              Copper wire bundle
-            </p>
-            <div
-              class="mt-2 flex items-center gap-2 text-xs text-subtext-light dark:text-subtext-dark"
-            >
-              <span class="material-icons text-[14px]">event</span>
-              <span>Oct 20, 9:00 AM</span>
-            </div>
+          <p class="text-sm text-subtext-light dark:text-subtext-dark truncate">
+            Copper wire bundle
+          </p>
+          <div class="mt-2 flex items-center gap-2 text-xs text-subtext-light dark:text-subtext-dark">
+            <span class="material-icons text-[14px]">event</span>
+            <span>Oct 20, 9:00 AM</span>
           </div>
         </div>
-      </main>
-      <nav
-        class="absolute bottom-0 w-full bg-card-light dark:bg-secondary border-t border-gray-200 dark:border-gray-700 px-6 py-3 pb-6 flex justify-between items-center z-20"
-      >
-        <a href="../homescreen.html">
-          <button
-            class="flex flex-col items-center gap-1 text-subtext-light dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
-          >
-            <span class="material-icons">home</span>
-            <span class="text-[10px] font-medium">Home</span>
-          </button>
-        </a>
+      </div>
+    </main>
+    <nav
+      class="absolute bottom-0 w-full bg-card-light dark:bg-secondary border-t border-gray-200 dark:border-gray-700 px-6 py-3 pb-6 flex justify-between items-center z-20">
+      <a href="../homescreen.html">
+        <button
+          class="flex flex-col items-center gap-1 text-subtext-light dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+          <span class="material-icons">home</span>
+          <span class="text-[10px] font-medium">Home</span>
+        </button>
+      </a>
 
-        <a href="history.html">
-          <button
-            class="flex flex-col items-center gap-1 text-primary transition-colors"
-          >
-            <span class="material-icons">receipt_long</span>
-            <span class="text-[10px] font-medium">History</span>
-          </button>
-        </a>
+      <a href="history.html">
+        <button class="flex flex-col items-center gap-1 text-primary transition-colors">
+          <span class="material-icons">receipt_long</span>
+          <span class="text-[10px] font-medium">History</span>
+        </button>
+      </a>
 
-        <a href="../notification.html">
-          <button
-            class="flex flex-col items-center gap-1 text-subtext-light dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
-          >
-            <div class="relative">
-              <span class="material-icons">notifications</span>
-              <span
-                class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full border border-white dark:border-secondary"
-              ></span>
-            </div>
-            <span class="text-[10px] font-medium">Notify</span>
-          </button>
-        </a>
+      <a href="../notification.html">
+        <button
+          class="flex flex-col items-center gap-1 text-subtext-light dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+          <div class="relative">
+            <span class="material-icons">notifications</span>
+            <span
+              class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full border border-white dark:border-secondary"></span>
+          </div>
+          <span class="text-[10px] font-medium">Notify</span>
+        </button>
+      </a>
 
-        <a href="../account.html">
-          <button
-            class="flex flex-col items-center gap-1 text-subtext-light dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
-          >
-            <span class="material-icons">person</span>
-            <span class="text-[10px] font-medium">Account</span>
-          </button>
-        </a>
-      </nav>
-    </div>
-    <div class="fixed top-4 right-4 z-50"></div>
+      <a href="../account.html">
+        <button
+          class="flex flex-col items-center gap-1 text-subtext-light dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+          <span class="material-icons">person</span>
+          <span class="text-[10px] font-medium">Account</span>
+        </button>
+      </a>
+    </nav>
+  </div>
+  <div class="fixed top-4 right-4 z-50"></div>
 
-    <script src="../theme-toggle.js"></script>
-  </body>
+  <script src="../theme-toggle.js"></script>
+</body>
+
 </html>

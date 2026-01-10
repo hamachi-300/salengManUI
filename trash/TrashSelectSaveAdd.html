@@ -112,16 +112,16 @@
           <span class="material-icons-round text-primary">location_on</span>
           Select Saved Address
         </h2>
-        <div class="space-y-4">
-          <div class="relative group cursor-pointer">
+        <div class="space-y-4" id="address-list">
+          <div class="address-card relative group cursor-pointer active" onclick="selectAddress(this)">
             <div
-              class="absolute inset-0 bg-primary opacity-10 rounded-xl border-2 border-primary"
+              class="selected-bg absolute inset-0 bg-primary opacity-10 rounded-xl border-2 border-primary"
             ></div>
             <div
-              class="relative bg-surface-light dark:bg-surface-dark p-5 rounded-xl border-2 border-primary shadow-md flex items-start gap-4 transition-all"
+              class="card-content relative bg-surface-light dark:bg-surface-dark p-5 rounded-xl border-2 border-primary shadow-md flex items-start gap-4 transition-all"
             >
               <div class="mt-1">
-                <span class="material-icons-round text-primary text-2xl"
+                <span class="card-icon material-icons-round text-primary text-2xl"
                   >home</span
                 >
               </div>
@@ -138,26 +138,29 @@
                 >
                   123/45 Village No. 8, Saleng Road, Bang Khen District
                 </p>
-                <p class="text-lg font-semibold tracking-wider">24240</p>
+                <p class="postal-code text-lg font-semibold tracking-wider">24240</p>
               </div>
               <div class="flex flex-col justify-between items-end h-full">
                 <div
-                  class="w-5 h-5 rounded-full border-2 border-primary flex items-center justify-center bg-primary"
+                  class="check-circle w-5 h-5 rounded-full border-2 border-primary flex items-center justify-center bg-primary"
                 >
-                  <span class="material-icons-round text-white text-xs"
+                  <span class="check-icon material-icons-round text-white text-xs"
                     >check</span
                   >
                 </div>
               </div>
             </div>
           </div>
-          <div class="relative group cursor-pointer">
+          <div class="address-card relative group cursor-pointer" onclick="selectAddress(this)">
             <div
-              class="bg-surface-light dark:bg-surface-dark p-5 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm flex items-start gap-4 hover:border-primary/50 transition-all"
+              class="selected-bg absolute inset-0 bg-primary opacity-10 rounded-xl border-2 border-primary hidden"
+            ></div>
+            <div
+              class="card-content bg-surface-light dark:bg-surface-dark p-5 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm flex items-start gap-4 hover:border-primary/50 transition-all"
             >
               <div class="mt-1">
                 <span
-                  class="material-icons-round text-subtext-light dark:text-subtext-dark text-2xl"
+                  class="card-icon material-icons-round text-subtext-light dark:text-subtext-dark text-2xl"
                   >work</span
                 >
               </div>
@@ -171,25 +174,28 @@
                   88 Tower A, 15th Floor, Ratchada Road, Huai Khwang
                 </p>
                 <p
-                  class="text-lg font-semibold tracking-wider text-subtext-light dark:text-subtext-dark"
+                  class="postal-code text-lg font-semibold tracking-wider text-subtext-light dark:text-subtext-dark"
                 >
                   10310
                 </p>
               </div>
               <div class="flex flex-col justify-between items-end h-full">
                 <div
-                  class="w-5 h-5 rounded-full border-2 border-gray-300 dark:border-gray-600 group-hover:border-primary transition-colors"
+                  class="check-circle w-5 h-5 rounded-full border-2 border-gray-300 dark:border-gray-600 group-hover:border-primary transition-colors"
                 ></div>
               </div>
             </div>
           </div>
-          <div class="relative group cursor-pointer">
+          <div class="address-card relative group cursor-pointer" onclick="selectAddress(this)">
             <div
-              class="bg-surface-light dark:bg-surface-dark p-5 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm flex items-start gap-4 hover:border-primary/50 transition-all"
+              class="selected-bg absolute inset-0 bg-primary opacity-10 rounded-xl border-2 border-primary hidden"
+            ></div>
+            <div
+              class="card-content bg-surface-light dark:bg-surface-dark p-5 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm flex items-start gap-4 hover:border-primary/50 transition-all"
             >
               <div class="mt-1">
                 <span
-                  class="material-icons-round text-subtext-light dark:text-subtext-dark text-2xl"
+                  class="card-icon material-icons-round text-subtext-light dark:text-subtext-dark text-2xl"
                   >store</span
                 >
               </div>
@@ -203,14 +209,14 @@
                   99/9 Market Street, Chatuchak
                 </p>
                 <p
-                  class="text-lg font-semibold tracking-wider text-subtext-light dark:text-subtext-dark"
+                  class="postal-code text-lg font-semibold tracking-wider text-subtext-light dark:text-subtext-dark"
                 >
                   10900
                 </p>
               </div>
               <div class="flex flex-col justify-between items-end h-full">
                 <div
-                  class="w-5 h-5 rounded-full border-2 border-gray-300 dark:border-gray-600 group-hover:border-primary transition-colors"
+                  class="check-circle w-5 h-5 rounded-full border-2 border-gray-300 dark:border-gray-600 group-hover:border-primary transition-colors"
                 ></div>
               </div>
             </div>
@@ -229,27 +235,84 @@
         </div>
       </main>
       <div
-        class="fixed bottom-0 left-0 w-full bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800 p-4 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-20"
+        class="absolute bottom-0 left-0 w-full bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800 p-4 pb-6 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-20"
       >
-        <div class="max-w-md mx-auto flex gap-4 items-center">
-          <div class="flex-1">
-            <p class="text-xs text-subtext-light dark:text-subtext-dark mb-1">
-              Estimated Pickup
-            </p>
-            <p class="text-sm font-semibold">Today, 2:00 PM</p>
-          </div>
-          <a href="TrashSpecifyLocation.html">
-            <button
-              class="bg-primary hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-xl shadow-lg shadow-orange-500/30 flex items-center gap-2 transition-all transform active:scale-95"
-            >
-              <span>Post Trash</span>
-              <span class="material-icons-round text-sm">send</span>
-            </button>
-          </a>
-        </div>
+        <a href="TrashSpecifyLocation.html" class="w-full">
+          <button
+            class="w-full bg-primary hover:bg-orange-600 text-white font-bold py-4 rounded-xl shadow-lg shadow-orange-500/30 flex items-center justify-center gap-2 transition-all transform active:scale-95"
+          >
+            <span>Confirm</span>
+            <span class="material-icons-round text-sm">check</span>
+          </button>
+        </a>
       </div>
     </div>
 
     <script src="../theme-toggle.js"></script>
+    <script>
+      function selectAddress(card) {
+        // Remove active state from all cards
+        document.querySelectorAll('.address-card').forEach(c => {
+          c.classList.remove('active');
+          // Hide selected background
+          const bg = c.querySelector('.selected-bg');
+          if (bg) bg.classList.add('hidden');
+          // Reset card content styles
+          const content = c.querySelector('.card-content');
+          if (content) {
+            content.classList.remove('border-2', 'border-primary', 'shadow-md', 'relative');
+            content.classList.add('border', 'border-gray-200', 'dark:border-gray-700', 'shadow-sm');
+          }
+          // Reset icon color
+          const icon = c.querySelector('.card-icon');
+          if (icon) {
+            icon.classList.remove('text-primary');
+            icon.classList.add('text-subtext-light', 'dark:text-subtext-dark');
+          }
+          // Reset check circle
+          const checkCircle = c.querySelector('.check-circle');
+          if (checkCircle) {
+            checkCircle.classList.remove('border-primary', 'bg-primary');
+            checkCircle.classList.add('border-gray-300', 'dark:border-gray-600');
+            checkCircle.innerHTML = '';
+          }
+          // Reset postal code color
+          const postalCode = c.querySelector('.postal-code');
+          if (postalCode) {
+            postalCode.classList.add('text-subtext-light', 'dark:text-subtext-dark');
+          }
+        });
+
+        // Add active state to clicked card
+        card.classList.add('active');
+        // Show selected background
+        const bg = card.querySelector('.selected-bg');
+        if (bg) bg.classList.remove('hidden');
+        // Update card content styles
+        const content = card.querySelector('.card-content');
+        if (content) {
+          content.classList.add('border-2', 'border-primary', 'shadow-md', 'relative');
+          content.classList.remove('border', 'border-gray-200', 'dark:border-gray-700', 'shadow-sm');
+        }
+        // Update icon color
+        const icon = card.querySelector('.card-icon');
+        if (icon) {
+          icon.classList.add('text-primary');
+          icon.classList.remove('text-subtext-light', 'dark:text-subtext-dark');
+        }
+        // Update check circle
+        const checkCircle = card.querySelector('.check-circle');
+        if (checkCircle) {
+          checkCircle.classList.add('border-primary', 'bg-primary');
+          checkCircle.classList.remove('border-gray-300', 'dark:border-gray-600');
+          checkCircle.innerHTML = '<span class="check-icon material-icons-round text-white text-xs">check</span>';
+        }
+        // Update postal code color
+        const postalCode = card.querySelector('.postal-code');
+        if (postalCode) {
+          postalCode.classList.remove('text-subtext-light', 'dark:text-subtext-dark');
+        }
+      }
+    </script>
   </body>
 </html>

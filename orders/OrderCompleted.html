@@ -88,7 +88,7 @@
         class="px-6 py-4 pt-14 flex items-center justify-between border-b border-gray-100 dark:border-gray-700"
       >
         <div class="flex items-center space-x-2">
-          <a href="OrderPending.html">
+          <a href="../homescreen.html">
             <button
               class="text-text-light dark:text-text-dark hover:text-primary transition-colors"
             >
@@ -126,11 +126,13 @@
                 ขายของเก่า (Second Hand)
               </h2>
             </div>
-            <button
-              class="text-primary hover:text-primary-dark text-sm font-medium border border-primary px-3 py-1 rounded-lg transition-colors"
-            >
-              Chat
-            </button>
+            <a href="../address/PostSchedulePickupCompleted.html">
+              <button
+                class="text-primary hover:text-primary-dark text-sm font-medium border border-primary px-3 py-1 rounded-lg transition-colors"
+              >
+                Chat
+              </button>
+            </a>
           </div>
           <div
             class="w-full h-40 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center mb-4 relative overflow-hidden group"
@@ -170,8 +172,9 @@
             class="text-sm font-medium text-gray-500 dark:text-gray-400 ml-1"
             >ผู้รับซื้อ (Buyer)</label
           >
-          <div
-            class="bg-background-light dark:bg-background-dark rounded-xl p-4 border border-gray-200 dark:border-gray-600 flex items-center justify-between"
+          <button
+            onclick="openRatingPopup()"
+            class="w-full bg-background-light dark:bg-background-dark rounded-xl p-4 border border-gray-200 dark:border-gray-600 flex items-center justify-between hover:border-primary transition-colors cursor-pointer"
           >
             <div class="flex items-center space-x-3">
               <div
@@ -183,7 +186,7 @@
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU5CKP4T0653EIXf1TCzYpcI0h1NYS0uHHRj4LPC1gGru38lloGc7Us91dwhlmFRi2VObV9GO92kz-aHAG9lTIbh6WsuFZkkQRECLhjLll6H_AKohvxKBRw47tbmQzN7aFlDMELBXv6C7qymaXgpis39wFrJQR-3fiAqIViyV8namSzh0h9TRM0atLtWuxbeoIOH5SaUnKisNNF7fnPi-oASRPhVoXdTStoOwsrke_Ivpqx6XJWZa4DPXbyW0pBXz9pbCz3nUR1x8"
                 />
               </div>
-              <div>
+              <div class="text-left">
                 <p class="text-text-light dark:text-text-dark font-medium">
                   Somchai Jai-dee
                 </p>
@@ -206,6 +209,69 @@
                 </div>
               </div>
             </div>
+            <span class="material-symbols-outlined text-gray-400">chevron_right</span>
+          </button>
+        </div>
+
+        <!-- Rating Popup -->
+        <div id="ratingPopup" class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-6 hidden">
+          <div class="bg-surface-light dark:bg-surface-dark rounded-2xl w-full max-w-[320px] shadow-2xl overflow-hidden">
+            <!-- Popup Header with Buyer Profile -->
+            <div class="p-4 border-b border-gray-200 dark:border-gray-700">
+              <a href="../buyers/BuyerProfile.html" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+                <div
+                  class="w-12 h-12 rounded-full bg-gray-300 dark:bg-gray-600 overflow-hidden border-2 border-primary"
+                >
+                  <img
+                    alt="Buyer Avatar"
+                    class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU5CKP4T0653EIXf1TCzYpcI0h1NYS0uHHRj4LPC1gGru38lloGc7Us91dwhlmFRi2VObV9GO92kz-aHAG9lTIbh6WsuFZkkQRECLhjLll6H_AKohvxKBRw47tbmQzN7aFlDMELBXv6C7qymaXgpis39wFrJQR-3fiAqIViyV8namSzh0h9TRM0atLtWuxbeoIOH5SaUnKisNNF7fnPi-oASRPhVoXdTStoOwsrke_Ivpqx6XJWZa4DPXbyW0pBXz9pbCz3nUR1x8"
+                  />
+                </div>
+                <div>
+                  <p class="text-text-light dark:text-text-dark font-semibold">Somchai Jai-dee</p>
+                  <p class="text-xs text-primary">View Profile →</p>
+                </div>
+              </a>
+            </div>
+
+            <!-- Rating Content -->
+            <div class="p-6 text-center">
+              <h3 class="text-lg font-semibold text-text-light dark:text-text-dark mb-2">Rate this Buyer</h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400 mb-6">How was your experience?</p>
+
+              <!-- Star Rating -->
+              <div class="flex justify-center gap-2 mb-6" id="starRating">
+                <button onclick="setRating(1)" class="star-btn text-gray-300 hover:text-yellow-400 transition-colors">
+                  <span class="material-symbols-outlined text-4xl">star</span>
+                </button>
+                <button onclick="setRating(2)" class="star-btn text-gray-300 hover:text-yellow-400 transition-colors">
+                  <span class="material-symbols-outlined text-4xl">star</span>
+                </button>
+                <button onclick="setRating(3)" class="star-btn text-gray-300 hover:text-yellow-400 transition-colors">
+                  <span class="material-symbols-outlined text-4xl">star</span>
+                </button>
+                <button onclick="setRating(4)" class="star-btn text-gray-300 hover:text-yellow-400 transition-colors">
+                  <span class="material-symbols-outlined text-4xl">star</span>
+                </button>
+                <button onclick="setRating(5)" class="star-btn text-gray-300 hover:text-yellow-400 transition-colors">
+                  <span class="material-symbols-outlined text-4xl">star</span>
+                </button>
+              </div>
+
+              <!-- Rating Text -->
+              <p id="ratingText" class="text-sm text-gray-500 dark:text-gray-400 mb-6">Select a rating</p>
+
+              <!-- Action Buttons -->
+              <div class="flex gap-3">
+                <button onclick="closeRatingPopup()" class="flex-1 py-3 rounded-xl border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-300 font-medium hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                  Cancel
+                </button>
+                <button onclick="submitRating()" class="flex-1 py-3 rounded-xl bg-primary text-white font-medium hover:bg-primary-dark transition-colors shadow-lg shadow-orange-500/30">
+                  Submit
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </main>
@@ -214,15 +280,67 @@
           class="p-6 bg-surface-light dark:bg-surface-dark border-t border-gray-100 dark:border-gray-700"
         >
           <button
-            class="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-4 rounded-xl shadow-lg shadow-orange-500/30 transition-all active:scale-[0.98] flex items-center justify-center space-x-2"
+            class="w-full bg-gray-500 hover:bg-gray-600 text-white font-semibold py-4 rounded-xl shadow-lg transition-all active:scale-[0.98] flex items-center justify-center space-x-2"
           >
-            <span class="material-symbols-outlined">thumbs_up_down</span>
-            <span>ให้คะแนนผู้ซื้อ (Rate Buyer)</span>
+            <span class="material-symbols-outlined">close</span>
+            <span>Close</span>
           </button>
         </div>
       </a>
     </div>
 
     <script src="../theme-toggle.js"></script>
+    <script>
+      let currentRating = 0;
+      const ratingTexts = ['Select a rating', 'Poor', 'Fair', 'Good', 'Very Good', 'Excellent'];
+
+      function openRatingPopup() {
+        document.getElementById('ratingPopup').classList.remove('hidden');
+      }
+
+      function closeRatingPopup() {
+        document.getElementById('ratingPopup').classList.add('hidden');
+        resetRating();
+      }
+
+      function setRating(rating) {
+        currentRating = rating;
+        const stars = document.querySelectorAll('.star-btn');
+        stars.forEach((star, index) => {
+          if (index < rating) {
+            star.classList.remove('text-gray-300');
+            star.classList.add('text-yellow-400');
+          } else {
+            star.classList.add('text-gray-300');
+            star.classList.remove('text-yellow-400');
+          }
+        });
+        document.getElementById('ratingText').textContent = ratingTexts[rating];
+      }
+
+      function resetRating() {
+        currentRating = 0;
+        const stars = document.querySelectorAll('.star-btn');
+        stars.forEach(star => {
+          star.classList.add('text-gray-300');
+          star.classList.remove('text-yellow-400');
+        });
+        document.getElementById('ratingText').textContent = ratingTexts[0];
+      }
+
+      function submitRating() {
+        if (currentRating > 0) {
+          alert('Thank you for rating ' + currentRating + ' stars!');
+          closeRatingPopup();
+        }
+      }
+
+      // Close popup when clicking outside
+      document.getElementById('ratingPopup').addEventListener('click', function(e) {
+        if (e.target === this) {
+          closeRatingPopup();
+        }
+      });
+    </script>
   </body>
 </html>
