@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Saleng Man - Contact Us</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#FD7014",
+              secondary: "#393E46",
+              darkbg: "#222831",
+              lightbg: "#EEEEEE",
+              "background-light": "#EEEEEE",
+              "background-dark": "#222831",
+              "card-light": "#FFFFFF",
+              "card-dark": "#393E46",
+              "text-light": "#222831",
+              "text-dark": "#EEEEEE",
+            },
+            fontFamily: {
+              display: ["Kanit", "sans-serif"],
+              body: ["Kanit", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              xl: "1rem",
+              "2xl": "1.5rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Kanit", sans-serif;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark min-h-screen flex justify-center items-center p-4 font-display transition-colors duration-300"
+  >
+    <div
+      class="w-full max-w-[375px] h-[812px] bg-background-light dark:bg-background-dark rounded-[40px] border-8 border-gray-200 dark:border-card-dark shadow-2xl relative flex flex-col overflow-hidden"
+    >
+      <div
+        class="absolute top-0 w-full h-12 flex justify-between items-center px-6 z-50 bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 text-sm font-medium"
+      >
+        <span>9:41</span>
+        <div class="flex gap-1.5 items-center">
+          <span class="material-icons-round text-base">signal_cellular_alt</span>
+          <span class="material-icons-round text-base">wifi</span>
+          <span class="material-icons-round text-base">battery_full</span>
+        </div>
+      </div>
+      <header
+        class="pt-12 pb-6 px-6 flex justify-between items-center sticky top-0 z-10 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm"
+      >
+        <div class="flex items-center gap-3">
+          <a href="account.html" class="text-secondary dark:text-gray-300 hover:text-primary transition-colors">
+            <span class="material-icons-round text-3xl">arrow_back</span>
+          </a>
+          <h1 class="text-2xl font-semibold tracking-wide text-primary">
+            Contact Us
+          </h1>
+        </div>
+      </header>
+      <main class="flex-1 px-6 pb-24 overflow-y-auto no-scrollbar">
+        <form class="space-y-5">
+          <div>
+            <label class="block font-medium text-text-light dark:text-text-dark mb-1">
+              Topic or question
+            </label>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">
+              Please summarize what you'd like help with
+            </p>
+            <input
+              type="text"
+              class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-card-light dark:bg-card-dark text-text-light dark:text-text-dark focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+              placeholder="Enter your topic"
+            />
+          </div>
+
+          <div>
+            <label class="block font-medium text-text-light dark:text-text-dark mb-2">
+              Any other details that might help
+            </label>
+            <textarea
+              rows="4"
+              class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-card-light dark:bg-card-dark text-text-light dark:text-text-dark focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
+              placeholder="Describe your issue or question in detail"
+            ></textarea>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block font-medium text-text-light dark:text-text-dark mb-2">
+                Full name
+              </label>
+              <input
+                type="text"
+                class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-card-light dark:bg-card-dark text-text-light dark:text-text-dark focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                placeholder="Your name"
+              />
+            </div>
+            <div>
+              <label class="block font-medium text-text-light dark:text-text-dark mb-2">
+                Email
+              </label>
+              <input
+                type="email"
+                class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-card-light dark:bg-card-dark text-text-light dark:text-text-dark focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                placeholder="Your email"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label class="block font-medium text-text-light dark:text-text-dark mb-2">
+              Attach photos (optional)
+            </label>
+            <div class="flex items-center gap-3">
+              <label
+                class="px-4 py-2 bg-primary/10 text-primary rounded-xl cursor-pointer hover:bg-primary/20 transition-colors font-medium"
+              >
+                Choose Files
+                <input
+                  type="file"
+                  id="file-input"
+                  accept="image/*"
+                  multiple
+                  class="hidden"
+                />
+              </label>
+              <span id="file-name" class="text-sm text-gray-500 dark:text-gray-400">
+                no files selected
+              </span>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-primary text-white py-3 px-4 rounded-xl font-medium hover:bg-orange-600 transition-colors shadow-md mt-4"
+          >
+            Send Message
+          </button>
+        </form>
+      </main>
+      <nav
+        class="absolute bottom-0 w-full bg-card-light dark:bg-card-dark border-t border-gray-200 dark:border-gray-700 py-3 px-6 pb-6 flex justify-between items-center z-20 shadow-[0_-5px_15px_rgba(0,0,0,0.05)]"
+      >
+        <a
+          class="flex flex-col items-center gap-1 group w-16"
+          href="homescreen.html"
+        >
+          <span
+            class="material-icons-round text-gray-400 group-hover:text-primary transition-colors text-3xl"
+            >home</span
+          >
+          <span
+            class="text-[10px] text-gray-400 group-hover:text-primary font-medium"
+            >Home</span
+          >
+        </a>
+        <a
+          class="flex flex-col items-center gap-1 group w-16"
+          href="orders/history.html"
+        >
+          <span
+            class="material-icons-round text-gray-400 group-hover:text-primary transition-colors text-3xl"
+            >receipt_long</span
+          >
+          <span
+            class="text-[10px] text-gray-400 group-hover:text-primary font-medium"
+            >History</span
+          >
+        </a>
+        <a
+          class="flex flex-col items-center gap-1 group w-16"
+          href="notification.html"
+        >
+          <div class="relative">
+            <span
+              class="material-icons-round text-gray-400 group-hover:text-primary transition-colors text-3xl"
+              >notifications</span
+            >
+            <span
+              class="absolute top-0 right-0 h-3 w-3 bg-red-500 rounded-full border-2 border-card-light dark:border-card-dark"
+            ></span>
+          </div>
+          <span
+            class="text-[10px] text-gray-400 group-hover:text-primary font-medium"
+            >Notify</span
+          >
+        </a>
+        <a
+          class="flex flex-col items-center gap-1 group w-16"
+          href="account.html"
+        >
+          <span
+            class="material-icons-round text-gray-400 group-hover:text-primary transition-colors text-3xl"
+            >account_circle</span
+          >
+          <span class="text-[10px] text-gray-400 group-hover:text-primary font-medium">Account</span>
+        </a>
+      </nav>
+    </div>
+
+    <script src="theme-toggle.js"></script>
+    <script>
+      document.getElementById('file-input').addEventListener('change', function(e) {
+        const fileNameSpan = document.getElementById('file-name');
+        if (this.files.length > 0) {
+          if (this.files.length === 1) {
+            fileNameSpan.textContent = this.files[0].name;
+          } else {
+            fileNameSpan.textContent = this.files.length + ' files selected';
+          }
+        } else {
+          fileNameSpan.textContent = 'no files selected';
+        }
+      });
+    </script>
+  </body>
+</html>

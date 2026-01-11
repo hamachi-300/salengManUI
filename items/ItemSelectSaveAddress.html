@@ -86,17 +86,6 @@
         Post Item
       </h1>
     </header>
-    <div class="px-6 py-2">
-      <div class="flex justify-between mb-2 text-xs font-medium text-gray-500 dark:text-gray-400">
-        <span>Details</span>
-        <span>Category</span>
-        <span>Photo</span>
-        <span class="text-primary font-bold">Address</span>
-      </div>
-      <div class="w-full h-1.5 bg-gray-300 dark:bg-gray-700 rounded-full overflow-hidden">
-        <div class="h-full bg-primary w-full rounded-full"></div>
-      </div>
-    </div>
     <main class="flex-1 overflow-y-auto px-6 pt-4 pb-24 no-scrollbar relative z-10">
       <div class="mb-6">
         <h2 class="text-2xl font-display font-bold mb-1">Select Location</h2>
@@ -104,65 +93,8 @@
           Where should we pick up your items?
         </p>
       </div>
-      <div class="space-y-4">
-        <label class="relative block group cursor-pointer">
-          <input checked="" class="peer sr-only" name="address" type="radio" />
-          <div
-            class="p-4 rounded-xl border-2 border-primary bg-surface-light dark:bg-surface-dark shadow-glow transition-all duration-300">
-            <div class="flex items-start justify-between mb-2">
-              <div class="flex items-center gap-2">
-                <span class="material-icons-round text-primary">home</span>
-                <span class="font-display font-semibold text-lg">Home</span>
-                <span
-                  class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white bg-primary rounded-full">Default</span>
-              </div>
-              <div class="w-5 h-5 rounded-full border-2 border-primary flex items-center justify-center bg-primary">
-                <span class="material-icons-round text-white text-xs font-bold">check</span>
-              </div>
-            </div>
-            <div class="pl-8">
-              <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                128/95 Moo 4, Soi Sukhumvit 42,<br />
-                Phra Khanong, Khlong Toei,
-              </p>
-              <p class="text-sm font-semibold mt-1">Bangkok 24240</p>
-              <p class="text-xs text-gray-400 mt-2 font-mono">081-234-5678</p>
-            </div>
-          </div>
-        </label>
-        <label class="relative block group cursor-pointer">
-          <input class="peer sr-only" name="address" type="radio" />
-          <div
-            class="p-4 rounded-xl border-2 border-transparent bg-surface-light dark:bg-surface-dark hover:bg-gray-50 dark:hover:bg-gray-700 peer-checked:border-primary peer-checked:shadow-glow transition-all duration-300 shadow-soft">
-            <div class="flex items-start justify-between mb-2">
-              <div class="flex items-center gap-2">
-                <span class="material-icons-round text-gray-400 group-hover:text-primary transition-colors">work</span>
-                <span class="font-display font-semibold text-lg">Office</span>
-              </div>
-              <div
-                class="w-5 h-5 rounded-full border-2 border-gray-300 dark:border-gray-500 flex items-center justify-center peer-checked:bg-primary peer-checked:border-primary">
-                <span
-                  class="material-icons-round text-white text-xs font-bold opacity-0 peer-checked:opacity-100">check</span>
-              </div>
-            </div>
-            <div class="pl-8">
-              <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                45 Empire Tower, 23rd Floor,<br />
-                Sathon Tai Road, Yannawa,
-              </p>
-              <p class="text-sm font-semibold mt-1">Bangkok 10120</p>
-              <p class="text-xs text-gray-400 mt-2 font-mono">089-999-8888</p>
-            </div>
-          </div>
-        </label>
-
-        <a href="ItemAddNewAddress.html">
-          <button
-            class="w-full py-4 mt-6 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-xl flex items-center justify-center gap-2 text-gray-500 dark:text-gray-400 hover:border-primary hover:text-primary hover:bg-surface-light dark:hover:bg-surface-dark transition-all group">
-            <span class="material-icons-round group-hover:scale-110 transition-transform">add_circle_outline</span>
-            <span class="font-medium">Add New Address</span>
-          </button>
-        </a>
+      <div id="address-list" class="space-y-4">
+        <!-- Addresses will be rendered by JavaScript -->
       </div>
     </main>
     <footer
@@ -174,15 +106,80 @@
             Cancel
           </button></a>
 
-        <a href="../homescreen.html" class="flex-1">
+        <a href="ItemSpecifyLocation.html" class="flex-1">
           <button
             class="w-full py-4 rounded-xl bg-primary text-white font-display font-bold text-lg shadow-glow flex items-center justify-center gap-2 hover:brightness-110 active:scale-95 transition-all">
-            <span>Post</span>
-            <span class="material-icons-round text-base">send</span>
+            <span>Select</span>
+            <span class="material-icons-round text-base">check</span>
           </button>
         </a>
       </div>
     </footer>
+
+    <!-- Add New Address Modal -->
+    <div id="add-address-modal" class="hidden absolute inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+      <div class="bg-surface-light dark:bg-surface-dark rounded-2xl p-6 w-full max-w-[340px] shadow-xl max-h-[90%] overflow-y-auto">
+        <h3 class="text-lg font-display font-semibold text-text-main-light dark:text-text-main-dark mb-4">Add New Address</h3>
+
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">Label</label>
+            <input
+              type="text"
+              id="new-address-label"
+              class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark focus:outline-none focus:ring-2 focus:ring-primary"
+              placeholder="e.g. Home, Office, etc."
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">Address</label>
+            <textarea
+              id="new-address-text"
+              rows="3"
+              class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+              placeholder="Street address, building, etc."
+            ></textarea>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">City & Postal Code</label>
+            <input
+              type="text"
+              id="new-address-city"
+              class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark focus:outline-none focus:ring-2 focus:ring-primary"
+              placeholder="e.g. Bangkok 10120"
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">Phone Number</label>
+            <input
+              type="tel"
+              id="new-address-phone"
+              class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark focus:outline-none focus:ring-2 focus:ring-primary"
+              placeholder="e.g. 081-234-5678"
+            />
+          </div>
+        </div>
+
+        <div class="flex gap-3 mt-6">
+          <button
+            onclick="closeAddAddressModal()"
+            class="flex-1 py-3 rounded-xl bg-gray-200 dark:bg-gray-600 text-text-main-light dark:text-text-main-dark font-medium hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors"
+          >
+            Cancel
+          </button>
+          <button
+            onclick="addNewAddress()"
+            class="flex-1 py-3 rounded-xl bg-primary text-white font-medium hover:bg-orange-600 transition-colors"
+          >
+            Add
+          </button>
+        </div>
+      </div>
+    </div>
+
     <div
       class="absolute top-0 right-0 w-64 h-64 bg-primary rounded-full filter blur-[100px] opacity-10 pointer-events-none transform translate-x-1/2 -translate-y-1/2">
     </div>
@@ -193,6 +190,166 @@
   <div class="fixed bottom-4 right-4 z-50"></div>
 
   <script src="../theme-toggle.js"></script>
+  <script>
+    // Default addresses
+    let addresses = [
+      {
+        id: 1,
+        label: 'Home',
+        icon: 'home',
+        address: '128/95 Moo 4, Soi Sukhumvit 42,\nPhra Khanong, Khlong Toei,',
+        city: 'Bangkok 24240',
+        phone: '081-234-5678',
+        isDefault: true,
+        selected: true
+      },
+      {
+        id: 2,
+        label: 'Office',
+        icon: 'work',
+        address: '45 Empire Tower, 23rd Floor,\nSathon Tai Road, Yannawa,',
+        city: 'Bangkok 10120',
+        phone: '089-999-8888',
+        isDefault: false,
+        selected: false
+      }
+    ];
+
+    function getIconForLabel(label) {
+      const lowerLabel = label.toLowerCase();
+      if (lowerLabel.includes('home')) return 'home';
+      if (lowerLabel.includes('office') || lowerLabel.includes('work')) return 'work';
+      if (lowerLabel.includes('school') || lowerLabel.includes('university')) return 'school';
+      if (lowerLabel.includes('gym') || lowerLabel.includes('sport')) return 'fitness_center';
+      if (lowerLabel.includes('shop') || lowerLabel.includes('store')) return 'store';
+      return 'location_on';
+    }
+
+    function renderAddresses() {
+      const container = document.getElementById('address-list');
+
+      let html = addresses.map(addr => {
+        if (addr.selected) {
+          return `
+            <label class="relative block group cursor-pointer" onclick="selectAddress(${addr.id})">
+              <input checked="" class="peer sr-only" name="address" type="radio" />
+              <div class="p-4 rounded-xl border-2 border-primary bg-surface-light dark:bg-surface-dark shadow-glow transition-all duration-300">
+                <div class="flex items-start justify-between mb-2">
+                  <div class="flex items-center gap-2">
+                    <span class="material-icons-round text-primary">${addr.icon}</span>
+                    <span class="font-display font-semibold text-lg">${addr.label}</span>
+                    ${addr.isDefault ? '<span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white bg-primary rounded-full">Default</span>' : ''}
+                  </div>
+                  <div class="w-5 h-5 rounded-full border-2 border-primary flex items-center justify-center bg-primary">
+                    <span class="material-icons-round text-white text-xs font-bold">check</span>
+                  </div>
+                </div>
+                <div class="pl-8">
+                  <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed whitespace-pre-line">${addr.address}</p>
+                  <p class="text-sm font-semibold mt-1">${addr.city}</p>
+                  <p class="text-xs text-gray-400 mt-2 font-mono">${addr.phone}</p>
+                </div>
+              </div>
+            </label>
+          `;
+        } else {
+          return `
+            <label class="relative block group cursor-pointer" onclick="selectAddress(${addr.id})">
+              <input class="peer sr-only" name="address" type="radio" />
+              <div class="p-4 rounded-xl border-2 border-transparent bg-surface-light dark:bg-surface-dark hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-300 shadow-soft">
+                <div class="flex items-start justify-between mb-2">
+                  <div class="flex items-center gap-2">
+                    <span class="material-icons-round text-gray-400 group-hover:text-primary transition-colors">${addr.icon}</span>
+                    <span class="font-display font-semibold text-lg">${addr.label}</span>
+                    ${addr.isDefault ? '<span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white bg-primary rounded-full">Default</span>' : ''}
+                  </div>
+                  <div class="w-5 h-5 rounded-full border-2 border-gray-300 dark:border-gray-500 flex items-center justify-center">
+                  </div>
+                </div>
+                <div class="pl-8">
+                  <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed whitespace-pre-line">${addr.address}</p>
+                  <p class="text-sm font-semibold mt-1">${addr.city}</p>
+                  <p class="text-xs text-gray-400 mt-2 font-mono">${addr.phone}</p>
+                </div>
+              </div>
+            </label>
+          `;
+        }
+      }).join('');
+
+      // Add New Address button
+      html += `
+        <button onclick="openAddAddressModal()"
+          class="w-full py-4 mt-6 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-xl flex items-center justify-center gap-2 text-gray-500 dark:text-gray-400 hover:border-primary hover:text-primary hover:bg-surface-light dark:hover:bg-surface-dark transition-all group">
+          <span class="material-icons-round group-hover:scale-110 transition-transform">add_circle_outline</span>
+          <span class="font-medium">Add New Address</span>
+        </button>
+      `;
+
+      container.innerHTML = html;
+    }
+
+    function selectAddress(id) {
+      addresses = addresses.map(addr => ({
+        ...addr,
+        selected: addr.id === id
+      }));
+      renderAddresses();
+    }
+
+    function openAddAddressModal() {
+      document.getElementById('add-address-modal').classList.remove('hidden');
+      document.getElementById('new-address-label').value = '';
+      document.getElementById('new-address-text').value = '';
+      document.getElementById('new-address-city').value = '';
+      document.getElementById('new-address-phone').value = '';
+      document.getElementById('new-address-label').focus();
+    }
+
+    function closeAddAddressModal() {
+      document.getElementById('add-address-modal').classList.add('hidden');
+    }
+
+    function addNewAddress() {
+      const label = document.getElementById('new-address-label').value.trim();
+      const addressText = document.getElementById('new-address-text').value.trim();
+      const city = document.getElementById('new-address-city').value.trim();
+      const phone = document.getElementById('new-address-phone').value.trim();
+
+      if (label && addressText && city) {
+        const newId = Math.max(...addresses.map(a => a.id)) + 1;
+        addresses.push({
+          id: newId,
+          label: label,
+          icon: getIconForLabel(label),
+          address: addressText,
+          city: city,
+          phone: phone || '-',
+          isDefault: false,
+          selected: true
+        });
+
+        // Deselect others and select the new one
+        addresses = addresses.map(addr => ({
+          ...addr,
+          selected: addr.id === newId
+        }));
+
+        renderAddresses();
+        closeAddAddressModal();
+      }
+    }
+
+    // Close modal when clicking outside
+    document.getElementById('add-address-modal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeAddAddressModal();
+      }
+    });
+
+    // Initialize
+    renderAddresses();
+  </script>
 </body>
 
 </html>
