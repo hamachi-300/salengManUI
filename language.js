@@ -1,5 +1,5 @@
 // Language translation system
-(function() {
+(function () {
   // Translation dictionary
   const translations = {
     en: {
@@ -119,6 +119,49 @@
       'Good': 'Good',
       'Very Good': 'Very Good',
       'Excellent': 'Excellent',
+
+      // Common Actions & Labels
+      'Next': 'Next',
+      'Back': 'Back',
+      'Required': 'Required',
+      'Remarks': 'Remarks',
+      'Submit': 'Submit',
+      'Cancel': 'Cancel',
+      'Save': 'Save',
+      'Close': 'Close',
+
+      // Upload Photo
+      'Item Photos': 'Item Photos',
+      'Upload Photos': 'Upload Photos',
+      'Tap here to add images': 'Tap here to add images',
+      'Weight (kg)': 'Weight (kg)',
+      'Describe condition, approximate weight, or pickup details...': 'Describe condition, approximate weight, or pickup details...',
+      'Trash Photo': 'Trash Photo',
+      'Upload Image': 'Upload Image',
+      'Tap to select image': 'Tap to select image',
+      'Provide more details (if any)...': 'Provide more details (if any)...',
+
+      // Location
+      'Specify Location': 'Specify Location',
+      'Choose Address': 'Choose Address',
+      'Delivery Address': 'Delivery Address',
+      'Note to Driver (Optional)': 'Note to Driver (Optional)',
+      'Landmark, backup contact number...': 'Landmark, backup contact number...',
+      'House No., Soi, Village...': 'House No., Soi, Village...',
+      'Postal Code': 'Postal Code',
+
+      // Tracking
+      'Driver Tracking': 'Driver Tracking',
+      'Current Status': 'Current Status',
+      'Heading to pickup': 'Heading to pickup',
+      'Chat with Driver': 'Chat with Driver',
+
+      // Order Completed
+      'Second Hand': 'Second Hand',
+      'Chat': 'Chat',
+      'Address': 'Address',
+      'Buyer': 'Buyer',
+      'Rate this Buyer': 'Rate this Buyer',
     },
     th: {
       // Navigation
@@ -208,6 +251,7 @@
       'Glass': 'แก้ว',
       'Cardboard': 'กระดาษแข็ง',
       'Electronics': 'อิเล็กทรอนิกส์',
+      'Waste': 'ขยะทั่วไป',
 
       // Address
       'Select Location': 'เลือกตำแหน่ง',
@@ -237,6 +281,45 @@
       'Good': 'ดี',
       'Very Good': 'ดีมาก',
       'Excellent': 'ยอดเยี่ยม',
+
+      // Common Actions & Labels
+      'Next': 'ถัดไป',
+      'Back': 'กลับ',
+      'Required': 'จำเป็น',
+      'Remarks': 'หมายเหตุ',
+      'Save': 'บันทึก',
+
+      // Upload Photo
+      'Item Photos': 'รูปภาพสินค้า',
+      'Upload Photos': 'อัปโหลดรูปภาพ',
+      'Tap here to add images': 'แตะที่นี่เพื่อเพิ่มรูปภาพ',
+      'Weight (kg)': 'น้ำหนัก (kg)',
+      'Describe condition, approximate weight, or pickup details...': 'ระบุสภาพ น้ำหนักโดยประมาณ หรือรายละเอียดการรับ...',
+      'Trash Photo': 'รูปของขยะ',
+      'Upload Image': 'อัปโหลดรูปภาพ',
+      'Tap to select image': 'แตะเพื่อเลือกรูป',
+      'Provide more details (if any)...': 'ระบุรายละเอียดเพิ่มเติม (ถ้ามี)...',
+
+      // Location
+      'Specify Location': 'ระบุตำแหน่ง',
+      'Choose Address': 'เลือกที่อยู่',
+      'Delivery Address': 'ที่อยู่จัดส่ง',
+      'Note to Driver (Optional)': 'หมายเหตุถึงคนขับ (ไม่บังคับ)',
+      'Landmark, backup contact number...': 'จุดสังเกต, เบอร์ติดต่อสำรอง...',
+      'House No., Soi, Village...': 'บ้านเลขที่, ซอย, หมู่บ้าน...',
+      'Postal Code': 'รหัสไปรษณีย์',
+
+      // Tracking
+      'Driver Tracking': 'ติดตามตำแหน่ง',
+      'Current Status': 'สถานะปัจจุบัน',
+      'Heading to pickup': 'กำลังเดินทางไปรับของ',
+      'Chat with Driver': 'แชทกับคนขับ',
+
+      // Order Completed
+      'Second Hand': 'ขายของเก่า',
+      'Chat': 'แชท',
+      'Buyer': 'ผู้รับซื้อ',
+      'Rate this Buyer': 'ให้คะแนนผู้รับซื้อ',
     }
   };
 

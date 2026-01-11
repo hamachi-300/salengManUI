@@ -1,383 +1,295 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Saleng Man - Account Screen</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
-      rel="stylesheet"
-    />
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#FD7014", // Orange
-              secondary: "#393E46", // Dark Gray
-              darkbg: "#222831", // Very Dark Gray
-              lightbg: "#EEEEEE", // Light Gray/White
-              "background-light": "#EEEEEE",
-              "background-dark": "#222831",
-              "card-light": "#FFFFFF",
-              "card-dark": "#393E46",
-              "text-light": "#222831",
-              "text-dark": "#EEEEEE",
-            },
-            fontFamily: {
-              display: ["Kanit", "sans-serif"],
-              body: ["Kanit", "sans-serif"],
-            },
-            borderRadius: {
-              DEFAULT: "0.5rem",
-              xl: "1rem",
-              "2xl": "1.5rem",
-            },
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Saleng Man - Account Screen</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#FD7014", // Orange
+            secondary: "#393E46", // Dark Gray
+            darkbg: "#222831", // Very Dark Gray
+            lightbg: "#EEEEEE", // Light Gray/White
+            "background-light": "#EEEEEE",
+            "background-dark": "#222831",
+            "card-light": "#FFFFFF",
+            "card-dark": "#393E46",
+            "text-light": "#222831",
+            "text-dark": "#EEEEEE",
+          },
+          fontFamily: {
+            display: ["Kanit", "sans-serif"],
+            body: ["Kanit", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem",
+            xl: "1rem",
+            "2xl": "1.5rem",
           },
         },
-      };
-    </script>
-    <style>
-      body {
-        font-family: "Kanit", sans-serif;
-      }
-      .no-scrollbar::-webkit-scrollbar {
-        display: none;
-      }
-      .no-scrollbar {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-    </style>
-    <style>
-      body {
-        min-height: max(884px, 100dvh);
-      }
-    </style>
-  </head>
-  <body
-    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark min-h-screen flex justify-center items-center p-4 font-display transition-colors duration-300"
-  >
+      },
+    };
+  </script>
+  <style>
+    body {
+      font-family: "Kanit", sans-serif;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+
+<body
+  class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark min-h-screen flex justify-center items-center p-4 font-display transition-colors duration-300">
+  <div
+    class="w-full max-w-[375px] h-[812px] bg-background-light dark:bg-background-dark rounded-[40px] border-8 border-gray-200 dark:border-card-dark shadow-2xl relative flex flex-col overflow-hidden">
     <div
-      class="w-full max-w-[375px] h-[812px] bg-background-light dark:bg-background-dark rounded-[40px] border-8 border-gray-200 dark:border-card-dark shadow-2xl relative flex flex-col overflow-hidden"
-    >
-      <div
-        class="absolute top-0 w-full h-12 flex justify-between items-center px-6 z-50 bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 text-sm font-medium"
-      >
-        <span>9:41</span>
-        <div class="flex gap-1.5 items-center">
-          <span class="material-icons-round text-base"
-            >signal_cellular_alt</span
-          >
-          <span class="material-icons-round text-base">wifi</span>
-          <span class="material-icons-round text-base">battery_full</span>
+      class="absolute top-0 w-full h-12 flex justify-between items-center px-6 z-50 bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 text-sm font-medium">
+      <span>9:41</span>
+      <div class="flex gap-1.5 items-center">
+        <span class="material-icons-round text-base">signal_cellular_alt</span>
+        <span class="material-icons-round text-base">wifi</span>
+        <span class="material-icons-round text-base">battery_full</span>
+      </div>
+    </div>
+    <header
+      class="pt-12 pb-6 px-6 flex justify-between items-center sticky top-0 z-10 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm">
+      <h1 class="text-2xl font-semibold tracking-wide text-primary">
+        Account
+      </h1>
+      <a href="setting.html" class="text-secondary dark:text-gray-300 hover:text-primary transition-colors">
+        <span class="material-icons-round text-3xl">settings</span>
+      </a>
+    </header>
+    <main class="flex-1 px-6 pb-24 overflow-y-auto no-scrollbar">
+      <div class="flex flex-col items-center mb-8 relative">
+        <div class="relative group">
+          <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-primary shadow-lg bg-card-dark">
+            <img id="profile-image" alt="User Profile Picture" class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD46YkCPT2PjNtIQMSBumUtcq3hbUjf-VXGhyB2nerjf4u1jrlvReTnjYfDvb5quaEY9yL-ADk5QpOJDtVbHPyWlhIeisTWCHQeQIviWcqm1V9UsU-gM13LpEEyio1KJzW6qYJPa72gn3qKPTvWo7VFu2ehlRxpC2wSGgMe47BNOnVp0QlxU1lpFAWX0zeX5ozJHsw9svDlolsPu67Ge0QvgAjGAnEgoTE03wJoYEUlSPrF8mDZ-OHBIoZj6nJqCMX3yxwUOahVuf0" />
+          </div>
+          <input type="file" id="profile-input" accept="image/*" class="hidden" />
+          <button onclick="document.getElementById('profile-input').click()"
+            class="absolute bottom-1 right-1 bg-secondary text-white p-2 rounded-full shadow-md border-2 border-background-light dark:border-background-dark hover:bg-primary transition-colors flex items-center justify-center">
+            <span class="material-icons-round text-sm">edit</span>
+          </button>
+        </div>
+        <h2 class="mt-4 text-xl font-bold">John Saleng</h2>
+        <p class="text-gray-500 dark:text-gray-400 text-sm">Green Member</p>
+      </div>
+      <div class="space-y-4">
+        <div
+          class="bg-card-light dark:bg-card-dark p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 flex items-center gap-4 transition-colors">
+          <div class="bg-primary/10 p-2 rounded-lg text-primary">
+            <span class="material-icons-round">person</span>
+          </div>
+          <div class="flex-1">
+            <p class="text-xs text-gray-500 dark:text-gray-400 uppercase font-medium">
+              Username
+            </p>
+            <p id="username-display" class="font-medium text-lg">john_salengman</p>
+          </div>
+          <button onclick="openModal('username')" class="text-gray-400 hover:text-primary">
+            <span class="material-icons-round text-lg">edit</span>
+          </button>
+        </div>
+        <div
+          class="bg-card-light dark:bg-card-dark p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 flex items-start gap-4 transition-colors">
+          <div class="bg-primary/10 p-2 rounded-lg text-primary mt-1">
+            <span class="material-icons-round">home</span>
+          </div>
+          <div class="flex-1">
+            <p class="text-xs text-gray-500 dark:text-gray-400 uppercase font-medium">
+              Address
+            </p>
+            <p class="font-medium text-lg leading-snug">
+              123 Recycling Road, Eco District, Bangkok 10110
+            </p>
+          </div>
+          <a href="items/ItemSelectSaveAddressProfile.html" class="text-gray-400 hover:text-primary mt-1">
+            <span class="material-icons-round text-lg">edit</span>
+          </a>
+        </div>
+        <div
+          class="bg-card-light dark:bg-card-dark p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 flex items-center gap-4 transition-colors">
+          <div class="bg-primary/10 p-2 rounded-lg text-primary">
+            <span class="material-icons-round">phone</span>
+          </div>
+          <div class="flex-1">
+            <p class="text-xs text-gray-500 dark:text-gray-400 uppercase font-medium">
+              Phone
+            </p>
+            <p id="phone-display" class="font-medium text-lg">089-123-4567</p>
+          </div>
+          <button onclick="openModal('phone')" class="text-gray-400 hover:text-primary">
+            <span class="material-icons-round text-lg">edit</span>
+          </button>
+        </div>
+        <div class="pt-4 space-y-3">
+          <a href="orders/history.html" class="block mb-6">
+            <button
+              class="w-full bg-secondary dark:bg-gray-700 text-white py-3 px-4 rounded-xl font-medium flex items-center justify-between hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors shadow-sm">
+              <span class="flex items-center gap-3">
+                <span class="material-icons-round text-gray-300">history</span>
+                My Selling History
+              </span>
+              <span class="material-icons-round text-gray-400">chevron_right</span>
+            </button>
+          </a>
+
+          <a href="contact.html">
+            <button
+              class="w-full bg-secondary dark:bg-gray-700 text-white py-3 px-4 rounded-xl font-medium flex items-center justify-between hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors shadow-sm">
+              <span class="flex items-center gap-3">
+                <span class="material-icons-round text-gray-300">help</span>
+                Help &amp; Support
+              </span>
+              <span class="material-icons-round text-gray-400">chevron_right</span>
+            </button>
+          </a>
+
+          <a href="index.html">
+            <button
+              class="w-full border border-red-500 text-red-500 dark:text-red-400 py-3 px-4 rounded-xl font-medium hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors mt-4 flex items-center justify-center gap-2">
+              <span class="material-icons-round">logout</span>
+              Sign Out
+            </button></a>
         </div>
       </div>
-      <header
-        class="pt-12 pb-6 px-6 flex justify-between items-center sticky top-0 z-10 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm"
-      >
-        <h1 class="text-2xl font-semibold tracking-wide text-primary">
-          Account
-        </h1>
-        <a href="setting.html" class="text-secondary dark:text-gray-300 hover:text-primary transition-colors">
-          <span class="material-icons-round text-3xl">settings</span>
-        </a>
-      </header>
-      <main class="flex-1 px-6 pb-24 overflow-y-auto no-scrollbar">
-        <div class="flex flex-col items-center mb-8 relative">
-          <div class="relative group">
-            <div
-              class="w-32 h-32 rounded-full overflow-hidden border-4 border-primary shadow-lg bg-card-dark"
-            >
-              <img
-                id="profile-image"
-                alt="User Profile Picture"
-                class="w-full h-full object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD46YkCPT2PjNtIQMSBumUtcq3hbUjf-VXGhyB2nerjf4u1jrlvReTnjYfDvb5quaEY9yL-ADk5QpOJDtVbHPyWlhIeisTWCHQeQIviWcqm1V9UsU-gM13LpEEyio1KJzW6qYJPa72gn3qKPTvWo7VFu2ehlRxpC2wSGgMe47BNOnVp0QlxU1lpFAWX0zeX5ozJHsw9svDlolsPu67Ge0QvgAjGAnEgoTE03wJoYEUlSPrF8mDZ-OHBIoZj6nJqCMX3yxwUOahVuf0"
-              />
-            </div>
-            <input
-              type="file"
-              id="profile-input"
-              accept="image/*"
-              class="hidden"
-            />
-            <button
-              onclick="document.getElementById('profile-input').click()"
-              class="absolute bottom-1 right-1 bg-secondary text-white p-2 rounded-full shadow-md border-2 border-background-light dark:border-background-dark hover:bg-primary transition-colors flex items-center justify-center"
-            >
-              <span class="material-icons-round text-sm">edit</span>
-            </button>
-          </div>
-          <h2 class="mt-4 text-xl font-bold">John Saleng</h2>
-          <p class="text-gray-500 dark:text-gray-400 text-sm">Green Member</p>
+    </main>
+    <nav
+      class="absolute bottom-0 w-full bg-card-light dark:bg-card-dark border-t border-gray-200 dark:border-gray-700 py-3 px-6 pb-6 flex justify-between items-center z-20 shadow-[0_-5px_15px_rgba(0,0,0,0.05)]">
+      <a class="flex flex-col items-center gap-1 group w-16" href="homescreen.html">
+        <span class="material-icons-round text-gray-400 group-hover:text-primary transition-colors text-3xl">home</span>
+        <span class="text-[10px] text-gray-400 group-hover:text-primary font-medium">Home</span>
+      </a>
+      <a class="flex flex-col items-center gap-1 group w-16" href="orders/history.html">
+        <span
+          class="material-icons-round text-gray-400 group-hover:text-primary transition-colors text-3xl">receipt_long</span>
+        <span class="text-[10px] text-gray-400 group-hover:text-primary font-medium">History</span>
+      </a>
+      <a class="flex flex-col items-center gap-1 group w-16" href="notification.html">
+        <div class="relative">
+          <span
+            class="material-icons-round text-gray-400 group-hover:text-primary transition-colors text-3xl">notifications</span>
+          <span
+            class="absolute top-0 right-0 h-3 w-3 bg-red-500 rounded-full border-2 border-card-light dark:border-card-dark"></span>
         </div>
-        <div class="space-y-4">
-          <div
-            class="bg-card-light dark:bg-card-dark p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 flex items-center gap-4 transition-colors"
-          >
-            <div class="bg-primary/10 p-2 rounded-lg text-primary">
-              <span class="material-icons-round">person</span>
-            </div>
-            <div class="flex-1">
-              <p
-                class="text-xs text-gray-500 dark:text-gray-400 uppercase font-medium"
-              >
-                Username
-              </p>
-              <p id="username-display" class="font-medium text-lg">john_salengman</p>
-            </div>
-            <button onclick="openModal('username')" class="text-gray-400 hover:text-primary">
-              <span class="material-icons-round text-lg">edit</span>
-            </button>
-          </div>
-          <div
-            class="bg-card-light dark:bg-card-dark p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 flex items-start gap-4 transition-colors"
-          >
-            <div class="bg-primary/10 p-2 rounded-lg text-primary mt-1">
-              <span class="material-icons-round">home</span>
-            </div>
-            <div class="flex-1">
-              <p
-                class="text-xs text-gray-500 dark:text-gray-400 uppercase font-medium"
-              >
-                Address
-              </p>
-              <p class="font-medium text-lg leading-snug">
-                123 Recycling Road, Eco District, Bangkok 10110
-              </p>
-            </div>
-            <a href="items/ItemSelectSaveAddressProfile.html" class="text-gray-400 hover:text-primary mt-1">
-              <span class="material-icons-round text-lg">edit</span>
-            </a>
-          </div>
-          <div
-            class="bg-card-light dark:bg-card-dark p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 flex items-center gap-4 transition-colors"
-          >
-            <div class="bg-primary/10 p-2 rounded-lg text-primary">
-              <span class="material-icons-round">phone</span>
-            </div>
-            <div class="flex-1">
-              <p
-                class="text-xs text-gray-500 dark:text-gray-400 uppercase font-medium"
-              >
-                Phone
-              </p>
-              <p id="phone-display" class="font-medium text-lg">089-123-4567</p>
-            </div>
-            <button onclick="openModal('phone')" class="text-gray-400 hover:text-primary">
-              <span class="material-icons-round text-lg">edit</span>
-            </button>
-          </div>
-          <div class="pt-4 space-y-3">
-            <a href="orders/history.html">
-              <button
-                class="w-full bg-secondary dark:bg-gray-700 text-white py-3 px-4 rounded-xl font-medium flex items-center justify-between hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors shadow-sm"
-              >
-                <span class="flex items-center gap-3">
-                  <span class="material-icons-round text-gray-300"
-                    >history</span
-                  >
-                  My Selling History
-                </span>
-                <span class="material-icons-round text-gray-400"
-                  >chevron_right</span
-                >
-              </button>
-            </a>
+        <span class="text-[10px] text-gray-400 group-hover:text-primary font-medium">Notify</span>
+      </a>
+      <a class="flex flex-col items-center gap-1 group w-16" href="account.html">
+        <span class="material-icons-round text-primary transition-colors text-3xl">account_circle</span>
+        <span class="text-[10px] text-primary font-medium">Account</span>
+      </a>
+    </nav>
 
-            <a href="contact.html">
-              <button
-                class="w-full bg-secondary dark:bg-gray-700 text-white py-3 px-4 rounded-xl font-medium flex items-center justify-between hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors shadow-sm"
-              >
-                <span class="flex items-center gap-3">
-                  <span class="material-icons-round text-gray-300">help</span>
-                  Help &amp; Support
-                </span>
-                <span class="material-icons-round text-gray-400"
-                  >chevron_right</span
-                >
-              </button>
-            </a>
-
-            <a href="index.html">
-              <button
-                class="w-full border border-red-500 text-red-500 dark:text-red-400 py-3 px-4 rounded-xl font-medium hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors mt-4 flex items-center justify-center gap-2"
-              >
-                <span class="material-icons-round">logout</span>
-                Sign Out
-              </button></a
-            >
-          </div>
-        </div>
-      </main>
-      <nav
-        class="absolute bottom-0 w-full bg-card-light dark:bg-card-dark border-t border-gray-200 dark:border-gray-700 py-3 px-6 pb-6 flex justify-between items-center z-20 shadow-[0_-5px_15px_rgba(0,0,0,0.05)]"
-      >
-        <a
-          class="flex flex-col items-center gap-1 group w-16"
-          href="homescreen.html"
-        >
-          <span
-            class="material-icons-round text-gray-400 group-hover:text-primary transition-colors text-3xl"
-            >home</span
-          >
-          <span
-            class="text-[10px] text-gray-400 group-hover:text-primary font-medium"
-            >Home</span
-          >
-        </a>
-        <a
-          class="flex flex-col items-center gap-1 group w-16"
-          href="orders/history.html"
-        >
-          <span
-            class="material-icons-round text-gray-400 group-hover:text-primary transition-colors text-3xl"
-            >receipt_long</span
-          >
-          <span
-            class="text-[10px] text-gray-400 group-hover:text-primary font-medium"
-            >History</span
-          >
-        </a>
-        <a
-          class="flex flex-col items-center gap-1 group w-16"
-          href="notification.html"
-        >
-          <div class="relative">
-            <span
-              class="material-icons-round text-gray-400 group-hover:text-primary transition-colors text-3xl"
-              >notifications</span
-            >
-            <span
-              class="absolute top-0 right-0 h-3 w-3 bg-red-500 rounded-full border-2 border-card-light dark:border-card-dark"
-            ></span>
-          </div>
-          <span
-            class="text-[10px] text-gray-400 group-hover:text-primary font-medium"
-            >Notify</span
-          >
-        </a>
-        <a
-          class="flex flex-col items-center gap-1 group w-16"
-          href="account.html"
-        >
-          <span
-            class="material-icons-round text-primary transition-colors text-3xl"
-            >account_circle</span
-          >
-          <span class="text-[10px] text-primary font-medium">Account</span>
-        </a>
-      </nav>
-
-      <!-- Username Modal -->
-      <div id="username-modal" class="hidden absolute inset-0 bg-black/50 z-50 flex items-center justify-center p-6">
-        <div class="bg-card-light dark:bg-card-dark rounded-2xl p-6 w-full max-w-[320px] shadow-xl">
-          <h3 class="text-lg font-semibold mb-4">Edit Username</h3>
-          <input
-            type="text"
-            id="username-input"
-            class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-background-light dark:bg-background-dark focus:outline-none focus:ring-2 focus:ring-primary mb-4"
-            placeholder="Enter username"
-          />
-          <div class="flex gap-3">
-            <button
-              onclick="closeModal('username')"
-              class="flex-1 py-3 rounded-xl bg-gray-200 dark:bg-gray-600 text-text-light dark:text-text-dark font-medium hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors"
-            >
-              Cancel
-            </button>
-            <button
-              onclick="saveUsername()"
-              class="flex-1 py-3 rounded-xl bg-primary text-white font-medium hover:bg-orange-600 transition-colors"
-            >
-              Save
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Phone Modal -->
-      <div id="phone-modal" class="hidden absolute inset-0 bg-black/50 z-50 flex items-center justify-center p-6">
-        <div class="bg-card-light dark:bg-card-dark rounded-2xl p-6 w-full max-w-[320px] shadow-xl">
-          <h3 class="text-lg font-semibold mb-4">Edit Phone Number</h3>
-          <input
-            type="tel"
-            id="phone-input"
-            class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-background-light dark:bg-background-dark focus:outline-none focus:ring-2 focus:ring-primary mb-4"
-            placeholder="Enter phone number"
-          />
-          <div class="flex gap-3">
-            <button
-              onclick="closeModal('phone')"
-              class="flex-1 py-3 rounded-xl bg-gray-200 dark:bg-gray-600 text-text-light dark:text-text-dark font-medium hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors"
-            >
-              Cancel
-            </button>
-            <button
-              onclick="savePhone()"
-              class="flex-1 py-3 rounded-xl bg-primary text-white font-medium hover:bg-orange-600 transition-colors"
-            >
-              Save
-            </button>
-          </div>
+    <!-- Username Modal -->
+    <div id="username-modal" class="hidden absolute inset-0 bg-black/50 z-50 flex items-center justify-center p-6">
+      <div class="bg-card-light dark:bg-card-dark rounded-2xl p-6 w-full max-w-[320px] shadow-xl">
+        <h3 class="text-lg font-semibold mb-4">Edit Username</h3>
+        <input type="text" id="username-input"
+          class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-background-light dark:bg-background-dark focus:outline-none focus:ring-2 focus:ring-primary mb-4"
+          placeholder="Enter username" />
+        <div class="flex gap-3">
+          <button onclick="closeModal('username')"
+            class="flex-1 py-3 rounded-xl bg-gray-200 dark:bg-gray-600 text-text-light dark:text-text-dark font-medium hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors">
+            Cancel
+          </button>
+          <button onclick="saveUsername()"
+            class="flex-1 py-3 rounded-xl bg-primary text-white font-medium hover:bg-orange-600 transition-colors">
+            Save
+          </button>
         </div>
       </div>
     </div>
 
-    <script src="theme-toggle.js"></script>
-    <script>
-      document.getElementById('profile-input').addEventListener('change', function(e) {
-        const file = e.target.files[0];
-        if (file) {
-          const reader = new FileReader();
-          reader.onload = function(e) {
-            document.getElementById('profile-image').src = e.target.result;
-          };
-          reader.readAsDataURL(file);
-        }
-      });
+    <!-- Phone Modal -->
+    <div id="phone-modal" class="hidden absolute inset-0 bg-black/50 z-50 flex items-center justify-center p-6">
+      <div class="bg-card-light dark:bg-card-dark rounded-2xl p-6 w-full max-w-[320px] shadow-xl">
+        <h3 class="text-lg font-semibold mb-4">Edit Phone Number</h3>
+        <input type="tel" id="phone-input"
+          class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-background-light dark:bg-background-dark focus:outline-none focus:ring-2 focus:ring-primary mb-4"
+          placeholder="Enter phone number" />
+        <div class="flex gap-3">
+          <button onclick="closeModal('phone')"
+            class="flex-1 py-3 rounded-xl bg-gray-200 dark:bg-gray-600 text-text-light dark:text-text-dark font-medium hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors">
+            Cancel
+          </button>
+          <button onclick="savePhone()"
+            class="flex-1 py-3 rounded-xl bg-primary text-white font-medium hover:bg-orange-600 transition-colors">
+            Save
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      function openModal(type) {
-        const modal = document.getElementById(type + '-modal');
-        const input = document.getElementById(type + '-input');
-        const display = document.getElementById(type + '-display');
-        input.value = display.textContent;
-        modal.classList.remove('hidden');
+  <script src="theme-toggle.js"></script>
+  <script src="language.js"></script>
+  <script>
+    document.getElementById('profile-input').addEventListener('change', function (e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          document.getElementById('profile-image').src = e.target.result;
+        };
+        reader.readAsDataURL(file);
       }
+    });
 
-      function closeModal(type) {
-        const modal = document.getElementById(type + '-modal');
-        modal.classList.add('hidden');
-      }
+    function openModal(type) {
+      const modal = document.getElementById(type + '-modal');
+      const input = document.getElementById(type + '-input');
+      const display = document.getElementById(type + '-display');
+      input.value = display.textContent;
+      modal.classList.remove('hidden');
+    }
 
-      function saveUsername() {
-        const input = document.getElementById('username-input');
-        const display = document.getElementById('username-display');
-        if (input.value.trim()) {
-          display.textContent = input.value.trim();
-        }
-        closeModal('username');
-      }
+    function closeModal(type) {
+      const modal = document.getElementById(type + '-modal');
+      modal.classList.add('hidden');
+    }
 
-      function savePhone() {
-        const input = document.getElementById('phone-input');
-        const display = document.getElementById('phone-display');
-        if (input.value.trim()) {
-          display.textContent = input.value.trim();
-        }
-        closeModal('phone');
+    function saveUsername() {
+      const input = document.getElementById('username-input');
+      const display = document.getElementById('username-display');
+      if (input.value.trim()) {
+        display.textContent = input.value.trim();
       }
-    </script>
-  </body>
+      closeModal('username');
+    }
+
+    function savePhone() {
+      const input = document.getElementById('phone-input');
+      const display = document.getElementById('phone-display');
+      if (input.value.trim()) {
+        display.textContent = input.value.trim();
+      }
+      closeModal('phone');
+    }
+  </script>
+</body>
+
 </html>

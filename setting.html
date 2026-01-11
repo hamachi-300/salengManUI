@@ -58,8 +58,13 @@
         -ms-overflow-style: none;
         scrollbar-width: none;
       }
+      .toggle-checkbox {
+        top: 2px;
+        left: 2px;
+        transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+      }
       .toggle-checkbox:checked {
-        right: 0;
+        transform: translateX(24px);
         border-color: #FD7014;
         background-color: #FD7014;
       }
@@ -130,8 +135,7 @@
                 <input
                   type="checkbox"
                   id="theme-toggle"
-                  class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-gray-300 appearance-none cursor-pointer transition-all duration-300"
-                  style="top: 2px; left: 2px;"
+                  class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-gray-300 appearance-none cursor-pointer"
                 />
                 <label
                   for="theme-toggle"

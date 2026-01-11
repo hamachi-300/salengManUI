@@ -1,327 +1,267 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Saleng Man - Post Item</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
-      rel="stylesheet"
-    />
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#FD7014",
-              "background-light": "#EEEEEE",
-              "background-dark": "#222831",
-              "surface-dark": "#393E46",
-              "surface-light": "#FFFFFF",
-              "text-light": "#EEEEEE", // Light text for dark mode
-              "text-dark": "#222831", // Dark text for light mode
-            },
-            fontFamily: {
-              display: ["Prompt", "sans-serif"],
-              sans: ["Prompt", "sans-serif"],
-            },
-            borderRadius: {
-              DEFAULT: "12px",
-              xl: "16px",
-              "2xl": "24px",
-              "3xl": "32px",
-            },
-            boxShadow: {
-              soft: "0 4px 20px -2px rgba(0, 0, 0, 0.1)",
-              glow: "0 4px 20px -2px rgba(253, 112, 20, 0.4)",
-            },
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Saleng Man - Post Item</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#FD7014",
+            "background-light": "#EEEEEE",
+            "background-dark": "#222831",
+            "surface-dark": "#393E46",
+            "surface-light": "#FFFFFF",
+            "text-light": "#EEEEEE", // Light text for dark mode
+            "text-dark": "#222831", // Dark text for light mode
+          },
+          fontFamily: {
+            display: ["Prompt", "sans-serif"],
+            sans: ["Prompt", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "12px",
+            xl: "16px",
+            "2xl": "24px",
+            "3xl": "32px",
+          },
+          boxShadow: {
+            soft: "0 4px 20px -2px rgba(0, 0, 0, 0.1)",
+            glow: "0 4px 20px -2px rgba(253, 112, 20, 0.4)",
           },
         },
-      };
-    </script>
-    <style>
-      body {
-        font-family: "Prompt", sans-serif;
-        -webkit-tap-highlight-color: transparent;
-      }
-      ::-webkit-scrollbar {
-        width: 0px;
-        background: transparent;
-      }
-    </style>
-    <style>
-      body {
-        min-height: max(884px, 100dvh);
-      }
-    </style>
-  </head>
-  <body
-    class="bg-gray-100 dark:bg-black font-sans min-h-screen flex items-center justify-center p-4 transition-colors duration-300"
-  >
-    <div
-      class="w-full max-w-[375px] h-[812px] bg-background-light dark:bg-background-dark flex flex-col relative overflow-hidden shadow-2xl rounded-[40px] border-8 border-gray-200 dark:border-surface-dark transition-colors duration-300"
-    >
-      <div
-        class="absolute top-0 w-full h-12 flex justify-between items-center px-6 z-50 bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 text-sm font-medium"
-      >
-        <span>9:41</span>
-        <div class="flex gap-1.5 items-center">
-          <span class="material-icons-round text-base"
-            >signal_cellular_alt</span
-          >
-          <span class="material-icons-round text-base">wifi</span>
-          <span class="material-icons-round text-base">battery_full</span>
-        </div>
-      </div>
-      <header class="px-6 py-4 pt-14 flex items-center justify-between shrink-0">
-        <a href="../homescreen.html">
-          <button
-            class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-200 dark:hover:bg-surface-dark transition-colors group"
-          >
-            <span
-              class="material-icons-round text-2xl text-text-dark dark:text-text-light group-hover:text-primary transition-colors"
-              >arrow_back_ios_new</span
-            >
-          </button>
-        </a>
+      },
+    };
+  </script>
+  <style>
+    body {
+      font-family: "Prompt", sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
 
-        <h1
-          class="text-xl font-bold tracking-wide text-text-dark dark:text-text-light"
-        >
-          Post Item
-        </h1>
-        <div class="w-10"></div>
-      </header>
-      <main class="flex-1 px-6 pb-28 overflow-y-auto flex flex-col gap-8">
-        <section class="flex flex-col gap-4 mt-2">
-          <div class="flex items-center justify-between">
-            <h2
-              class="text-lg font-semibold text-text-dark dark:text-text-light"
-            >
-              Item Photos
-            </h2>
-            <span
-              class="text-xs font-medium px-2 py-1 bg-gray-200 dark:bg-surface-dark rounded-md text-gray-500 dark:text-gray-400"
-              >Required</span
-            >
-          </div>
-          <label
-            for="photoUpload"
-            class="group relative w-full aspect-[4/3] rounded-2xl border-2 border-dashed border-primary bg-surface-light dark:bg-surface-dark shadow-soft flex flex-col items-center justify-center cursor-pointer overflow-hidden transition-all active:scale-[0.98] hover:bg-primary/5"
-          >
-            <input
-              type="file"
-              id="photoUpload"
-              accept="image/*"
-              multiple
-              class="hidden"
-              onchange="handleImageUpload(event)"
-            />
-            <div id="uploadPlaceholder" class="z-10 flex flex-col items-center gap-3">
-              <div
-                class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
-              >
-                <span class="material-icons-round text-3xl text-primary"
-                  >arrow_upward</span
-                >
-              </div>
-              <div class="text-center">
-                <h3 class="text-primary font-bold text-lg">Upload Photos</h3>
-                <p class="text-gray-400 text-xs mt-1">Tap here to add images</p>
-              </div>
-            </div>
-            <img
-              id="mainPreview"
-              class="absolute inset-0 w-full h-full object-cover hidden z-10"
-              alt="Preview"
-            />
-            <div
-              class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiMwMDAiLz48L3N2Zz4=')]"
-            ></div>
-          </label>
-          <div id="thumbnailContainer" class="flex items-center gap-3">
-            <div
-              id="thumb1"
-              class="relative w-14 h-14 rounded-lg bg-surface-light dark:bg-surface-dark border border-dashed border-gray-400 dark:border-gray-500 shadow-sm overflow-hidden flex items-center justify-center text-gray-400 dark:text-gray-500 font-semibold text-sm cursor-pointer hover:border-primary transition-colors"
-              onclick="document.getElementById('photoUpload').click()"
-            >
-              <span class="thumb-number">1</span>
-              <img class="thumb-img absolute inset-0 w-full h-full object-cover hidden" alt="thumb1" />
-            </div>
-            <div
-              id="thumb2"
-              class="relative w-14 h-14 rounded-lg bg-surface-light dark:bg-surface-dark border border-dashed border-gray-400 dark:border-gray-500 shadow-sm overflow-hidden flex items-center justify-center text-gray-400 dark:text-gray-500 font-semibold text-sm cursor-pointer hover:border-primary transition-colors"
-              onclick="document.getElementById('photoUpload').click()"
-            >
-              <span class="thumb-number">2</span>
-              <img class="thumb-img absolute inset-0 w-full h-full object-cover hidden" alt="thumb2" />
-            </div>
-            <div
-              id="thumb3"
-              class="relative w-14 h-14 rounded-lg bg-surface-light dark:bg-surface-dark border border-dashed border-gray-400 dark:border-gray-500 shadow-sm overflow-hidden flex items-center justify-center text-gray-400 dark:text-gray-500 font-semibold text-sm cursor-pointer hover:border-primary transition-colors"
-              onclick="document.getElementById('photoUpload').click()"
-            >
-              <span class="thumb-number">3</span>
-              <img class="thumb-img absolute inset-0 w-full h-full object-cover hidden" alt="thumb3" />
-            </div>
-            <label
-              for="photoUpload"
-              class="w-8 h-8 rounded-full bg-surface-light dark:bg-surface-dark text-gray-400 flex items-center justify-center shadow-sm ml-1 hover:text-primary transition-colors cursor-pointer"
-            >
-              <span class="material-icons-round text-lg">add</span>
-            </label>
-          </div>
-        </section>
-        <section class="flex flex-col gap-3">
-          <div class="flex items-center justify-between">
-            <h2
-              class="text-lg font-semibold text-text-dark dark:text-text-light"
-            >
-              Category
-            </h2>
-            <div
-              class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white text-[10px] uppercase font-bold tracking-wider shadow-md animate-pulse"
-            >
-              <span class="material-icons-round text-[12px]">auto_awesome</span>
-              AI Detect
-            </div>
-          </div>
-          <div
-            class="bg-surface-light dark:bg-surface-dark rounded-xl p-4 shadow-soft border border-transparent dark:border-gray-700"
-          >
-            <div class="flex flex-wrap gap-2 mb-3">
-              <span
-                class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/30 text-primary text-sm font-medium"
-              >
-                Scrap Metal
-                <span
-                  class="material-icons-round text-sm cursor-pointer hover:text-red-500"
-                  >close</span
-                >
-              </span>
-            </div>
-            <a href="ItemSelectCategory.html">
-              <button
-                class="w-full flex items-center justify-between bg-background-light dark:bg-background-dark py-3 px-4 rounded-lg border border-gray-200 dark:border-gray-600 text-text-dark dark:text-gray-300 text-sm font-medium hover:border-primary transition-colors"
-              >
-                <span>Select Category...</span>
-                <span class="material-icons-round text-gray-400"
-                  >expand_more</span
-                >
-              </button>
-            </a>
-          </div>
-        </section>
-        <section class="flex flex-col gap-3">
-          <h2
-            class="text-lg font-semibold text-text-dark dark:text-text-light"
-          >
-            น้ำหนัก (kg)
-          </h2>
-          <div
-            class="bg-surface-light dark:bg-surface-dark p-2 rounded-xl shadow-soft border border-transparent dark:border-gray-700"
-          >
-            <input
-              type="number"
-              min="0"
-              step="0.1"
-              placeholder="0.0"
-              class="w-full bg-background-light dark:bg-background-dark border-none rounded-lg p-3 text-xl font-bold text-center text-text-dark dark:text-text-light placeholder-gray-400 focus:ring-2 focus:ring-primary"
-            />
-          </div>
-        </section>
-        <section class="flex flex-col gap-3">
-          <h2 class="text-lg font-semibold text-text-dark dark:text-text-light">
-            Remarks
-          </h2>
-          <div class="relative">
-            <textarea
-              class="w-full bg-surface-light dark:bg-surface-dark text-text-dark dark:text-text-light rounded-xl border-0 ring-1 ring-gray-200 dark:ring-gray-700 focus:ring-2 focus:ring-primary p-4 shadow-soft text-sm placeholder-gray-400 dark:placeholder-gray-500 resize-none h-32 transition-all"
-              placeholder="Describe condition, approximate weight, or pickup details..."
-            ></textarea>
-            <div class="absolute bottom-3 right-3 text-[10px] text-gray-400">
-              0/300
-            </div>
-          </div>
-        </section>
-      </main>
-      <div
-        class="absolute bottom-0 left-0 w-full bg-white/80 dark:bg-surface-dark/90 backdrop-blur-md border-t border-gray-200 dark:border-gray-700 p-6 pb-8 z-30"
-      >
-        <a href="ItemSpecifyLocation.html">
-          <button
-            class="w-full bg-primary hover:bg-orange-600 text-white font-bold text-lg py-4 rounded-2xl shadow-lg shadow-orange-500/30 transform transition active:scale-[0.98] flex items-center justify-center gap-2"
-          >
-            <span>Next</span>
-            <span class="material-icons-round">arrow_forward</span>
-          </button>
-        </a>
+    ::-webkit-scrollbar {
+      width: 0px;
+      background: transparent;
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+
+<body
+  class="bg-gray-100 dark:bg-black font-sans min-h-screen flex items-center justify-center p-4 transition-colors duration-300">
+  <div
+    class="w-full max-w-[375px] h-[812px] bg-background-light dark:bg-background-dark flex flex-col relative overflow-hidden shadow-2xl rounded-[40px] border-8 border-gray-200 dark:border-surface-dark transition-colors duration-300">
+    <div
+      class="absolute top-0 w-full h-12 flex justify-between items-center px-6 z-50 bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 text-sm font-medium">
+      <span>9:41</span>
+      <div class="flex gap-1.5 items-center">
+        <span class="material-icons-round text-base">signal_cellular_alt</span>
+        <span class="material-icons-round text-base">wifi</span>
+        <span class="material-icons-round text-base">battery_full</span>
       </div>
     </div>
+    <header class="px-6 py-4 pt-14 flex items-center justify-between shrink-0">
+      <a href="../homescreen.html">
+        <button
+          class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-200 dark:hover:bg-surface-dark transition-colors group">
+          <span
+            class="material-icons-round text-2xl text-text-dark dark:text-text-light group-hover:text-primary transition-colors">arrow_back_ios_new</span>
+        </button>
+      </a>
 
-    <script src="../theme-toggle.js"></script>
-    <script>
-      let uploadedImages = [];
+      <h1 class="text-xl font-bold tracking-wide text-text-dark dark:text-text-light" data-translate="Post Item">
+        Post Item
+      </h1>
+      <div class="w-10"></div>
+    </header>
+    <main class="flex-1 px-6 pb-28 overflow-y-auto flex flex-col gap-8">
+      <section class="flex flex-col gap-4 mt-2">
+        <div class="flex items-center justify-between">
+          <h2 class="text-lg font-semibold text-text-dark dark:text-text-light" data-translate="Item Photos">
+            Item Photos
+          </h2>
+          <span
+            class="text-xs font-medium px-2 py-1 bg-gray-200 dark:bg-surface-dark rounded-md text-gray-500 dark:text-gray-400"
+            data-translate="Required">Required</span>
+        </div>
+        <label for="photoUpload"
+          class="group relative w-full aspect-[4/3] rounded-2xl border-2 border-dashed border-primary bg-surface-light dark:bg-surface-dark shadow-soft flex flex-col items-center justify-center cursor-pointer overflow-hidden transition-all active:scale-[0.98] hover:bg-primary/5">
+          <input type="file" id="photoUpload" accept="image/*" multiple class="hidden"
+            onchange="handleImageUpload(event)" />
+          <div id="uploadPlaceholder" class="z-10 flex flex-col items-center gap-3">
+            <div
+              class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <span class="material-icons-round text-3xl text-primary">arrow_upward</span>
+            </div>
+            <div class="text-center">
+              <h3 class="text-primary font-bold text-lg" data-translate="Upload Photos">Upload Photos</h3>
+              <p class="text-gray-400 text-xs mt-1" data-translate="Tap here to add images">Tap here to add images</p>
+            </div>
+          </div>
+          <img id="mainPreview" class="absolute inset-0 w-full h-full object-cover hidden z-10" alt="Preview" />
+          <div
+            class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiMwMDAiLz48L3N2Zz4=')]">
+          </div>
+        </label>
+        <div id="thumbnailContainer" class="flex items-center gap-3">
+          <div id="thumb1"
+            class="relative w-14 h-14 rounded-lg bg-surface-light dark:bg-surface-dark border border-dashed border-gray-400 dark:border-gray-500 shadow-sm overflow-hidden flex items-center justify-center text-gray-400 dark:text-gray-500 font-semibold text-sm cursor-pointer hover:border-primary transition-colors"
+            onclick="document.getElementById('photoUpload').click()">
+            <span class="thumb-number">1</span>
+            <img class="thumb-img absolute inset-0 w-full h-full object-cover hidden" alt="thumb1" />
+          </div>
+          <div id="thumb2"
+            class="relative w-14 h-14 rounded-lg bg-surface-light dark:bg-surface-dark border border-dashed border-gray-400 dark:border-gray-500 shadow-sm overflow-hidden flex items-center justify-center text-gray-400 dark:text-gray-500 font-semibold text-sm cursor-pointer hover:border-primary transition-colors"
+            onclick="document.getElementById('photoUpload').click()">
+            <span class="thumb-number">2</span>
+            <img class="thumb-img absolute inset-0 w-full h-full object-cover hidden" alt="thumb2" />
+          </div>
+          <div id="thumb3"
+            class="relative w-14 h-14 rounded-lg bg-surface-light dark:bg-surface-dark border border-dashed border-gray-400 dark:border-gray-500 shadow-sm overflow-hidden flex items-center justify-center text-gray-400 dark:text-gray-500 font-semibold text-sm cursor-pointer hover:border-primary transition-colors"
+            onclick="document.getElementById('photoUpload').click()">
+            <span class="thumb-number">3</span>
+            <img class="thumb-img absolute inset-0 w-full h-full object-cover hidden" alt="thumb3" />
+          </div>
+          <label for="photoUpload"
+            class="w-8 h-8 rounded-full bg-surface-light dark:bg-surface-dark text-gray-400 flex items-center justify-center shadow-sm ml-1 hover:text-primary transition-colors cursor-pointer">
+            <span class="material-icons-round text-lg">add</span>
+          </label>
+        </div>
+      </section>
+      <section class="flex flex-col gap-3">
+        <div class="flex items-center justify-between">
+          <h2 class="text-lg font-semibold text-text-dark dark:text-text-light" data-translate="Type of Second Hand">
+            Category
+          </h2>
+          <div
+            class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white text-[10px] uppercase font-bold tracking-wider shadow-md animate-pulse">
+            <span class="material-icons-round text-[12px]">auto_awesome</span>
+            AI Detect
+          </div>
+        </div>
+        <div
+          class="bg-surface-light dark:bg-surface-dark rounded-xl p-4 shadow-soft border border-transparent dark:border-gray-700">
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span
+              class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/30 text-primary text-sm font-medium">
+              Scrap Metal
+              <span class="material-icons-round text-sm cursor-pointer hover:text-red-500">close</span>
+            </span>
+          </div>
+          <a href="ItemSelectCategory.html">
+            <button
+              class="w-full flex items-center justify-between bg-background-light dark:bg-background-dark py-3 px-4 rounded-lg border border-gray-200 dark:border-gray-600 text-text-dark dark:text-gray-300 text-sm font-medium hover:border-primary transition-colors">
+              <span data-translate="Search or add category...">Select Category...</span>
+              <span class="material-icons-round text-gray-400">expand_more</span>
+            </button>
+          </a>
+        </div>
+      </section>
+      <section class="flex flex-col gap-3">
+        <h2 class="text-lg font-semibold text-text-dark dark:text-text-light" data-translate="Weight (kg)">
+          Weight (kg)
+        </h2>
+        <div
+          class="bg-surface-light dark:bg-surface-dark p-2 rounded-xl shadow-soft border border-transparent dark:border-gray-700">
+          <input type="number" min="0" step="0.1" placeholder="0.0"
+            class="w-full bg-background-light dark:bg-background-dark border-none rounded-lg p-3 text-xl font-bold text-center text-text-dark dark:text-text-light placeholder-gray-400 focus:ring-2 focus:ring-primary" />
+        </div>
+      </section>
+      <section class="flex flex-col gap-3">
+        <h2 class="text-lg font-semibold text-text-dark dark:text-text-light" data-translate="Remarks">
+          Remarks
+        </h2>
+        <div class="relative">
+          <textarea
+            class="w-full bg-surface-light dark:bg-surface-dark text-text-dark dark:text-text-light rounded-xl border-0 ring-1 ring-gray-200 dark:ring-gray-700 focus:ring-2 focus:ring-primary p-4 shadow-soft text-sm placeholder-gray-400 dark:placeholder-gray-500 resize-none h-32 transition-all"
+            placeholder="Describe condition, approximate weight, or pickup details..."
+            data-translate-placeholder="Describe condition, approximate weight, or pickup details..."></textarea>
+          <div class="absolute bottom-3 right-3 text-[10px] text-gray-400">
+            0/300
+          </div>
+        </div>
+      </section>
+    </main>
+    <div
+      class="absolute bottom-0 left-0 w-full bg-white/80 dark:bg-surface-dark/90 backdrop-blur-md border-t border-gray-200 dark:border-gray-700 p-6 pb-8 z-30">
+      <a href="ItemSpecifyLocation.html">
+        <button
+          class="w-full bg-primary hover:bg-orange-600 text-white font-bold text-lg py-4 rounded-2xl shadow-lg shadow-orange-500/30 transform transition active:scale-[0.98] flex items-center justify-center gap-2">
+          <span data-translate="Next">Next</span>
+          <span class="material-icons-round">arrow_forward</span>
+        </button>
+      </a>
+    </div>
+  </div>
 
-      function handleImageUpload(event) {
-        const files = event.target.files;
-        if (!files.length) return;
+  <script src="../theme-toggle.js"></script>
+  <script>
+    let uploadedImages = [];
 
-        for (let i = 0; i < files.length && uploadedImages.length < 3; i++) {
-          const file = files[i];
-          if (file.type.startsWith('image/')) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-              uploadedImages.push(e.target.result);
-              updatePreviews();
-            };
-            reader.readAsDataURL(file);
-          }
+    function handleImageUpload(event) {
+      const files = event.target.files;
+      if (!files.length) return;
+
+      for (let i = 0; i < files.length && uploadedImages.length < 3; i++) {
+        const file = files[i];
+        if (file.type.startsWith('image/')) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            uploadedImages.push(e.target.result);
+            updatePreviews();
+          };
+          reader.readAsDataURL(file);
         }
       }
+    }
 
-      function updatePreviews() {
-        const mainPreview = document.getElementById('mainPreview');
-        const placeholder = document.getElementById('uploadPlaceholder');
+    function updatePreviews() {
+      const mainPreview = document.getElementById('mainPreview');
+      const placeholder = document.getElementById('uploadPlaceholder');
 
-        if (uploadedImages.length > 0) {
-          mainPreview.src = uploadedImages[0];
-          mainPreview.classList.remove('hidden');
-          placeholder.classList.add('hidden');
+      if (uploadedImages.length > 0) {
+        mainPreview.src = uploadedImages[0];
+        mainPreview.classList.remove('hidden');
+        placeholder.classList.add('hidden');
+      } else {
+        mainPreview.classList.add('hidden');
+        placeholder.classList.remove('hidden');
+      }
+
+      for (let i = 1; i <= 3; i++) {
+        const thumb = document.getElementById('thumb' + i);
+        const thumbImg = thumb.querySelector('.thumb-img');
+        const thumbNumber = thumb.querySelector('.thumb-number');
+
+        if (uploadedImages[i - 1]) {
+          thumbImg.src = uploadedImages[i - 1];
+          thumbImg.classList.remove('hidden');
+          thumbNumber.classList.add('hidden');
+          thumb.classList.remove('border-dashed');
+          thumb.classList.add('border-solid', 'border-primary');
         } else {
-          mainPreview.classList.add('hidden');
-          placeholder.classList.remove('hidden');
-        }
-
-        for (let i = 1; i <= 3; i++) {
-          const thumb = document.getElementById('thumb' + i);
-          const thumbImg = thumb.querySelector('.thumb-img');
-          const thumbNumber = thumb.querySelector('.thumb-number');
-
-          if (uploadedImages[i - 1]) {
-            thumbImg.src = uploadedImages[i - 1];
-            thumbImg.classList.remove('hidden');
-            thumbNumber.classList.add('hidden');
-            thumb.classList.remove('border-dashed');
-            thumb.classList.add('border-solid', 'border-primary');
-          } else {
-            thumbImg.classList.add('hidden');
-            thumbNumber.classList.remove('hidden');
-            thumb.classList.add('border-dashed');
-            thumb.classList.remove('border-solid', 'border-primary');
-          }
+          thumbImg.classList.add('hidden');
+          thumbNumber.classList.remove('hidden');
+          thumb.classList.add('border-dashed');
+          thumb.classList.remove('border-solid', 'border-primary');
         }
       }
-    </script>
-  </body>
+    }
+  </script>
+  <script src="../language.js"></script>
+</body>
+
 </html>

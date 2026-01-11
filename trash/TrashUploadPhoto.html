@@ -1,213 +1,166 @@
 <!doctype html>
 <html lang="th">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Saleng Man - Post Trash</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
-      rel="stylesheet"
-    />
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#FD7014", // Orange
-              secondary: "#393E46", // Dark Grey
-              tertiary: "#222831", // Darker Grey
-              surface: "#EEEEEE", // Light Grey/White
-              "background-light": "#F5F5F5",
-              "background-dark": "#222831",
-            },
-            fontFamily: {
-              display: ["Kanit", "sans-serif"],
-              sans: ["Kanit", "sans-serif"],
-            },
-            borderRadius: {
-              DEFAULT: "12px",
-              xl: "1rem",
-              "2xl": "1.5rem",
-            },
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Saleng Man - Post Trash</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#FD7014", // Orange
+            secondary: "#393E46", // Dark Grey
+            tertiary: "#222831", // Darker Grey
+            surface: "#EEEEEE", // Light Grey/White
+            "background-light": "#F5F5F5",
+            "background-dark": "#222831",
+          },
+          fontFamily: {
+            display: ["Kanit", "sans-serif"],
+            sans: ["Kanit", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "12px",
+            xl: "1rem",
+            "2xl": "1.5rem",
           },
         },
-      };
-    </script>
-    <style>
-      ::-webkit-scrollbar {
-        width: 6px;
-      }
-      ::-webkit-scrollbar-track {
-        background: transparent;
-      }
-      ::-webkit-scrollbar-thumb {
-        background-color: rgba(156, 163, 175, 0.5);
-        border-radius: 20px;
-      }
-    </style>
-    <style>
-      body {
-        min-height: max(884px, 100dvh);
-      }
-    </style>
-  </head>
-  <body
-    class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-100 antialiased min-h-screen flex flex-col items-center justify-center p-4"
-  >
+      },
+    };
+  </script>
+  <style>
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: rgba(156, 163, 175, 0.5);
+      border-radius: 20px;
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+
+<body
+  class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-100 antialiased min-h-screen flex flex-col items-center justify-center p-4">
+  <div
+    class="w-full max-w-[375px] h-[812px] bg-white dark:bg-secondary rounded-[40px] shadow-2xl overflow-hidden relative flex flex-col border-8 border-gray-200 dark:border-surface-dark">
     <div
-      class="w-full max-w-[375px] h-[812px] bg-white dark:bg-secondary rounded-[40px] shadow-2xl overflow-hidden relative flex flex-col border-8 border-gray-200 dark:border-surface-dark"
-    >
-      <div
-        class="absolute top-0 w-full h-12 flex justify-between items-center px-6 z-50 bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 text-sm font-medium"
-      >
-        <span>9:41</span>
-        <div class="flex gap-1.5 items-center">
-          <span class="material-icons-round text-base"
-            >signal_cellular_alt</span
-          >
-          <span class="material-icons-round text-base">wifi</span>
-          <span class="material-icons-round text-base">battery_full</span>
-        </div>
-      </div>
-      <header
-        class="px-6 py-4 pt-14 flex items-center gap-4 border-b border-gray-100 dark:border-gray-600/30"
-      >
-        <a href="../homescreen.html">
-          <button
-            class="p-2 -ml-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-          >
-            <span class="material-icons-round text-gray-600 dark:text-gray-300"
-              >arrow_back_ios_new</span
-            >
-          </button>
-        </a>
-        <h1 class="text-xl font-semibold text-gray-900 dark:text-white">
-          ทิ้งขยะ (Post Trash)
-        </h1>
-      </header>
-      <main class="flex-1 overflow-y-auto p-6 space-y-6">
-        <section class="space-y-3">
-          <label
-            class="block text-lg font-medium text-gray-800 dark:text-gray-200"
-            >รูปของขยะ</label
-          >
-          <div class="relative group">
-            <input class="hidden" id="trash-upload" type="file" />
-            <label
-              class="flex flex-col items-center justify-center w-full h-48 border-2 border-dashed border-primary/50 dark:border-primary/60 rounded-2xl bg-orange-50 dark:bg-gray-800 hover:bg-orange-100 dark:hover:bg-gray-700 transition-all cursor-pointer"
-              for="trash-upload"
-            >
-              <div
-                class="bg-primary/10 p-3 rounded-full mb-2 group-hover:scale-110 transition-transform"
-              >
-                <span class="material-icons-round text-3xl text-primary"
-                  >cloud_upload</span
-                >
-              </div>
-              <p class="text-sm font-semibold text-primary">อัปโหลดรูปภาพ</p>
-              <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                แตะเพื่อเลือกรูป
-              </p>
-            </label>
-          </div>
-        </section>
-        <section class="space-y-3">
-          <div class="flex items-center justify-between">
-            <label
-              class="block text-base font-medium text-gray-700 dark:text-gray-300"
-              >ประเภทขยะ</label
-            >
-            <div
-              class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white text-[10px] uppercase font-bold tracking-wider shadow-md animate-pulse"
-            >
-              <span class="material-icons-round text-[12px]">auto_awesome</span>
-              AI Detect
-            </div>
-          </div>
-          <div
-            class="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-700"
-          >
-            <div class="flex flex-wrap gap-2 mb-3">
-              <span
-                class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/30 text-primary text-sm font-medium"
-              >
-                เศษเหล็ก
-                <span
-                  class="material-icons-round text-sm cursor-pointer hover:text-red-500"
-                  >close</span
-                >
-              </span>
-            </div>
-            <a href="TrashSelectCategory.html">
-              <button
-                class="w-full flex items-center justify-between bg-gray-50 dark:bg-gray-700 py-3 px-4 rounded-lg border border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300 text-sm font-medium hover:border-primary transition-colors"
-              >
-                <span>Select Category...</span>
-                <span class="material-icons-round text-gray-400"
-                  >expand_more</span
-                >
-              </button>
-            </a>
-          </div>
-        </section>
-        <section class="space-y-3">
-          <label
-            class="text-base font-medium text-gray-700 dark:text-gray-300"
-            >น้ำหนัก (kg)</label
-          >
-          <div
-            class="bg-gray-50 dark:bg-gray-800/50 p-2 rounded-xl border border-gray-200 dark:border-gray-700"
-          >
-            <input
-              type="number"
-              min="0"
-              step="0.1"
-              placeholder="0.0"
-              class="w-full bg-white dark:bg-gray-700 border-none rounded-lg p-3 text-xl font-bold text-center text-gray-800 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-primary"
-            />
-          </div>
-        </section>
-        <section class="space-y-3 pb-20">
-          <label
-            class="block text-base font-medium text-gray-700 dark:text-gray-300"
-            >หมายเหตุ</label
-          >
-          <div class="relative">
-            <textarea
-              class="w-full bg-gray-50 dark:bg-gray-800 border-none rounded-xl p-4 text-gray-700 dark:text-gray-200 placeholder-gray-400 focus:ring-2 focus:ring-primary resize-none shadow-inner"
-              placeholder="ระบุรายละเอียดเพิ่มเติม (ถ้ามี)..."
-              rows="4"
-            ></textarea>
-            <div class="absolute bottom-3 right-3 text-xs text-gray-400">
-              0/200
-            </div>
-          </div>
-        </section>
-      </main>
-      <div
-        class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-white via-white to-transparent dark:from-secondary dark:via-secondary dark:to-transparent pt-10"
-      >
-        <a href="TrashSpecifyLocation.html">
-          <button
-            class="w-full bg-primary hover:bg-orange-600 text-white font-bold py-4 rounded-xl shadow-lg shadow-orange-500/30 flex items-center justify-center gap-2 transition-all active:scale-[0.98]"
-          >
-            ถัดไป (Next)
-            <span class="material-icons-round">arrow_forward</span>
-          </button>
-        </a>
+      class="absolute top-0 w-full h-12 flex justify-between items-center px-6 z-50 bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 text-sm font-medium">
+      <span>9:41</span>
+      <div class="flex gap-1.5 items-center">
+        <span class="material-icons-round text-base">signal_cellular_alt</span>
+        <span class="material-icons-round text-base">wifi</span>
+        <span class="material-icons-round text-base">battery_full</span>
       </div>
     </div>
+    <header class="px-6 py-4 pt-14 flex items-center gap-4 border-b border-gray-100 dark:border-gray-600/30">
+      <a href="../homescreen.html">
+        <button class="p-2 -ml-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+          <span class="material-icons-round text-gray-600 dark:text-gray-300">arrow_back_ios_new</span>
+        </button>
+      </a>
+      <h1 class="text-xl font-semibold text-gray-900 dark:text-white" data-translate="Post Trash">
+        Post Trash
+      </h1>
+    </header>
+    <main class="flex-1 overflow-y-auto p-6 space-y-6">
+      <section class="space-y-3">
+        <label class="block text-lg font-medium text-gray-800 dark:text-gray-200" data-translate="Trash Photo">Trash
+          Photo</label>
+        <div class="relative group">
+          <input class="hidden" id="trash-upload" type="file" />
+          <label
+            class="flex flex-col items-center justify-center w-full h-48 border-2 border-dashed border-primary/50 dark:border-primary/60 rounded-2xl bg-orange-50 dark:bg-gray-800 hover:bg-orange-100 dark:hover:bg-gray-700 transition-all cursor-pointer"
+            for="trash-upload">
+            <div class="bg-primary/10 p-3 rounded-full mb-2 group-hover:scale-110 transition-transform">
+              <span class="material-icons-round text-3xl text-primary">cloud_upload</span>
+            </div>
+            <p class="text-sm font-semibold text-primary" data-translate="Upload Image">Upload Image</p>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1" data-translate="Tap to select image">
+              Tap to select image
+            </p>
+          </label>
+        </div>
+      </section>
+      <section class="space-y-3">
+        <div class="flex items-center justify-between">
+          <label class="block text-base font-medium text-gray-700 dark:text-gray-300"
+            data-translate="Type of Trash">Type of Trash</label>
+          <div
+            class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white text-[10px] uppercase font-bold tracking-wider shadow-md animate-pulse">
+            <span class="material-icons-round text-[12px]">auto_awesome</span>
+            AI Detect
+          </div>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-700">
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span
+              class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/30 text-primary text-sm font-medium">
+              เศษเหล็ก
+              <span class="material-icons-round text-sm cursor-pointer hover:text-red-500">close</span>
+            </span>
+          </div>
+          <a href="TrashSelectCategory.html">
+            <button
+              class="w-full flex items-center justify-between bg-gray-50 dark:bg-gray-700 py-3 px-4 rounded-lg border border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300 text-sm font-medium hover:border-primary transition-colors">
+              <span data-translate="Search or add category...">Select Category...</span>
+              <span class="material-icons-round text-gray-400">expand_more</span>
+            </button>
+          </a>
+        </div>
+      </section>
+      <section class="space-y-3">
+        <label class="text-base font-medium text-gray-700 dark:text-gray-300" data-translate="Weight (kg)">Weight
+          (kg)</label>
+        <div class="bg-gray-50 dark:bg-gray-800/50 p-2 rounded-xl border border-gray-200 dark:border-gray-700">
+          <input type="number" min="0" step="0.1" placeholder="0.0"
+            class="w-full bg-white dark:bg-gray-700 border-none rounded-lg p-3 text-xl font-bold text-center text-gray-800 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-primary" />
+        </div>
+      </section>
+      <section class="space-y-3 pb-20">
+        <label class="block text-base font-medium text-gray-700 dark:text-gray-300"
+          data-translate="Remarks">Remarks</label>
+        <div class="relative">
+          <textarea
+            class="w-full bg-gray-50 dark:bg-gray-800 border-none rounded-xl p-4 text-gray-700 dark:text-gray-200 placeholder-gray-400 focus:ring-2 focus:ring-primary resize-none shadow-inner"
+            placeholder="Provide more details (if any)..." data-translate-placeholder="Provide more details (if any)..."
+            rows="4"></textarea>
+          <div class="absolute bottom-3 right-3 text-xs text-gray-400">
+            0/200
+          </div>
+        </div>
+      </section>
+    </main>
+    <div
+      class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-white via-white to-transparent dark:from-secondary dark:via-secondary dark:to-transparent pt-10">
+      <a href="TrashSpecifyLocation.html">
+        <button
+          class="w-full bg-primary hover:bg-orange-600 text-white font-bold py-4 rounded-xl shadow-lg shadow-orange-500/30 flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
+          <span data-translate="Next">Next</span>
+          <span class="material-icons-round">arrow_forward</span>
+        </button>
+      </a>
+    </div>
+  </div>
 
-    <script src="../theme-toggle.js"></script>
-  </body>
+  <script src="../theme-toggle.js"></script>
+  <script src="../language.js"></script>
+</body>
+
 </html>
