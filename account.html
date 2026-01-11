@@ -102,12 +102,20 @@
               class="w-32 h-32 rounded-full overflow-hidden border-4 border-primary shadow-lg bg-card-dark"
             >
               <img
+                id="profile-image"
                 alt="User Profile Picture"
                 class="w-full h-full object-cover"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuD46YkCPT2PjNtIQMSBumUtcq3hbUjf-VXGhyB2nerjf4u1jrlvReTnjYfDvb5quaEY9yL-ADk5QpOJDtVbHPyWlhIeisTWCHQeQIviWcqm1V9UsU-gM13LpEEyio1KJzW6qYJPa72gn3qKPTvWo7VFu2ehlRxpC2wSGgMe47BNOnVp0QlxU1lpFAWX0zeX5ozJHsw9svDlolsPu67Ge0QvgAjGAnEgoTE03wJoYEUlSPrF8mDZ-OHBIoZj6nJqCMX3yxwUOahVuf0"
               />
             </div>
+            <input
+              type="file"
+              id="profile-input"
+              accept="image/*"
+              class="hidden"
+            />
             <button
+              onclick="document.getElementById('profile-input').click()"
               class="absolute bottom-1 right-1 bg-secondary text-white p-2 rounded-full shadow-md border-2 border-background-light dark:border-background-dark hover:bg-primary transition-colors flex items-center justify-center"
             >
               <span class="material-icons-round text-sm">edit</span>
@@ -129,9 +137,9 @@
               >
                 Username
               </p>
-              <p class="font-medium text-lg">john_salengman</p>
+              <p id="username-display" class="font-medium text-lg">john_salengman</p>
             </div>
-            <button class="text-gray-400 hover:text-primary">
+            <button onclick="openModal('username')" class="text-gray-400 hover:text-primary">
               <span class="material-icons-round text-lg">edit</span>
             </button>
           </div>
@@ -151,9 +159,9 @@
                 123 Recycling Road, Eco District, Bangkok 10110
               </p>
             </div>
-            <button class="text-gray-400 hover:text-primary mt-1">
+            <a href="items/ItemSelectSaveAddressProfile.html" class="text-gray-400 hover:text-primary mt-1">
               <span class="material-icons-round text-lg">edit</span>
-            </button>
+            </a>
           </div>
           <div
             class="bg-card-light dark:bg-card-dark p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 flex items-center gap-4 transition-colors"
@@ -167,9 +175,9 @@
               >
                 Phone
               </p>
-              <p class="font-medium text-lg">089-123-4567</p>
+              <p id="phone-display" class="font-medium text-lg">089-123-4567</p>
             </div>
-            <button class="text-gray-400 hover:text-primary">
+            <button onclick="openModal('phone')" class="text-gray-400 hover:text-primary">
               <span class="material-icons-round text-lg">edit</span>
             </button>
           </div>
@@ -271,8 +279,105 @@
           <span class="text-[10px] text-primary font-medium">Account</span>
         </a>
       </nav>
+
+      <!-- Username Modal -->
+      <div id="username-modal" class="hidden absolute inset-0 bg-black/50 z-50 flex items-center justify-center p-6">
+        <div class="bg-card-light dark:bg-card-dark rounded-2xl p-6 w-full max-w-[320px] shadow-xl">
+          <h3 class="text-lg font-semibold mb-4">Edit Username</h3>
+          <input
+            type="text"
+            id="username-input"
+            class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-background-light dark:bg-background-dark focus:outline-none focus:ring-2 focus:ring-primary mb-4"
+            placeholder="Enter username"
+          />
+          <div class="flex gap-3">
+            <button
+              onclick="closeModal('username')"
+              class="flex-1 py-3 rounded-xl bg-gray-200 dark:bg-gray-600 text-text-light dark:text-text-dark font-medium hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors"
+            >
+              Cancel
+            </button>
+            <button
+              onclick="saveUsername()"
+              class="flex-1 py-3 rounded-xl bg-primary text-white font-medium hover:bg-orange-600 transition-colors"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phone Modal -->
+      <div id="phone-modal" class="hidden absolute inset-0 bg-black/50 z-50 flex items-center justify-center p-6">
+        <div class="bg-card-light dark:bg-card-dark rounded-2xl p-6 w-full max-w-[320px] shadow-xl">
+          <h3 class="text-lg font-semibold mb-4">Edit Phone Number</h3>
+          <input
+            type="tel"
+            id="phone-input"
+            class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-background-light dark:bg-background-dark focus:outline-none focus:ring-2 focus:ring-primary mb-4"
+            placeholder="Enter phone number"
+          />
+          <div class="flex gap-3">
+            <button
+              onclick="closeModal('phone')"
+              class="flex-1 py-3 rounded-xl bg-gray-200 dark:bg-gray-600 text-text-light dark:text-text-dark font-medium hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors"
+            >
+              Cancel
+            </button>
+            <button
+              onclick="savePhone()"
+              class="flex-1 py-3 rounded-xl bg-primary text-white font-medium hover:bg-orange-600 transition-colors"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="theme-toggle.js"></script>
+    <script>
+      document.getElementById('profile-input').addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function(e) {
+            document.getElementById('profile-image').src = e.target.result;
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+
+      function openModal(type) {
+        const modal = document.getElementById(type + '-modal');
+        const input = document.getElementById(type + '-input');
+        const display = document.getElementById(type + '-display');
+        input.value = display.textContent;
+        modal.classList.remove('hidden');
+      }
+
+      function closeModal(type) {
+        const modal = document.getElementById(type + '-modal');
+        modal.classList.add('hidden');
+      }
+
+      function saveUsername() {
+        const input = document.getElementById('username-input');
+        const display = document.getElementById('username-display');
+        if (input.value.trim()) {
+          display.textContent = input.value.trim();
+        }
+        closeModal('username');
+      }
+
+      function savePhone() {
+        const input = document.getElementById('phone-input');
+        const display = document.getElementById('phone-display');
+        if (input.value.trim()) {
+          display.textContent = input.value.trim();
+        }
+        closeModal('phone');
+      }
+    </script>
   </body>
 </html>

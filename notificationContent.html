@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Saleng Man - Notification Detail</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#FD7014",
+              "background-light": "#EEEEEE",
+              "background-dark": "#222831",
+              "surface-dark": "#393E46",
+              "surface-light": "#FFFFFF",
+              "text-light-primary": "#222831",
+              "text-dark-primary": "#EEEEEE",
+              "text-secondary": "#9CA3AF",
+            },
+            fontFamily: {
+              display: ["Poppins", "sans-serif"],
+              sans: ["Poppins", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "12px",
+              xl: "16px",
+              "2xl": "20px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-sans min-h-screen flex items-center justify-center p-4 antialiased transition-colors duration-200"
+  >
+    <div
+      class="w-full max-w-[375px] h-[812px] bg-background-light dark:bg-background-dark rounded-[40px] border-8 border-gray-200 dark:border-surface-dark shadow-2xl overflow-hidden relative flex flex-col"
+    >
+      <div
+        class="absolute top-0 w-full h-12 flex justify-between items-center px-6 z-50 bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 text-sm font-medium"
+      >
+        <span>9:41</span>
+        <div class="flex gap-1.5 items-center">
+          <span class="material-icons-round text-base">signal_cellular_alt</span>
+          <span class="material-icons-round text-base">wifi</span>
+          <span class="material-icons-round text-base">battery_full</span>
+        </div>
+      </div>
+      <div
+        class="pt-14 pb-4 px-4 flex items-center gap-3 bg-surface-light dark:bg-background-dark sticky top-0 z-10 shadow-sm dark:shadow-none transition-colors duration-200"
+      >
+        <a href="notification.html">
+          <button
+            class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-surface-dark transition-colors"
+          >
+            <span
+              class="material-icons-round text-text-light-primary dark:text-text-dark-primary"
+              >arrow_back</span
+            >
+          </button>
+        </a>
+        <h1
+          class="text-xl font-bold text-text-light-primary dark:text-text-dark-primary tracking-wide"
+        >
+          Notification Detail
+        </h1>
+      </div>
+      <main class="flex-1 overflow-y-auto px-6 py-6 pb-8">
+        <div class="flex flex-col items-center mb-6">
+          <div
+            class="bg-blue-100 dark:bg-blue-900/30 p-4 rounded-full mb-4"
+          >
+            <span
+              class="material-icons-round text-blue-600 dark:text-blue-400 text-4xl"
+              >person</span
+            >
+          </div>
+          <span class="text-xs text-gray-400">2 minutes ago</span>
+        </div>
+        <div class="bg-surface-light dark:bg-surface-dark rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 mb-6">
+          <h2 class="text-xl font-bold text-text-light-primary dark:text-text-dark-primary mb-3">
+            Buyer Arrived
+          </h2>
+          <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+            The buyer for "Old Newspapers" is waiting at the location. Please meet them at the designated pickup point to complete the transaction.
+          </p>
+        </div>
+        <div class="bg-surface-light dark:bg-surface-dark rounded-2xl p-5 shadow-sm border border-gray-100 dark:border-gray-700 mb-6">
+          <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4">
+            Details
+          </h3>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="bg-gray-100 dark:bg-gray-700 p-2 rounded-full">
+                <span class="material-icons-round text-gray-600 dark:text-gray-400 text-lg">inventory_2</span>
+              </div>
+              <div>
+                <p class="text-xs text-gray-400">Item</p>
+                <p class="font-medium text-text-light-primary dark:text-text-dark-primary">Old Newspapers - 5kg</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="bg-gray-100 dark:bg-gray-700 p-2 rounded-full">
+                <span class="material-icons-round text-gray-600 dark:text-gray-400 text-lg">person</span>
+              </div>
+              <div>
+                <p class="text-xs text-gray-400">Buyer</p>
+                <p class="font-medium text-text-light-primary dark:text-text-dark-primary">Somchai Recycler</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="bg-gray-100 dark:bg-gray-700 p-2 rounded-full">
+                <span class="material-icons-round text-gray-600 dark:text-gray-400 text-lg">location_on</span>
+              </div>
+              <div>
+                <p class="text-xs text-gray-400">Location</p>
+                <p class="font-medium text-text-light-primary dark:text-text-dark-primary">123 Sukhumvit Rd, Bangkok</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <a href="notification.html" class="flex-1">
+            <button class="w-full py-3 rounded-xl font-semibold text-gray-600 dark:text-gray-300 bg-gray-200 dark:bg-surface-dark hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+              Dismiss
+            </button>
+          </a>
+          <a href="orders/history.html" class="flex-1">
+            <button class="w-full py-3 rounded-xl font-semibold text-white bg-primary hover:bg-orange-600 transition-colors shadow-lg shadow-primary/30">
+              View Order
+            </button>
+          </a>
+        </div>
+      </main>
+    </div>
+
+    <script src="theme-toggle.js"></script>
+  </body>
+</html>

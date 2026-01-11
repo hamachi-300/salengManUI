@@ -1,314 +1,237 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Saleng Man - Buyer List (Trash)</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&amp;family=Prompt:wght@300;400;500;600&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
-      rel="stylesheet"
-    />
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#FD7014",
-              "background-light": "#EEEEEE",
-              "background-dark": "#222831",
-              "surface-light": "#FFFFFF",
-              "surface-dark": "#393E46",
-              "text-light": "#222831",
-              "text-dark": "#EEEEEE",
-            },
-            fontFamily: {
-              sans: ["Prompt", "Kanit", "sans-serif"],
-            },
-            borderRadius: {
-              DEFAULT: "12px",
-            },
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Saleng Man - Driver List (Trash)</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&amp;family=Prompt:wght@300;400;500;600&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#FD7014",
+            "background-light": "#EEEEEE",
+            "background-dark": "#222831",
+            "surface-light": "#FFFFFF",
+            "surface-dark": "#393E46",
+            "text-light": "#222831",
+            "text-dark": "#EEEEEE",
+          },
+          fontFamily: {
+            sans: ["Prompt", "Kanit", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "12px",
           },
         },
-      };
-    </script>
-    <style>
-      ::-webkit-scrollbar {
-        width: 6px;
-      }
-      ::-webkit-scrollbar-track {
-        background: transparent;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #888;
-        border-radius: 3px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #555;
-      }
-    </style>
-    <style>
-      body {
-        min-height: max(884px, 100dvh);
-      }
-    </style>
-  </head>
-  <body
-    class="bg-gray-100 dark:bg-gray-900 flex justify-center items-center min-h-screen p-4 font-sans"
-  >
+      },
+    };
+  </script>
+  <style>
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 3px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 flex justify-center items-center min-h-screen p-4 font-sans">
+  <div
+    class="w-full max-w-[375px] h-[812px] bg-background-light dark:bg-background-dark overflow-hidden shadow-2xl rounded-[40px] border-8 border-gray-200 dark:border-surface-dark relative flex flex-col">
     <div
-      class="w-full max-w-[375px] h-[812px] bg-background-light dark:bg-background-dark overflow-hidden shadow-2xl rounded-[40px] border-8 border-gray-200 dark:border-surface-dark relative flex flex-col"
-    >
-      <div
-        class="absolute top-0 w-full h-12 flex justify-between items-center px-6 z-50 bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 text-sm font-medium"
-      >
-        <span>9:41</span>
-        <div class="flex gap-1.5 items-center">
-          <span class="material-icons-round text-base"
-            >signal_cellular_alt</span
-          >
-          <span class="material-icons-round text-base">wifi</span>
-          <span class="material-icons-round text-base">battery_full</span>
+      class="absolute top-0 w-full h-12 flex justify-between items-center px-6 z-50 bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 text-sm font-medium">
+      <span>9:41</span>
+      <div class="flex gap-1.5 items-center">
+        <span class="material-icons-round text-base">signal_cellular_alt</span>
+        <span class="material-icons-round text-base">wifi</span>
+        <span class="material-icons-round text-base">battery_full</span>
+      </div>
+    </div>
+    <header
+      class="px-5 py-4 pt-14 flex items-center gap-4 bg-background-light dark:bg-background-dark border-b border-gray-300 dark:border-gray-700 z-10 sticky top-0">
+      <a href="../orders/OrderWaitingForBuyerTrash.html">
+        <button
+          class="text-text-light dark:text-text-dark p-1 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition">
+          <span class="material-icons-round text-2xl">arrow_back_ios_new</span>
+        </button>
+      </a>
+      <h1 class="text-xl font-semibold text-text-light dark:text-text-dark flex-1">
+        Interested Drivers
+      </h1>
+      <div class="w-8"></div>
+    </header>
+    <main class="flex-1 overflow-y-auto px-5 py-6">
+      <div class="mb-6">
+        <h2 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+          Trash Item
+        </h2>
+        <div class="bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm flex gap-4 items-center">
+          <div
+            class="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center flex-shrink-0 text-green-500">
+            <span class="material-icons-round text-3xl">delete</span>
+          </div>
+          <div>
+            <h3 class="text-text-light dark:text-text-dark font-medium text-lg">
+              Recyclable Trash
+            </h3>
+            <p class="text-green-500 font-semibold">5 kg</p>
+          </div>
         </div>
       </div>
-      <header
-        class="px-5 py-4 pt-14 flex items-center gap-4 bg-background-light dark:bg-background-dark border-b border-gray-300 dark:border-gray-700 z-10 sticky top-0"
-      >
-        <a href="../orders/OrderWaitingForBuyerTrash.html">
-          <button
-            class="text-text-light dark:text-text-dark p-1 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition"
-          >
-            <span class="material-icons-round text-2xl"
-              >arrow_back_ios_new</span
-            >
-          </button>
-        </a>
-        <h1
-          class="text-xl font-semibold text-text-light dark:text-text-dark flex-1"
-        >
-          Interested Buyers
-        </h1>
-        <div class="w-8"></div>
-      </header>
-      <main class="flex-1 overflow-y-auto px-5 py-6">
-        <div class="mb-6">
-          <h2
-            class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3"
-          >
-            Trash Item
-          </h2>
+      <h2 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
+        Pending Requests (5)
+      </h2>
+      <a href="ConfirmBuyerTrash.html">
+        <div class="flex flex-col gap-3">
           <div
-            class="bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm flex gap-4 items-center"
-          >
-            <div
-              class="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center flex-shrink-0 text-green-500"
-            >
-              <span class="material-icons-round text-3xl">delete</span>
+            class="group bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm flex items-center justify-between border border-transparent hover:border-primary transition-all cursor-pointer">
+            <div class="flex items-center gap-4">
+              <div class="relative">
+                <img alt="User Avatar" class="w-12 h-12 rounded-full object-cover border-2 border-primary"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIcCaKVgBkEv70oKDztMKZPu0Et374fM2YDmupyT2Xk0I2JNHFkNkupDNsiFB5NfhH3SSh_W2saWUL3CFciAlWFGt9Z09sRJM7R3-uudbJsXiHKISd_dChSRER3lVUDTOVf027mYMkWVjAwdig1OmWVLaet-XWO1HZbqUNirWGV8Xaa8eTNU5rYsb-C4Weztt6U1qmuAe81nPjlAEX7I5DkDOQRQG4CXOOivy_UpIqq_w4g4NqK_FcDZmZD_8Ruy4KiWFd6Rp_iwQ" />
+                <div
+                  class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-surface-light dark:border-surface-dark rounded-full">
+                </div>
+              </div>
+              <div>
+                <p class="text-text-light dark:text-text-dark font-medium text-lg">
+                  Somchai K.
+                </p>
+                <div class="flex items-center text-xs text-gray-500 dark:text-gray-400 gap-1">
+                  <span class="material-icons-round text-sm text-yellow-500">star</span>
+                  <span>4.8</span>
+                  <span class="mx-1">•</span>
+                  <span>2m ago</span>
+                </div>
+              </div>
             </div>
-            <div>
-              <h3
-                class="text-text-light dark:text-text-dark font-medium text-lg"
-              >
-                Recyclable Trash
-              </h3>
-              <p class="text-green-500 font-semibold">5 kg</p>
+            <span
+              class="material-icons-round text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+          </div>
+          <div
+            class="group bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm flex items-center justify-between border border-transparent hover:border-primary transition-all cursor-pointer">
+            <div class="flex items-center gap-4">
+              <div class="relative">
+                <img alt="User Avatar"
+                  class="w-12 h-12 rounded-full object-cover border-2 border-gray-200 dark:border-gray-600"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbT5vpTpSqubyPiCAjUHcBpE5f-jA26WlyvgEbblMkv7MtnJosLuwQMmJxYlI66rqmt9vgtKMd80_STBZuCv_c0M9qxbetQB_F837teo92GYRxcoMs-i7YlRefZu0b20T5_o0eF9xb2bHIGKUX2DaXdMBcftOwDT2n0GQ_nEhGnScGN_2COCNFo9lUNOrX5r_GDjd9vZg1ouENFnx1eokPvZVb7rjK3sf_qYBTfnmWDUS4_MIvQh5cSnaaW-urrn7Xfu7fHqhMar0" />
+              </div>
+              <div>
+                <p class="text-text-light dark:text-text-dark font-medium text-lg">
+                  Nok Noi
+                </p>
+                <div class="flex items-center text-xs text-gray-500 dark:text-gray-400 gap-1">
+                  <span class="material-icons-round text-sm text-yellow-500">star</span>
+                  <span>5.0</span>
+                  <span class="mx-1">•</span>
+                  <span>15m ago</span>
+                </div>
+              </div>
             </div>
+            <span
+              class="material-icons-round text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+          </div>
+          <div
+            class="group bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm flex items-center justify-between border border-transparent hover:border-primary transition-all cursor-pointer">
+            <div class="flex items-center gap-4">
+              <div class="relative">
+                <div
+                  class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-lg border-2 border-transparent">
+                  T
+                </div>
+              </div>
+              <div>
+                <p class="text-text-light dark:text-text-dark font-medium text-lg">
+                  Tony Wood
+                </p>
+                <div class="flex items-center text-xs text-gray-500 dark:text-gray-400 gap-1">
+                  <span class="material-icons-round text-sm text-yellow-500">star</span>
+                  <span>4.2</span>
+                  <span class="mx-1">•</span>
+                  <span>1h ago</span>
+                </div>
+              </div>
+            </div>
+            <span
+              class="material-icons-round text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+          </div>
+          <div
+            class="group bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm flex items-center justify-between border border-transparent hover:border-primary transition-all cursor-pointer">
+            <div class="flex items-center gap-4">
+              <div class="relative">
+                <img alt="User Avatar"
+                  class="w-12 h-12 rounded-full object-cover border-2 border-gray-200 dark:border-gray-600"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPvy5dxMMII7i_iE6BuTMc7uIoyEDUekSdGDYycTBSgVMGv6q5nInSRWcLtoOJBvSXgOlCfjYiBqWVtvI4AmecwM8C9_GZEiLgEgjHZT6LYzVrH1wQmfPZ-o_Lf-qe3Ps1IyTzzMLYZBB7fefdv_APIO8Zdahnp3SYv59sGQaJhRohtsixQc2N3t5r6WikaMb1hogIR74oxORJbj1AGTU67rcx8KCvNfXRCJNTX0GZ3NLeY6z3m36ZJnrzzeXIb5dtU1ZWLnyJLHQ" />
+              </div>
+              <div>
+                <p class="text-text-light dark:text-text-dark font-medium text-lg">
+                  Chaiwat P.
+                </p>
+                <div class="flex items-center text-xs text-gray-500 dark:text-gray-400 gap-1">
+                  <span class="material-icons-round text-sm text-yellow-500">star</span>
+                  <span>4.9</span>
+                  <span class="mx-1">•</span>
+                  <span>3h ago</span>
+                </div>
+              </div>
+            </div>
+            <span
+              class="material-icons-round text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+          </div>
+          <div
+            class="group bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm flex items-center justify-between border border-transparent hover:border-primary transition-all cursor-pointer">
+            <div class="flex items-center gap-4">
+              <div class="relative">
+                <img alt="User Avatar"
+                  class="w-12 h-12 rounded-full object-cover border-2 border-gray-200 dark:border-gray-600"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWg2Pknb4fg0rAIs_C1YJSjQrd-YGcoGnf1XDw217rNNcCLWGO_y-TOLdRtHp0BEzpc9t0gSRpKPjv1rek9xuH5CferfPbrfMAUukFGjiKwu2DWi1R--K2ZOvUW7k3jVOBGiKWdwqW2hyeFgrI-XjMRMxsnl7VMyRYRbL3gDv4JkPLwX40n2eV-wA2PyPhs3RW9uze6Ex6zwTugIfrAQo3NX-wOG29lJoI36syXPqBjuRQTGjJ56wXiL41tRYhJ656Txwi2Glz6bE" />
+              </div>
+              <div>
+                <p class="text-text-light dark:text-text-dark font-medium text-lg">
+                  Sarah J.
+                </p>
+                <div class="flex items-center text-xs text-gray-500 dark:text-gray-400 gap-1">
+                  <span class="material-icons-round text-sm text-yellow-500">star</span>
+                  <span>4.5</span>
+                  <span class="mx-1">•</span>
+                  <span>5h ago</span>
+                </div>
+              </div>
+            </div>
+            <span
+              class="material-icons-round text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
           </div>
         </div>
-        <h2
-          class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3"
-        >
-          Pending Requests (5)
-        </h2>
-        <a href="ConfirmBuyerTrash.html">
-          <div class="flex flex-col gap-3">
-            <div
-              class="group bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm flex items-center justify-between border border-transparent hover:border-primary transition-all cursor-pointer"
-            >
-              <div class="flex items-center gap-4">
-                <div class="relative">
-                  <img
-                    alt="User Avatar"
-                    class="w-12 h-12 rounded-full object-cover border-2 border-primary"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIcCaKVgBkEv70oKDztMKZPu0Et374fM2YDmupyT2Xk0I2JNHFkNkupDNsiFB5NfhH3SSh_W2saWUL3CFciAlWFGt9Z09sRJM7R3-uudbJsXiHKISd_dChSRER3lVUDTOVf027mYMkWVjAwdig1OmWVLaet-XWO1HZbqUNirWGV8Xaa8eTNU5rYsb-C4Weztt6U1qmuAe81nPjlAEX7I5DkDOQRQG4CXOOivy_UpIqq_w4g4NqK_FcDZmZD_8Ruy4KiWFd6Rp_iwQ"
-                  />
-                  <div
-                    class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-surface-light dark:border-surface-dark rounded-full"
-                  ></div>
-                </div>
-                <div>
-                  <p
-                    class="text-text-light dark:text-text-dark font-medium text-lg"
-                  >
-                    Somchai K.
-                  </p>
-                  <div
-                    class="flex items-center text-xs text-gray-500 dark:text-gray-400 gap-1"
-                  >
-                    <span class="material-icons-round text-sm text-yellow-500"
-                      >star</span
-                    >
-                    <span>4.8</span>
-                    <span class="mx-1">•</span>
-                    <span>2m ago</span>
-                  </div>
-                </div>
-              </div>
-              <span
-                class="material-icons-round text-gray-400 group-hover:text-primary transition-colors"
-                >chevron_right</span
-              >
-            </div>
-            <div
-              class="group bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm flex items-center justify-between border border-transparent hover:border-primary transition-all cursor-pointer"
-            >
-              <div class="flex items-center gap-4">
-                <div class="relative">
-                  <img
-                    alt="User Avatar"
-                    class="w-12 h-12 rounded-full object-cover border-2 border-gray-200 dark:border-gray-600"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbT5vpTpSqubyPiCAjUHcBpE5f-jA26WlyvgEbblMkv7MtnJosLuwQMmJxYlI66rqmt9vgtKMd80_STBZuCv_c0M9qxbetQB_F837teo92GYRxcoMs-i7YlRefZu0b20T5_o0eF9xb2bHIGKUX2DaXdMBcftOwDT2n0GQ_nEhGnScGN_2COCNFo9lUNOrX5r_GDjd9vZg1ouENFnx1eokPvZVb7rjK3sf_qYBTfnmWDUS4_MIvQh5cSnaaW-urrn7Xfu7fHqhMar0"
-                  />
-                </div>
-                <div>
-                  <p
-                    class="text-text-light dark:text-text-dark font-medium text-lg"
-                  >
-                    Nok Noi
-                  </p>
-                  <div
-                    class="flex items-center text-xs text-gray-500 dark:text-gray-400 gap-1"
-                  >
-                    <span class="material-icons-round text-sm text-yellow-500"
-                      >star</span
-                    >
-                    <span>5.0</span>
-                    <span class="mx-1">•</span>
-                    <span>15m ago</span>
-                  </div>
-                </div>
-              </div>
-              <span
-                class="material-icons-round text-gray-400 group-hover:text-primary transition-colors"
-                >chevron_right</span
-              >
-            </div>
-            <div
-              class="group bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm flex items-center justify-between border border-transparent hover:border-primary transition-all cursor-pointer"
-            >
-              <div class="flex items-center gap-4">
-                <div class="relative">
-                  <div
-                    class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-lg border-2 border-transparent"
-                  >
-                    T
-                  </div>
-                </div>
-                <div>
-                  <p
-                    class="text-text-light dark:text-text-dark font-medium text-lg"
-                  >
-                    Tony Wood
-                  </p>
-                  <div
-                    class="flex items-center text-xs text-gray-500 dark:text-gray-400 gap-1"
-                  >
-                    <span class="material-icons-round text-sm text-yellow-500"
-                      >star</span
-                    >
-                    <span>4.2</span>
-                    <span class="mx-1">•</span>
-                    <span>1h ago</span>
-                  </div>
-                </div>
-              </div>
-              <span
-                class="material-icons-round text-gray-400 group-hover:text-primary transition-colors"
-                >chevron_right</span
-              >
-            </div>
-            <div
-              class="group bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm flex items-center justify-between border border-transparent hover:border-primary transition-all cursor-pointer"
-            >
-              <div class="flex items-center gap-4">
-                <div class="relative">
-                  <img
-                    alt="User Avatar"
-                    class="w-12 h-12 rounded-full object-cover border-2 border-gray-200 dark:border-gray-600"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPvy5dxMMII7i_iE6BuTMc7uIoyEDUekSdGDYycTBSgVMGv6q5nInSRWcLtoOJBvSXgOlCfjYiBqWVtvI4AmecwM8C9_GZEiLgEgjHZT6LYzVrH1wQmfPZ-o_Lf-qe3Ps1IyTzzMLYZBB7fefdv_APIO8Zdahnp3SYv59sGQaJhRohtsixQc2N3t5r6WikaMb1hogIR74oxORJbj1AGTU67rcx8KCvNfXRCJNTX0GZ3NLeY6z3m36ZJnrzzeXIb5dtU1ZWLnyJLHQ"
-                  />
-                </div>
-                <div>
-                  <p
-                    class="text-text-light dark:text-text-dark font-medium text-lg"
-                  >
-                    Chaiwat P.
-                  </p>
-                  <div
-                    class="flex items-center text-xs text-gray-500 dark:text-gray-400 gap-1"
-                  >
-                    <span class="material-icons-round text-sm text-yellow-500"
-                      >star</span
-                    >
-                    <span>4.9</span>
-                    <span class="mx-1">•</span>
-                    <span>3h ago</span>
-                  </div>
-                </div>
-              </div>
-              <span
-                class="material-icons-round text-gray-400 group-hover:text-primary transition-colors"
-                >chevron_right</span
-              >
-            </div>
-            <div
-              class="group bg-surface-light dark:bg-surface-dark p-4 rounded-xl shadow-sm flex items-center justify-between border border-transparent hover:border-primary transition-all cursor-pointer"
-            >
-              <div class="flex items-center gap-4">
-                <div class="relative">
-                  <img
-                    alt="User Avatar"
-                    class="w-12 h-12 rounded-full object-cover border-2 border-gray-200 dark:border-gray-600"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWg2Pknb4fg0rAIs_C1YJSjQrd-YGcoGnf1XDw217rNNcCLWGO_y-TOLdRtHp0BEzpc9t0gSRpKPjv1rek9xuH5CferfPbrfMAUukFGjiKwu2DWi1R--K2ZOvUW7k3jVOBGiKWdwqW2hyeFgrI-XjMRMxsnl7VMyRYRbL3gDv4JkPLwX40n2eV-wA2PyPhs3RW9uze6Ex6zwTugIfrAQo3NX-wOG29lJoI36syXPqBjuRQTGjJ56wXiL41tRYhJ656Txwi2Glz6bE"
-                  />
-                </div>
-                <div>
-                  <p
-                    class="text-text-light dark:text-text-dark font-medium text-lg"
-                  >
-                    Sarah J.
-                  </p>
-                  <div
-                    class="flex items-center text-xs text-gray-500 dark:text-gray-400 gap-1"
-                  >
-                    <span class="material-icons-round text-sm text-yellow-500"
-                      >star</span
-                    >
-                    <span>4.5</span>
-                    <span class="mx-1">•</span>
-                    <span>5h ago</span>
-                  </div>
-                </div>
-              </div>
-              <span
-                class="material-icons-round text-gray-400 group-hover:text-primary transition-colors"
-                >chevron_right</span
-              >
-            </div>
-          </div>
-        </a>
-      </main>
-    </div>
+      </a>
+    </main>
+  </div>
 
-    <script src="../theme-toggle.js"></script>
-  </body>
+  <script src="../theme-toggle.js"></script>
+</body>
+
 </html>

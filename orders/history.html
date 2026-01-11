@@ -81,26 +81,26 @@
         Track your selling and disposal activities
       </p>
     </header>
-    <div class="px-6 py-2 flex gap-3 mb-2">
-      <button
-        class="px-4 py-1.5 bg-primary text-white rounded-full text-sm font-medium shadow-md hover:opacity-90 transition-opacity">
+    <div class="px-6 py-2 flex gap-3 mb-2 overflow-x-auto no-scrollbar whitespace-nowrap">
+      <button data-filter="all"
+        class="filter-btn active px-4 py-1.5 bg-primary text-white rounded-full text-sm font-medium shadow-md hover:opacity-90 transition-opacity">
         All
       </button>
-      <a href="OrderPending.html">
-        <button
-          class="px-4 py-1.5 bg-gray-200 dark:bg-secondary text-text-light dark:text-gray-300 rounded-full text-sm font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
-          Pending
-        </button>
-      </a>
-      <a href="OrderCompleted.html">
-        <button
-          class="px-4 py-1.5 bg-gray-200 dark:bg-secondary text-text-light dark:text-gray-300 rounded-full text-sm font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
-          Completed
-        </button>
-      </a>
+      <button data-filter="pending"
+        class="filter-btn px-4 py-1.5 bg-gray-200 dark:bg-secondary text-text-light dark:text-gray-300 rounded-full text-sm font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+        Pending
+      </button>
+      <button data-filter="waiting"
+        class="filter-btn px-4 py-1.5 bg-gray-200 dark:bg-secondary text-text-light dark:text-gray-300 rounded-full text-sm font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+        Waiting
+      </button>
+      <button data-filter="completed"
+        class="filter-btn px-4 py-1.5 bg-gray-200 dark:bg-secondary text-text-light dark:text-gray-300 rounded-full text-sm font-medium hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+        Completed
+      </button>
     </div>
-    <main class="flex-1 overflow-y-auto no-scrollbar px-6 pb-24 space-y-4 pt-2">
-      <a href="OrderPending.html">
+    <main class="flex-1 overflow-y-auto no-scrollbar px-6 pb-24 pt-2 flex flex-col gap-4">
+      <a href="OrderPending.html" class="history-item" data-status="pending">
         <div
           class="group bg-card-light dark:bg-card-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-center gap-4 transition-transform active:scale-[0.98]">
           <div class="w-14 h-14 rounded-full bg-orange-100 dark:bg-gray-700 flex items-center justify-center shrink-0">
@@ -126,7 +126,7 @@
           </div>
         </div>
       </a>
-      <a href="OrderCompleted.html">
+      <a href="OrderCompleted.html" class="history-item" data-status="completed">
         <div
           class="group bg-card-light dark:bg-card-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-center gap-4 transition-transform active:scale-[0.98]">
           <div class="w-14 h-14 rounded-full bg-green-50 dark:bg-gray-700 flex items-center justify-center shrink-0">
@@ -152,7 +152,7 @@
           </div>
         </div>
       </a>
-      <a href="OrderWaitingForBuyer.html">
+      <a href="OrderWaitingForBuyer.html" class="history-item" data-status="waiting">
         <div
           class="group bg-card-light dark:bg-card-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-center gap-4 transition-transform active:scale-[0.98]">
           <div class="w-14 h-14 rounded-full bg-orange-100 dark:bg-gray-700 flex items-center justify-center shrink-0">
@@ -179,27 +179,29 @@
           </div>
         </div>
       </a>
-      <div
-        class="group bg-card-light dark:bg-card-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-center gap-4 transition-transform active:scale-[0.98] opacity-75">
-        <div class="w-14 h-14 rounded-full bg-red-50 dark:bg-gray-700 flex items-center justify-center shrink-0">
-          <span class="material-icons text-red-500 text-2xl">close</span>
-        </div>
-        <div class="flex-1 min-w-0">
-          <div class="flex justify-between items-start mb-1">
-            <h3 class="font-semibold text-lg text-text-light dark:text-white truncate">
-              Metal Scraps
-            </h3>
-            <span
-              class="px-2 py-0.5 rounded-md bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 text-xs font-medium border border-red-200 dark:border-red-800">
-              Cancelled
-            </span>
+      <div class="history-item" data-status="cancelled">
+        <div
+          class="group bg-card-light dark:bg-card-dark p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex items-center gap-4 transition-transform active:scale-[0.98] opacity-75">
+          <div class="w-14 h-14 rounded-full bg-red-50 dark:bg-gray-700 flex items-center justify-center shrink-0">
+            <span class="material-icons text-red-500 text-2xl">close</span>
           </div>
-          <p class="text-sm text-subtext-light dark:text-subtext-dark truncate">
-            Copper wire bundle
-          </p>
-          <div class="mt-2 flex items-center gap-2 text-xs text-subtext-light dark:text-subtext-dark">
-            <span class="material-icons text-[14px]">event</span>
-            <span>Oct 20, 9:00 AM</span>
+          <div class="flex-1 min-w-0">
+            <div class="flex justify-between items-start mb-1">
+              <h3 class="font-semibold text-lg text-text-light dark:text-white truncate">
+                Metal Scraps
+              </h3>
+              <span
+                class="px-2 py-0.5 rounded-md bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 text-xs font-medium border border-red-200 dark:border-red-800">
+                Cancelled
+              </span>
+            </div>
+            <p class="text-sm text-subtext-light dark:text-subtext-dark truncate">
+              Copper wire bundle
+            </p>
+            <div class="mt-2 flex items-center gap-2 text-xs text-subtext-light dark:text-subtext-dark">
+              <span class="material-icons text-[14px]">event</span>
+              <span>Oct 20, 9:00 AM</span>
+            </div>
           </div>
         </div>
       </div>
@@ -245,6 +247,30 @@
   <div class="fixed top-4 right-4 z-50"></div>
 
   <script src="../theme-toggle.js"></script>
+  <script>
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const historyItems = document.querySelectorAll('.history-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-primary', 'text-white', 'shadow-md', 'active');
+          b.classList.add('bg-gray-200', 'dark:bg-secondary', 'text-text-light', 'dark:text-gray-300');
+        });
+        btn.classList.remove('bg-gray-200', 'dark:bg-secondary', 'text-text-light', 'dark:text-gray-300');
+        btn.classList.add('bg-primary', 'text-white', 'shadow-md', 'active');
+
+        const filter = btn.dataset.filter;
+        historyItems.forEach(item => {
+          if (filter === 'all' || item.dataset.status === filter) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
